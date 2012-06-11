@@ -6,7 +6,6 @@ comments: true
 categories: 
 ---
 To get you familiar with capybara, we'll be using irb (Interactive Ruby Shell). 
-
 So before we get started, make sure you have ruby installed. 
 
 Launch irb with the following requirements (ruby, capybara, and capybara/dsl)
