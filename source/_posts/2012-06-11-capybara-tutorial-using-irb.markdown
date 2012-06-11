@@ -22,7 +22,7 @@ Set the default driver.
 
 Now test that capybara commands work by visiting google
 
-    visit "http://www.gmail.com"
+    visit "http://www.google.com"
 
 Here's an example for logging into GMAIL
 ---
