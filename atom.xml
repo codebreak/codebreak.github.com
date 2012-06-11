@@ -1,16 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2012-06-06T23:00:30-07:00</updated>
+  <updated>2012-06-11T16:12:36-07:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[codebreaker]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Capybara Tutorial using irb]]></title>
+    <link href="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/"/>
+    <updated>2012-06-11T16:03:00-07:00</updated>
+    <id>http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb</id>
+    <content type="html"><![CDATA[<p>To get you familiar with capybara, we&#8217;ll be using irb (Interactive Ruby Shell).
+So before we get started, make sure you have ruby installed.</p>
+
+<p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
+
+<pre><code>irb -r rubygems -r capybara -r capybara/dsl
+</code></pre>
+
+<p>Include Cabybara:</p>
+
+<pre><code>include Capybara::DSL
+</code></pre>
+
+<p>Set the default driver.</p>
+
+<pre><code>Capybara.default_driver = :selenium
+</code></pre>
+
+<p>Now test that capybara commands work by visiting google</p>
+
+<pre><code>visit "http://www.gmail.com"
+</code></pre>
+
+<h2>Here&#8217;s an example for logging into GMAIL</h2>
+
+<pre><code>visit "http://www.gmail.com"
+page.has_content?("A Google approach to email.")
+
+fill_in 'Email', :with =&gt; "johnjames4343@gmail.com"
+fill_in 'Passwd', :with =&gt; "johnjames4u"
+click_button 'Sign in'
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World!!]]></title>
+    <link href="http://codebreak.github.com/blog/2012/06/07/hello-world/"/>
+    <updated>2012-06-07T00:05:00-07:00</updated>
+    <id>http://codebreak.github.com/blog/2012/06/07/hello-world</id>
+    <content type="html"><![CDATA[<p>Much love to @scottmuc for helping me setup my octopress blog!! :)</p>
+]]></content>
+  </entry>
   
 </feed>

@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title></title>
+  <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="To get you familiar with capybara, we&#8217;ll be using irb (Interactive Ruby Shell).
+So before we get started, make sure you have ruby installed. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +25,7 @@
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -35,9 +36,9 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/"></a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>code.breaker</h2>
   
 </hgroup>
 
@@ -65,6 +66,109 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/11/capybara-tutorial-using-irb/">Capybara Tutorial Using Irb</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T16:03:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To get you familiar with capybara, we&#8217;ll be using irb (Interactive Ruby Shell).
+So before we get started, make sure you have ruby installed.</p>
+
+<p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
+
+<pre><code>irb -r rubygems -r capybara -r capybara/dsl
+</code></pre>
+
+<p>Include Cabybara:</p>
+
+<pre><code>include Capybara::DSL
+</code></pre>
+
+<p>Set the default driver.</p>
+
+<pre><code>Capybara.default_driver = :selenium
+</code></pre>
+
+<p>Now test that capybara commands work by visiting google</p>
+
+<pre><code>visit "http://www.gmail.com"
+</code></pre>
+
+<h2>Here&#8217;s an example for logging into GMAIL</h2>
+
+<pre><code>visit "http://www.gmail.com"
+page.has_content?("A Google approach to email.")
+
+fill_in 'Email', :with =&gt; "johnjames4343@gmail.com"
+fill_in 'Passwd', :with =&gt; "johnjames4u"
+click_button 'Sign in'
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/07/hello-world/">Hello World!!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-07T00:05:00-07:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Much love to @scottmuc for helping me setup my octopress blog!! :)</p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/blog/archives">Blog Archives</a>
@@ -76,6 +180,14 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/06/11/capybara-tutorial-using-irb/">Capybara Tutorial using irb</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/07/hello-world/">Hello World!!</a>
+      </li>
     
   </ul>
 </section>
@@ -91,7 +203,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Your Name -
+  Copyright &copy; 2012 - codebreaker -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

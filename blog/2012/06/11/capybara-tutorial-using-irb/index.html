@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - </title>
+  <title>Capybara Tutorial using irb - </title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content=" Blog Archive 2012 Capybara Tutorial using irb
-Jun 11 2012 Hello World!!
-Jun 07 2012 Recent Posts Capybara Tutorial using irb Hello World!! ">
+  <meta name="description" content="To get you familiar with capybara, we&#8217;ll be using irb (Interactive Ruby Shell).
+So before we get started, make sure you have ruby installed. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ Jun 07 2012 Recent Posts Capybara Tutorial using irb Hello World!! ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/archives/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,41 +64,109 @@ Jun 07 2012 Recent Posts Capybara Tutorial using irb Hello World!! ">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Capybara Tutorial Using Irb</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T16:03:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>To get you familiar with capybara, we&#8217;ll be using irb (Interactive Ruby Shell).
+So before we get started, make sure you have ruby installed.</p>
 
-  
-  <h2>2012</h2>
+<p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
 
-<article>
-  
-<h1><a href="/blog/2012/06/11/capybara-tutorial-using-irb/">Capybara Tutorial using irb</a></h1>
-<time datetime="2012-06-11T16:03:00-07:00" pubdate><span class='month'>Jun</span> <span class='day'>11</span> <span class='year'>2012</span></time>
+<pre><code>irb -r rubygems -r capybara -r capybara/dsl
+</code></pre>
 
+<p>Include Cabybara:</p>
 
-</article>
+<pre><code>include Capybara::DSL
+</code></pre>
 
+<p>Set the default driver.</p>
 
+<pre><code>Capybara.default_driver = :selenium
+</code></pre>
 
-<article>
-  
-<h1><a href="/blog/2012/06/07/hello-world/">Hello World!!</a></h1>
-<time datetime="2012-06-07T00:05:00-07:00" pubdate><span class='month'>Jun</span> <span class='day'>07</span> <span class='year'>2012</span></time>
+<p>Now test that capybara commands work by visiting google</p>
 
+<pre><code>visit "http://www.gmail.com"
+</code></pre>
 
-</article>
+<h2>Here&#8217;s an example for logging into GMAIL</h2>
 
+<pre><code>visit "http://www.gmail.com"
+page.has_content?("A Google approach to email.")
+
+fill_in 'Email', :with =&gt; "johnjames4343@gmail.com"
+fill_in 'Passwd', :with =&gt; "johnjames4u"
+click_button 'Sign in'
+</code></pre>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">codebreaker</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T16:03:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/06/07/hello-world/" title="Previous Post: Hello World!!">&laquo; Hello World!!</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
