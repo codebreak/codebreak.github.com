@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2012-06-11T16:12:36-07:00</updated>
+  <updated>2012-06-11T16:18:13-07:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -18,8 +18,9 @@
     <link href="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/"/>
     <updated>2012-06-11T16:03:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb</id>
-    <content type="html"><![CDATA[<p>To get you familiar with capybara, we&#8217;ll be using irb (Interactive Ruby Shell).
-So before we get started, make sure you have ruby installed.</p>
+    <content type="html"><![CDATA[<p>To get you familiar with capybara, we&#8217;ll be using irb (Interactive Ruby Shell).</p>
+
+<p>So before we get started, make sure you have ruby installed.</p>
 
 <p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
 
@@ -38,7 +39,7 @@ So before we get started, make sure you have ruby installed.</p>
 
 <p>Now test that capybara commands work by visiting google</p>
 
-<pre><code>visit "http://www.gmail.com"
+<pre><code>visit "http://www.google.com"
 </code></pre>
 
 <h2>Here&#8217;s an example for logging into GMAIL</h2>
