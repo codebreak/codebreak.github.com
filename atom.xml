@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2012-06-21T14:59:31-07:00</updated>
+  <updated>2012-06-21T15:02:38-07:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -56,7 +56,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Capybara tutorial sing irb]]></title>
+    <title type="html"><![CDATA[Capybara tutorial using irb]]></title>
     <link href="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/"/>
     <updated>2012-06-11T16:03:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb</id>
