@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2012-06-21T14:53:06-07:00</updated>
+  <updated>2012-06-21T14:59:31-07:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -45,73 +45,13 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[I am A TESTER.]]></title>
+    <title type="html"><![CDATA[I'm a TESTER.]]></title>
     <link href="http://codebreak.github.com/blog/2012/06/15/i-am-a-tester/"/>
     <updated>2012-06-15T14:56:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/15/i-am-a-tester</id>
     <content type="html"><![CDATA[<p>Whenever I tell people that I am a Tester, they quickly respond with &#8220;Oh &#8230; you&#8217;re a QA.&#8221; No, I said that I AM A TESTER!</p>
 
 <p>We all need to get rid of this notion that QAs are the &#8220;GATEKEEPERS&#8221; of quality on an agile team. In fact, if you&#8217;re doing it right &#8230; the entire team should be fully aware of the state of the app.</p>
-
-<p>This is mainly because I believe that quality is the responsibility of the whole tea</p>
-
-<p>This gets back to Ash&#8217;s comment. The WHOLE team is responsible for testing,</p>
-
-<p>including automation. There should not be a backlog of automation as the</p>
-
-<p>team should be working on automation as stories are being developed and not</p>
-
-<p>move to the next story until it is complete - complete includes automation.</p>
-
-<p>When applying ATDD and TDD process the automation should be developed BEFORE</p>
-
-<p>the code - so again a backlog should never occur.</p>
-
-<p>I do understand that things are not always this simple, sometimes the</p>
-
-<p>automation is being done after the code is created. If this is the case then</p>
-
-<p>I suggest looking to implement some WIP (Work In Progress) limits on the</p>
-
-<p>queues /swim lanes(Kanban style). So put a limit on the number of stories</p>
-
-<p>(not points) that can be in any swim lane at a time, for example 3 stories</p>
-
-<p>are allowed &#8220;In Test&#8221;. If the developers are finished and want to move a</p>
-
-<p>story from &#8220;In Development&#8221; to &#8220;In Test&#8221;  and there are already 3 stories</p>
-
-<p>&#8220;In Test&#8221; thenthey must first help the testers to clear one of the stories</p>
-
-<p>before they can move another story in. This prevents backlogs from building</p>
-
-<p>up.</p>
-
-<p>QA should be doing is helping the team to work out the best way of building the best quality application/system/product in the first place, rather than just checking the quality after something has been done.</p>
-
-<p>With regards to <strong>environments</strong> it is very project specific, but a generic list</p>
-
-<p>would be:</p>
-
-<p>Testers machine - should be the same as a dev machine. Tester can checkout,</p>
-
-<p>build and deploy then test the application when ever they want to.</p>
-
-<p>System Test - an environment that is available for further exploratory</p>
-
-<p>testing, showcases and other team members to look at the system. Should be</p>
-
-<p>&#8220;more&#8221; production like then the CI machine - so have bigger data sets, more</p>
-
-<p>production like hardware/network infrastructure (i.e. load balancers,</p>
-
-<p>switches etc) and other systems - so less reliance on stubs and mocks.</p>
-
-<p>SIT/Pre-Prod - an environment that has all integration points, both internal</p>
-
-<p>ad external. Infrastructure and architecture should be inline with</p>
-
-<p>production.</p>
 ]]></content>
   </entry>
   
