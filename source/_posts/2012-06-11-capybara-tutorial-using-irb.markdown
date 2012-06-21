@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Capybara Tutorial using irb"
+title: "Capybara tutorial sing irb"
 date: 2012-06-11 16:03
 comments: true
 categories: 
 ---
-To get you familiar with capybara, we'll be using irb (Interactive Ruby Shell). 
-So before we get started, make sure you have ruby installed. 
+At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with capybara. I've found it pretty useful so I figured I'd share it here.
+
+To get started, make sure you have ruby installed. 
 
 Launch irb with the following requirements (ruby, capybara, and capybara/dsl)
 
