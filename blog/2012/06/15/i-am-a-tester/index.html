@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>I am A TESTER. - </title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="I&#8217;ve been noticing that the role of a tester has been slowly changing and converging with different roles on an Agile team. Instead of having a &hellip;">
+  <meta name="description" content="Whenever I tell people that I am a Tester, they quickly respond with &#8220;Oh &#8230; you&#8217;re a QA.&#8221; No, I said that I AM A TESTER! We &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/2012/06/15/i-am-a-tester/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,73 +62,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/06/20/role-of-a-tester-on-a-project/">Role of a Tester on a Project</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-20T19:46:00-07:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve been noticing that the role of a tester has been slowly changing and converging with different roles on an Agile team. Instead of having a strictly defined set of tasks and responsibilities, I&#8217;ve often found my self wearing many different hats on a project. But I guess this only makes sense since collaboration is key in any successful team.</p>
-
-<p>To illustrate my role, I&#8217;m going to use the process we followed at my previous project where we specified the status of specific product requirements (which we called &#8220;stories&#8221;) by the following:</p>
-
-<h4>New</h4>
-
-<p>During the time that stories are being created and broken down by the BAs and Devs, I&#8217;ve always found it useful to be present and provide input from the testers point of view.</p>
-
-<h4>In Analysis</h4>
-
-<p>Once BAs feel like their stories have the essential requirements for the developers, I&#8217;ll sit and &#8220;pair&#8221; with them for a bit. And together, we&#8217;ll go through the stories to make sure that 1. I understand what the stories entail and I am prepared to test</p>
-
-<h4>Ready For Development</h4>
-
-<h4>In Development</h4>
-
-<h4>Ready for QA</h4>
-
-<h4>In QA</h4>
-
-<h4>Ready for Verification</h4>
-
-<h4>Verified</h4>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/15/i-am-a-tester/">I Am a TESTER.</a></h1>
+      <h1 class="entry-title">I Am a TESTER.</h1>
     
     
       <p class="meta">
@@ -151,7 +90,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Whenever I tell people that I am a Tester, they quickly respond with &#8220;Oh &#8230; you&#8217;re a QA.&#8221; No, I said that I AM A TESTER!</p>
+<div class="entry-content"><p>Whenever I tell people that I am a Tester, they quickly respond with &#8220;Oh &#8230; you&#8217;re a QA.&#8221; No, I said that I AM A TESTER!</p>
 
 <p>We all need to get rid of this notion that QAs are the &#8220;GATEKEEPERS&#8221; of quality on an agile team. In fact, if you&#8217;re doing it right &#8230; the entire team should be fully aware of the state of the app.</p>
 
@@ -215,90 +154,16 @@
 
 <p>production.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/11/capybara-tutorial-using-irb/">Capybara Tutorial Sing Irb</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">codebreaker</span></span>
 
-<time datetime="2012-06-11T16:03:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with capybara. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
-
-<p>To get started, make sure you have ruby installed.</p>
-
-<p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
-
-<pre><code>irb -r rubygems -r capybara -r capybara/dsl
-</code></pre>
-
-<p>Include Cabybara:</p>
-
-<pre><code>include Capybara::DSL
-</code></pre>
-
-<p>Set the default driver.</p>
-
-<pre><code>Capybara.default_driver = :selenium
-</code></pre>
-
-<p>Now test that capybara commands work by visiting google</p>
-
-<pre><code>visit "http://www.google.com"
-</code></pre>
-
-<h2>Here&#8217;s an example for logging into GMAIL</h2>
-
-<pre><code>visit "http://www.gmail.com"
-page.has_content?("A Google approach to email.")
-
-fill_in 'Email', :with =&gt; "johnjames4343@gmail.com"
-fill_in 'Passwd', :with =&gt; "johnjames4u"
-click_button 'Sign in'
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/07/hello-world/">Hello World!!</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -310,27 +175,34 @@ click_button 'Sign in'
   
 
 
-<time datetime="2012-06-07T00:05:00-07:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
-        
-      </p>
+<time datetime="2012-06-15T14:56:00-07:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>
+      
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>Much love to @scottmuc for helping me setup my octopress blog!! :)</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/06/15/i-am-a-tester/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/06/15/i-am-a-tester/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/06/11/capybara-tutorial-using-irb/" title="Previous Post: Capybara tutorial sing irb">&laquo; Capybara tutorial sing irb</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/06/20/role-of-a-tester-on-a-project/" title="Next Post: Role of a Tester on a Project">Role of a Tester on a Project &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -363,6 +235,7 @@ click_button 'Sign in'
 
   
 </aside>
+
 
     </div>
   </div>
