@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Capybara tutorial sing irb"
+title: "Capybara tutorial using irb"
 date: 2012-06-11 16:03
 comments: true
 categories: 
