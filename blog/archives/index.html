@@ -9,10 +9,9 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Blog Archive 2012 Role of a Tester on a Project
-Jun 20 2012 I&#8217;m a TESTER.
-Jun 15 2012 Capybara tutorial using irb
-Jun 11 2012 Hello World!! &hellip;">
+  <meta name="description" content="Blog Archive 2012 Capybara tutorial using irb
+Jun 11 2012 Hello World!!
+Jun 07 2012 Recent Posts Capybara tutorial using irb Hello World!! GitHub &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,26 +81,6 @@ Jun 11 2012 Hello World!! &hellip;">
 
 <article>
   
-<h1><a href="/blog/2012/06/20/role-of-a-tester-on-a-project/">Role of a Tester on a Project</a></h1>
-<time datetime="2012-06-20T19:46:00-07:00" pubdate><span class='month'>Jun</span> <span class='day'>20</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/06/15/i-am-a-tester/">I&#8217;m a TESTER.</a></h1>
-<time datetime="2012-06-15T14:56:00-07:00" pubdate><span class='month'>Jun</span> <span class='day'>15</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
 <h1><a href="/blog/2012/06/11/capybara-tutorial-using-irb/">Capybara tutorial using irb</a></h1>
 <time datetime="2012-06-11T16:03:00-07:00" pubdate><span class='month'>Jun</span> <span class='day'>11</span> <span class='year'>2012</span></time>
 
@@ -132,14 +111,6 @@ Jun 11 2012 Hello World!! &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/06/20/role-of-a-tester-on-a-project/">Role of a Tester on a Project</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/15/i-am-a-tester/">I'm a TESTER.</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2012/06/11/capybara-tutorial-using-irb/">Capybara tutorial using irb</a>
       </li>
     
@@ -150,6 +121,51 @@ Jun 11 2012 Hello World!! &hellip;">
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/codebreak">@codebreak</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'codebreak',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("hiyasmind", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/hiyasmind" class="twitter-follow-button" data-show-count="false">Follow @hiyasmind</a>
+  
+</section>
 
 
 

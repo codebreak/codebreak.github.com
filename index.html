@@ -9,7 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="I&#8217;ve been noticing that the role of a tester has been slowly changing and converging with different roles on an Agile team. Instead of having a &hellip;">
+  <meta name="description" content="At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,102 +64,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/20/role-of-a-tester-on-a-project/">Role of a Tester on a Project</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-20T19:46:00-07:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve been noticing that the role of a tester has been slowly changing and converging with different roles on an Agile team. Instead of having a strictly defined set of tasks and responsibilities, I&#8217;ve often found my self wearing many different hats on a project. But I guess this only makes sense since collaboration is key in any successful team.</p>
-
-<p>To illustrate my role, I&#8217;m going to use the process we followed at my previous project where we specified the status of specific product requirements (which we called &#8220;stories&#8221;) by the following:</p>
-
-<h4>New</h4>
-
-<p>During the time that stories are being created and broken down by the BAs and Devs, I&#8217;ve always found it useful to be present and provide input from the testers point of view.</p>
-
-<h4>In Analysis</h4>
-
-<p>Once BAs feel like their stories have the essential requirements for the developers, I&#8217;ll sit and &#8220;pair&#8221; with them for a bit. And together, we&#8217;ll go through the stories to make sure that 1. I understand what the stories entail and I am prepared to test</p>
-
-<h4>Ready For Development</h4>
-
-<h4>In Development</h4>
-
-<h4>Ready for QA</h4>
-
-<h4>In QA</h4>
-
-<h4>Ready for Verification</h4>
-
-<h4>Verified</h4>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/15/i-am-a-tester/">I&#8217;m a TESTER.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-15T14:56:00-07:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Whenever I tell people that I am a Tester, they quickly respond with &#8220;Oh &#8230; you&#8217;re a QA.&#8221; No, I said that I&#8217;m a TESTER!</p>
-
-<p>Honestly, I&#8217;m not the type to be too concerned about labels. But I definitely think it worth making a distinction just to make a point that Testers are NOT the &#8220;GATEKEEPERS&#8221; of quality on an agile team. In fact, if you&#8217;re doing it right &#8230; the entire team should be fully aware of the state of the app.</p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -278,14 +182,6 @@ click_button 'Sign in'
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/06/20/role-of-a-tester-on-a-project/">Role of a Tester on a Project</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/15/i-am-a-tester/">I&#8217;m a TESTER.</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2012/06/11/capybara-tutorial-using-irb/">Capybara tutorial using irb</a>
       </li>
     
@@ -296,6 +192,51 @@ click_button 'Sign in'
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/codebreak">@codebreak</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'codebreak',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("hiyasmind", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/hiyasmind" class="twitter-follow-button" data-show-count="false">Follow @hiyasmind</a>
+  
+</section>
 
 
 
