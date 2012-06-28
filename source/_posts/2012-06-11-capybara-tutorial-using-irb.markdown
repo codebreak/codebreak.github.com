@@ -5,15 +5,21 @@ date: 2012-06-11 16:03
 comments: true
 categories: 
 ---
-At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with capybara. I've found it pretty useful so I figured I'd share it here.
+At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with [Capybara](https://github.com/jnicklas/capybara/). I've found it pretty useful so I figured I'd share it here.
 
-To get started, make sure you have ruby installed. 
+To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)
+	
+	rvm use 1.9.2@cucumberplay --create
 
+Install [Capybara](https://github.com/jnicklas/capybara/) if you haven't already.
+	
+	gem install capybara
+	
 Launch irb with the following requirements (ruby, capybara, and capybara/dsl)
 
     irb -r rubygems -r capybara -r capybara/dsl
 
-Include Cabybara: 
+Include Cabybara DSL: 
 
     include Capybara::DSL
 
