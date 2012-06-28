@@ -4,7 +4,7 @@
   <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2012-06-28T14:51:42-07:00</updated>
+  <updated>2012-06-28T16:30:31-07:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -18,7 +18,7 @@
     <link href="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/"/>
     <updated>2012-06-11T16:03:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb</id>
-    <content type="html"><![CDATA[<p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
+    <content type="html"><![CDATA[<p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
 
 <p>To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)</p>
 
