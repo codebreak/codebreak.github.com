@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[]]></title>
+  <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2012-06-25T09:40:51-07:00</updated>
+  <updated>2012-06-28T14:51:42-07:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -18,16 +18,24 @@
     <link href="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/"/>
     <updated>2012-06-11T16:03:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb</id>
-    <content type="html"><![CDATA[<p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with capybara. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
+    <content type="html"><![CDATA[<p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
 
-<p>To get started, make sure you have ruby installed.</p>
+<p>To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)</p>
+
+<pre><code>rvm use 1.9.2@cucumberplay --create
+</code></pre>
+
+<p>Install <a href="https://github.com/jnicklas/capybara/">Capybara</a> if you haven&#8217;t already.</p>
+
+<pre><code>gem install capybara
+</code></pre>
 
 <p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
 
 <pre><code>irb -r rubygems -r capybara -r capybara/dsl
 </code></pre>
 
-<p>Include Cabybara:</p>
+<p>Include Cabybara DSL:</p>
 
 <pre><code>include Capybara::DSL
 </code></pre>
