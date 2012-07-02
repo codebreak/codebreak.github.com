@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Capybara tutorial using irb - codebreak.er</title>
+  <title>The Tester Role on an Agile Project - codebreak.er</title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test &hellip;">
+  <meta name="description" content="Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/2012/07/01/tester-role/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -70,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">Capybara Tutorial Using Irb</h1>
+      <h1 class="entry-title">The Tester Role on an Agile Project</h1>
     
     
       <p class="meta">
@@ -86,54 +86,30 @@
   
 
 
-<time datetime="2012-06-11T16:03:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+<time datetime="2012-07-01T22:54:00-07:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
+<div class="entry-content"><p>Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies and can depend on the tester or the unique dynamics of the team.</p>
 
-<p>To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)</p>
+<ul>
+<li>Show interest in participating on project <strong>Inceptions</strong> and always accept when invited!</li>
+<li>Provide tester input when the team is holding their story <strong>Estimation</strong> Sessions.</li>
+<li>Be present in team IPMs ( <strong>Iteration Planning Meetings</strong> ) to gain familiarity with the upcoming stories.</li>
+<li>Pair with the BAs in writing the <strong>Acceptance Criteria</strong> so that scenarios missed can be identified.</li>
+<li>Hold <strong>Story Kickoffs</strong> with a BA when Developers kick up a story.</li>
+<li><strong>Pair</strong> with Developers in writing their tests.</li>
+<li>Don&#8217;t wait till stories are &#8220;Ready to Test&#8221;. Pull the latest and greatest on your local or Test Environment and <strong>start testing early</strong>! (No defects should be created at this time, simply notify the Devs about the issues/concerns identified.</li>
+<li>Once Dev&#8217;s believe that their stories are &#8220;Ready to Test&#8221;, hold <strong>Desk-checks</strong> with them and a BA to make sure that they&#8217;ve implemented the stories accordingly.</li>
+<li><strong>Automate</strong> functional tests. (Pair with Devs as much as possible!)</li>
+<li>Encourage the client to verify stories on Pre-Prod.</li>
+<li>Perform <strong>Smoke Tests</strong> on the Production Environment.</li>
+<li>Pair with <strong>Dev Ops</strong> to make sure the necessary Environments are created with appropriate data and automated tests.</li>
+</ul>
 
-<pre><code>rvm use 1.9.2@cucumberplay --create
-</code></pre>
-
-<p>Install <a href="https://github.com/jnicklas/capybara/">Capybara</a> if you haven&#8217;t already.</p>
-
-<pre><code>gem install capybara
-</code></pre>
-
-<p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
-
-<pre><code>irb -r rubygems -r capybara -r capybara/dsl
-</code></pre>
-
-<p>Include Cabybara DSL:</p>
-
-<pre><code>include Capybara::DSL
-</code></pre>
-
-<p>Set the default driver.</p>
-
-<pre><code>Capybara.default_driver = :selenium
-</code></pre>
-
-<p>Now test that capybara commands work by visiting google</p>
-
-<pre><code>visit "http://www.google.com"
-</code></pre>
-
-<h2>Here&#8217;s an example for logging into GMAIL</h2>
-
-<pre><code>visit "http://www.gmail.com"
-page.has_content?("A Google approach to email.")
-
-fill_in 'Email', :with =&gt; "johnjames4343@gmail.com"
-fill_in 'Passwd', :with =&gt; "johnjames4u"
-click_button 'Sign in'
-</code></pre>
 </div>
 
 
@@ -156,7 +132,7 @@ click_button 'Sign in'
   
 
 
-<time datetime="2012-06-11T16:03:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+<time datetime="2012-07-01T22:54:00-07:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
       
 
 
@@ -164,7 +140,7 @@ click_button 'Sign in'
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/06/11/capybara-tutorial-using-irb/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/07/01/tester-role/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/07/01/tester-role/" >Tweet</a>
   
   
   
@@ -173,10 +149,8 @@ click_button 'Sign in'
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/06/07/hello-world/" title="Previous Post: Hello World!!">&laquo; Hello World!!</a>
+        <a class="basic-alignment left" href="/blog/2012/06/11/capybara-tutorial-using-irb/" title="Previous Post: Capybara tutorial using irb">&laquo; Capybara tutorial using irb</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/07/01/tester-role/" title="Next Post: The Tester Role on an Agile Project">The Tester Role on an Agile Project &raquo;</a>
       
     </p>
   </footer>
