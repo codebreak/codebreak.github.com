@@ -17,6 +17,8 @@ Below are examples of what I personally strive for when I'm on an agile project.
 * Don't wait till stories are "Ready to Test". Pull the latest and greatest on your local or Test Environment and **start testing early**! (No defects should be created at this time, simply notify the Devs about the issues/concerns found.)
 * Once Dev's believe that their stories are "Ready to Test", hold **Desk-checks** with them and a BA to make sure that they've implemented the stories according to the Acceptance Criteria.
 * **Automate** functional tests. (Pair with Devs as much as possible when doing this!)
+* Perform **Exploratory** Testing on stories and push back stories when blocking issues associated to the stories are found.
+* Log **Defects** for issues not blocking stories or those that are new/regression issues.
 * Encourage the client to verify stories on Pre-Production and to push to Production as often as possible.
 * Perform **Smoke Tests** on the Production Environment.
 * Pair with **Dev Ops** to make sure the necessary Environments are created with appropriate data and automated tests.
