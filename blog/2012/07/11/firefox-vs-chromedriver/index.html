@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>The Tester Role on an Agile Project - codebreak.er</title>
+  <title>WebDriver: Firefox vs ChromeDriver - codebreak.er</title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies &hellip;">
+  <meta name="description" content="On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/2012/07/01/tester-role/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -85,7 +85,7 @@
   
   <header>
     
-      <h1 class="entry-title">The Tester Role on an Agile Project</h1>
+      <h1 class="entry-title">WebDriver: Firefox vs ChromeDriver</h1>
     
     
       <p class="meta">
@@ -101,32 +101,57 @@
   
 
 
-<time datetime="2012-07-01T22:54:00-07:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+<time datetime="2012-07-11T00:05:00-07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies and can depend on the tester or the unique dynamics of the team.</p>
+<div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &#8230; but I decided at the last minute to stick with Firefox.</p>
+
+<p>Recently, I heard rumors that ChromeDriver is &#8220;Faster&#8221; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim. I did so by replacing the driver definition from:</p>
+
+<pre><code>Capybara.current_driver = :selenium 
+</code></pre>
+
+<p>to:</p>
+
+<pre><code>Capybara.register_driver :chrome do |app|
+    Capybara::Selenium::Driver.new(app, :browser =&gt; :chrome)
+  end
+Capybara.javascript_driver = :chrome
+</code></pre>
+
+<p>Then in all my Cucumber feature files, I added the tag @javascript:</p>
+
+<pre><code>@javascript
+Feature: Logging into the application
+
+Scenario:
+    Given I am logged in successfully
+    Then I can use the app
+</code></pre>
+
+<p>When I re-ran my Cucumber Features files using ChromeDriver, I however came across a few errors:</p>
+
+<pre><code>focusElement execution failed;
+   Failed to send keys because cannot focus element (Selenium::WebDriver::Error::UnknownError)
+</code></pre>
+
+<blockquote><p>Apparently, You can&#8217;t use send_keys for certain types of inputs. (Workaround - click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
+
+<pre><code>Element is not clickable at point (928, 23.5). Other element would receive the click
+</code></pre>
+
+<blockquote><p>ChromeDriver always clicks the middle of the element in attempt to be faithful to what an actual user does.
+There are two ways to handle this currently:</p>
 
 <ul>
-<li>Show interest in participating on project <strong>Inceptions</strong> and always accept when invited!</li>
-<li>Provide tester input when the team is holding their story <strong>Estimation</strong> Sessions.</li>
-<li>Be present in team IPMs ( <strong>Iteration Planning Meetings</strong> ) to gain familiarity with the upcoming stories.</li>
-<li>Pair with the BAs in writing the <strong>Acceptance Criteria</strong> so that scenarios missed can be identified.</li>
-<li>Hold <strong>Story Kickoffs</strong> with a BA and the Developer that has picked up the story.</li>
-<li><strong>Pair</strong> with Developers in writing their tests.</li>
-<li>Don&#8217;t wait till stories are &#8220;Ready to Test&#8221;. Pull the latest and greatest on your local or Test Environment and <strong>start testing early</strong>! (No defects should be created at this time, simply notify the Devs about the issues/concerns found.)</li>
-<li>Once Dev&#8217;s believe that their stories are &#8220;Ready to Test&#8221;, hold <strong>Desk-checks</strong> with them and a BA to make sure that they&#8217;ve implemented the stories according to the Acceptance Criteria.</li>
-<li><strong>Automate</strong> functional tests. (Pair with Devs as much as possible when doing this!)</li>
-<li>Perform <strong>Exploratory</strong> Testing on stories and push back stories when blocking issues associated to the stories are found.</li>
-<li>Log <strong>Defects</strong> for issues not blocking stories or those that are new/regression issues.</li>
-<li>Encourage the client to verify stories on Pre-Production and to push to Production as often as possible.</li>
-<li>Perform <strong>Smoke Tests</strong> on the Production Environment.</li>
-<li>Pair with <strong>Dev Ops</strong> to make sure the necessary Environments are created with appropriate data and automated tests.</li>
+<li>Change/fix the page so that the user can click on the link in the middle.</li>
+<li>Use the advanced user interactions API to click at the appropriate place in the link. e.g., ActionChains(w).move_to_element_with_offset(link, 0, 20).click().perform()</li>
 </ul>
-
+</blockquote>
 </div>
 
 
@@ -149,7 +174,7 @@
   
 
 
-<time datetime="2012-07-01T22:54:00-07:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+<time datetime="2012-07-11T00:05:00-07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
       
 
 
@@ -157,7 +182,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/07/01/tester-role/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/07/01/tester-role/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/" >Tweet</a>
   
   
   
@@ -166,7 +191,7 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/06/11/capybara-tutorial-using-irb/" title="Previous Post: Capybara tutorial using irb">&laquo; Capybara tutorial using irb</a>
+        <a class="basic-alignment left" href="/blog/2012/06/24/capybara-tutorial-using-irb/" title="Previous Post: Capybara tutorial using irb">&laquo; Capybara tutorial using irb</a>
       
       
     </p>
@@ -182,11 +207,15 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/07/01/tester-role/">The Tester Role on an Agile Project</a>
+        <a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Firefox vs ChromeDriver</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/06/11/capybara-tutorial-using-irb/">Capybara tutorial using irb</a>
+        <a href="/blog/2012/06/24/capybara-tutorial-using-irb/">Capybara tutorial using irb</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/11/tester-role/">The Tester Role on an Agile Project</a>
       </li>
     
       <li class="post">
