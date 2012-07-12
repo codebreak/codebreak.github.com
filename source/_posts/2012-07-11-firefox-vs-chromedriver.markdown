@@ -12,7 +12,7 @@ Recently, I heard rumors that ChromeDriver is "Faster" than Firefox. So, like th
 
 ### Setting up Cucumber to use ChromeDriver
 
-Replace the driver definition from:
+To make the switch, all I had to do was replace the driver definition from:
 	Capybara.current_driver = :selenium	
 to:
 	Capybara.register_driver :chrome do |app|
@@ -21,12 +21,6 @@ to:
 	Capybara.javascript_driver = :chrome
 
 Then in all my Cucumber feature files, I added the tag @javascript:
-	@javascript
-	Feature: Logging into the application
-	
-	Scenario:
-		Given I am logged in successfully
-		Then I can use the app
 
 ### Re-run Cucumber Feature Files
 
