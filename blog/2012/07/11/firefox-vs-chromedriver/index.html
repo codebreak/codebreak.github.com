@@ -114,7 +114,7 @@
 
 <h3>Setting up Cucumber to use ChromeDriver</h3>
 
-<p>Replace the driver definition from:</p>
+<p>To make the switch, all I had to do was replace the driver definition from:</p>
 
 <pre><code>Capybara.current_driver = :selenium 
 </code></pre>
@@ -128,14 +128,6 @@ Capybara.javascript_driver = :chrome
 </code></pre>
 
 <p>Then in all my Cucumber feature files, I added the tag @javascript:</p>
-
-<pre><code>@javascript
-Feature: Logging into the application
-
-Scenario:
-    Given I am logged in successfully
-    Then I can use the app
-</code></pre>
 
 <h3>Re-run Cucumber Feature Files</h3>
 
