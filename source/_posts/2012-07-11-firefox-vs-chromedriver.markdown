@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "WebDriver: Firefox vs ChromeDriver"
+title: "WebDriver: Making the switch to ChromeDriver"
 date: 2012-07-11 00:05
 comments: true
 categories: 
@@ -8,8 +8,11 @@ categories:
 
 On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox ... but I decided at the last minute to stick with Firefox.
 
-Recently, I heard rumors that ChromeDriver is "Faster" than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim. I did so by replacing the driver definition from:
+Recently, I heard rumors that ChromeDriver is "Faster" than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim. 
 
+### Setting up Cucumber to use ChromeDriver
+
+Replace the driver definition from:
 	Capybara.current_driver = :selenium	
 to:
 	Capybara.register_driver :chrome do |app|
@@ -24,6 +27,8 @@ Then in all my Cucumber feature files, I added the tag @javascript:
 	Scenario:
 		Given I am logged in successfully
 		Then I can use the app
+
+### Re-run Cucumber Feature Files
 
 When I re-ran my Cucumber Features files using ChromeDriver, I however came across a few errors:
 	
@@ -40,4 +45,6 @@ There are two ways to handle this currently:
 > * Change/fix the page so that the user can click on the link in the middle.
 > * Use the advanced user interactions API to click at the appropriate place in the link. e.g., ActionChains(w).move_to_element_with_offset(link, 0, 20).click().perform()
 
+### Speed Test Results: Firefox vs ChromeDriver
 
+After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was slightly faster than Firefox. Perhaps at a larger scale the difference is more significant. However, you must then consider whether speed is worth dealing with issues that seem to be ChromeDriver specific. 
