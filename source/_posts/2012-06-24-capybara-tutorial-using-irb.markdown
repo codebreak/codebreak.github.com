@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Capybara tutorial using irb"
-date: 2012-06-11 16:03
+date: 2012-06-24 16:03
 comments: true
 categories: 
 ---
