@@ -88,7 +88,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Firefox vs ChromeDriver</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Making the Switch to ChromeDriver</a></h1>
     
     
       <p class="meta">
@@ -113,7 +113,11 @@
 
   <div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &#8230; but I decided at the last minute to stick with Firefox.</p>
 
-<p>Recently, I heard rumors that ChromeDriver is &#8220;Faster&#8221; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim. I did so by replacing the driver definition from:</p>
+<p>Recently, I heard rumors that ChromeDriver is &#8220;Faster&#8221; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
+
+<h3>Setting up Cucumber to use ChromeDriver</h3>
+
+<p>Replace the driver definition from:</p>
 
 <pre><code>Capybara.current_driver = :selenium 
 </code></pre>
@@ -136,6 +140,8 @@ Scenario:
     Then I can use the app
 </code></pre>
 
+<h3>Re-run Cucumber Feature Files</h3>
+
 <p>When I re-ran my Cucumber Features files using ChromeDriver, I however came across a few errors:</p>
 
 <pre><code>focusElement execution failed;
@@ -155,6 +161,10 @@ There are two ways to handle this currently:</p>
 <li>Use the advanced user interactions API to click at the appropriate place in the link. e.g., ActionChains(w).move_to_element_with_offset(link, 0, 20).click().perform()</li>
 </ul>
 </blockquote>
+
+<h3>Speed Test Results: Firefox vs ChromeDriver</h3>
+
+<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was slightly faster than Firefox. Perhaps at a larger scale the difference is more significant. However, you must then consider whether speed is worth dealing with issues that seem to be ChromeDriver specific.</p>
 </div>
   
   
@@ -341,7 +351,7 @@ click_button 'Sign in'
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Firefox vs ChromeDriver</a>
+        <a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Making the switch to ChromeDriver</a>
       </li>
     
       <li class="post">
