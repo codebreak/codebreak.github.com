@@ -4,7 +4,7 @@
   <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2012-07-12T15:58:57-07:00</updated>
+  <updated>2012-07-24T14:52:25-05:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -14,9 +14,66 @@
 
   
   <entry>
+    <title type="html"><![CDATA[3 years @ ThoughtWorks]]></title>
+    <link href="http://codebreak.github.com/blog/2012/07/20/3-years-at-thoughtworks/"/>
+    <updated>2012-07-20T09:41:00-05:00</updated>
+    <id>http://codebreak.github.com/blog/2012/07/20/3-years-at-thoughtworks</id>
+    <content type="html"><![CDATA[<p>Over 3 years ago, after being laid off from a start up company then deciding to volunteer in Peru and backpack through South America for a few months - I was basking in the glory of <strong>FUNEMPLOYMENT</strong> when I came across an invitation to a &#8221;<strong>Super Saturday</strong>&#8221; interview event at <a href="https://www.thoughtworks.com">ThoughtWorks</a> - Chicago.</p>
+
+<p>I got flown in and put up at the Club Quarters Hotel in the heart of downtown Chicago. Then during the event, 30-40 candidates got divided into groups and spent the entire day meeting numerous ThoughtWorkers as well participate in various activities like a Lego game and a controversial group discussion. I really appreciated how the main purpose was to not only test my technical abilities but to also determine if I&#8217;m a good culture fit.</p>
+
+<blockquote><p>Never before have I been thoroughly impressed by the way a company hired people.</p></blockquote>
+
+<p>During my 3 year relationship with ThoughtWorks, I have worked on <strong>4 billable projects</strong> as well as numerous side projects in <strong>5 different countries</strong>. I have met countless intellectual co-workers (now friends) from all over the world and I can honestly say that I have learned something from each one of them.</p>
+
+<h4>Calgary, Canada Project</h4>
+
+<ul>
+<li>I learned quickly that ThoughtWorks is a flat organization and that though there are leads on a project, there is no need to sit around and wait for anyone to tell you what to do. You can (and should) simply just get up and start getting shit done.</li>
+<li>Got the chance to use QTP again.</li>
+</ul>
+
+
+<h4>San Francisco, California</h4>
+
+<ul>
+<li>First time I got to do some iPad application testing.</li>
+<li>Was lucky enough to be present during the creation of the iOS Test Automation Framework called <a href="http://testingwithfrank.com/">Frank</a> created by fellow ThoughtWorker <a href="http://blog.thepete.net/">Pete Hodgson</a>.</li>
+</ul>
+
+
+<h4>Melbourne, Australia</h4>
+
+<ul>
+<li>Another Mobile application both generic mobile and Native iOs application</li>
+<li>There are defined roles on a project but a role is not meant to be done by one person. The team should work together to fill in that role.</li>
+<li>Learned that consulting is hard.</li>
+</ul>
+
+
+<h4>Bangalore, India and Xian, China</h4>
+
+<ul>
+<li>Trainer</li>
+<li>Getting over my fear of public speaking.</li>
+</ul>
+
+
+<h4>San Francisco, California</h4>
+
+<ul>
+<li>Got the opportunity to play the BA role.</li>
+<li>Worked closely with DevOps.</li>
+<li>Realized the importance of an inception.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[WebDriver: Making the switch to ChromeDriver]]></title>
     <link href="http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/"/>
-    <updated>2012-07-11T00:05:00-07:00</updated>
+    <updated>2012-07-11T00:05:00-05:00</updated>
     <id>http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver</id>
     <content type="html"><![CDATA[<p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &#8230; but I decided at the last minute to stick with Firefox.</p>
 
@@ -63,14 +120,14 @@ There are two ways to handle this currently:</p>
 
 <h3>Speed Test Results: Firefox vs ChromeDriver</h3>
 
-<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was slightly faster than Firefox. Perhaps at a larger scale the difference is more significant. However, you must then consider whether speed is worth dealing with issues that seem to be ChromeDriver specific.</p>
+<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 - 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &#8230; you have to consider whether Chrome&#8217;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Capybara tutorial using irb]]></title>
     <link href="http://codebreak.github.com/blog/2012/06/24/capybara-tutorial-using-irb/"/>
-    <updated>2012-06-24T16:03:00-07:00</updated>
+    <updated>2012-06-24T16:03:00-05:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/24/capybara-tutorial-using-irb</id>
     <content type="html"><![CDATA[<p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
 
@@ -119,7 +176,7 @@ click_button 'Sign in'
   <entry>
     <title type="html"><![CDATA[The Tester Role on an Agile Project]]></title>
     <link href="http://codebreak.github.com/blog/2012/06/11/tester-role/"/>
-    <updated>2012-06-11T22:54:00-07:00</updated>
+    <updated>2012-06-11T22:54:00-05:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/11/tester-role</id>
     <content type="html"><![CDATA[<p>Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies and can depend on the tester or the unique dynamics of the team.</p>
 
@@ -127,7 +184,7 @@ click_button 'Sign in'
 <li>Show interest in participating on project <strong>Inceptions</strong> and always accept when invited!</li>
 <li>Provide tester input when the team is holding their story <strong>Estimation</strong> Sessions.</li>
 <li>Be present in team IPMs ( <strong>Iteration Planning Meetings</strong> ) to gain familiarity with the upcoming stories.</li>
-<li>Pair with the BAs in writing the <strong>Acceptance Criteria</strong> so that scenarios missed can be identified.</li>
+<li>Pair with the BAs in writing the <strong>Acceptance Criteria</strong> so that missed scenarios can be identified.</li>
 <li>Hold <strong>Story Kickoffs</strong> with a BA and the Developer that has picked up the story.</li>
 <li><strong>Pair</strong> with Developers in writing their tests.</li>
 <li>Don&#8217;t wait till stories are &#8220;Ready to Test&#8221;. Pull the latest and greatest on your local or Test Environment and <strong>start testing early</strong>! (No defects should be created at this time, simply notify the Devs about the issues/concerns found.)</li>
@@ -146,7 +203,7 @@ click_button 'Sign in'
   <entry>
     <title type="html"><![CDATA[Hello World!!]]></title>
     <link href="http://codebreak.github.com/blog/2012/06/07/hello-world/"/>
-    <updated>2012-06-07T00:05:00-07:00</updated>
+    <updated>2012-06-07T00:05:00-05:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/07/hello-world</id>
     <content type="html"><![CDATA[<p>Much love to @scottmuc for helping me setup my octopress blog!! :)</p>
 ]]></content>

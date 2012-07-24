@@ -2,26 +2,30 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://codebreak.github.com/blog/2012/06/07/hello-world/</loc>
-        <lastmod>2012-06-07T07:00:35-07:00</lastmod>
+        <lastmod>2012-06-07T09:00:35-05:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/blog/2012/06/11/tester-role/</loc>
-        <lastmod>2012-07-11T14:10:05-07:00</lastmod>
+        <lastmod>2012-07-20T16:52:55-05:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/blog/2012/06/24/capybara-tutorial-using-irb/</loc>
-        <lastmod>2012-07-11T14:10:00-07:00</lastmod>
+        <lastmod>2012-07-11T16:10:00-05:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/</loc>
-        <lastmod>2012-07-12T15:58:41-07:00</lastmod>
+        <lastmod>2012-07-20T16:46:18-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://codebreak.github.com/blog/2012/07/20/3-years-at-thoughtworks/</loc>
+        <lastmod>2012-07-23T09:58:30-05:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/blog/archives/</loc>
-        <lastmod>2012-07-12T15:58:41-07:00</lastmod>
+        <lastmod>2012-07-23T09:58:30-05:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/</loc>
-        <lastmod>2012-07-12T15:58:41-07:00</lastmod>
+        <lastmod>2012-07-23T09:58:30-05:00</lastmod>
     </url>
 </urlset>
