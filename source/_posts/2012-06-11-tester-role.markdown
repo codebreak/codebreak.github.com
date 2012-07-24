@@ -11,7 +11,7 @@ Below are examples of what I personally strive for when I'm on an agile project.
 * Show interest in participating on project **Inceptions** and always accept when invited! 
 * Provide tester input when the team is holding their story **Estimation** Sessions.
 * Be present in team IPMs ( **Iteration Planning Meetings** ) to gain familiarity with the upcoming stories.
-* Pair with the BAs in writing the **Acceptance Criteria** so that scenarios missed can be identified.
+* Pair with the BAs in writing the **Acceptance Criteria** so that missed scenarios can be identified.
 * Hold **Story Kickoffs** with a BA and the Developer that has picked up the story.
 * **Pair** with Developers in writing their tests. 
 * Don't wait till stories are "Ready to Test". Pull the latest and greatest on your local or Test Environment and **start testing early**! (No defects should be created at this time, simply notify the Devs about the issues/concerns found.)

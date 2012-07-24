@@ -41,4 +41,4 @@ There are two ways to handle this currently:
 
 ### Speed Test Results: Firefox vs ChromeDriver
 
-After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was slightly faster than Firefox. Perhaps at a larger scale the difference is more significant. However, you must then consider whether speed is worth dealing with issues that seem to be ChromeDriver specific. 
+After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 - 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end ... you have to consider whether Chrome's speedy performance is worth dealing with the issues that seem to be ChromeDriver specific. 
