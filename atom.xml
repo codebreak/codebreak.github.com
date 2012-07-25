@@ -4,7 +4,7 @@
   <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2012-07-24T15:11:43-05:00</updated>
+  <updated>2012-07-24T23:31:32-05:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -20,56 +20,83 @@
     <id>http://codebreak.github.com/blog/2012/07/20/3-years-at-thoughtworks</id>
     <content type="html"><![CDATA[<p>Over 3 years ago, after being laid off from a start up company then deciding to volunteer in Peru and backpack through South America for a few months - I was basking in the glory of <strong>FUNEMPLOYMENT</strong> when I came across an invitation to a &#8221;<strong>Super Saturday</strong>&#8221; interview event at <a href="https://www.thoughtworks.com">ThoughtWorks</a> - Chicago.</p>
 
-<p>I got flown in and put up at the Club Quarters Hotel in the heart of downtown Chicago. Then during the event, 30-40 candidates got divided into groups and spent the entire day meeting numerous ThoughtWorkers as well participate in various activities like a Lego game and a controversial group discussion. I really appreciated how the main purpose was to not only test my technical abilities but to also determine if I&#8217;m a good culture fit.</p>
+<p>I got flown in and put up at the Club Quarters Hotel in the heart of downtown Chicago. Then during the event, 30-40 candidates got divided into groups and spent the entire day meeting numerous ThoughtWorkers as well participate in various activities like a Lego game and a controversial group discussion.</p>
 
-<blockquote><p>Never before have I been thoroughly impressed by the way a company hired people.</p></blockquote>
+<blockquote><p>I really appreciated how the main purpose was to not only test my technical abilities but to also determine if I&#8217;m a good culture fit. Never before have I been thoroughly impressed by the way a company hired people.</p></blockquote>
 
 <p>During my 3 year relationship with ThoughtWorks, I have worked on <strong>4 billable projects</strong> as well as numerous side projects in <strong>5 different countries</strong>. I have met countless intellectual co-workers (now friends) from all over the world and I can honestly say that I have learned something from each one of them.</p>
 
-<h4>Calgary, Canada</h4>
+<h4>Assignment in Calgary, Canada</h4>
 
 <ul>
-<li>I learned quickly that ThoughtWorks is a flat organization and that though there are leads on a project, there is no need to sit around and wait for anyone to tell you what to do. You can (and should) simply just get up and start getting shit done.</li>
-<li>Got the chance to use QTP again &#8230; and I am now over it.</li>
-<li>Got to work with a dominantly ThoughtWorks team and learned so much about an array of different roles from amazing people like Jane Robarts (Delivery Assurance and my original sponsor), Mikey Aquilar (Project Coach and my current sponsor), Vijay Seetaram (Iteration Manager), JJ, and Radu Muresan (kick ass DEV).</li>
-<li>ThoughtWorks deemed the project &#8220;successful&#8221; considering we delivered what we said we would - the company division has however been shut down.</li>
+<li><strong><em>Test Stack</em>:</strong> QTP for test automation</li>
+<li><strong><em>Learnings</em>:</strong>
+
+<ul>
+<li>On my very first project, I had the opportunity to work with a dominantly ThoughtWorks team and learn so much about an array of different roles from amazing people like Jane Robarts (Delivery Assurance and my original sponsor), Mikey Aquilar (Project Coach and my current sponsor), Vijay Seetaram (Iteration Manager), Juanjuan Zang (BA), and Radu Muresan (kick ass DEV).</li>
+<li>Within just a few days, it also became apparent that ThoughtWorks is a flat organization and that though there are leads on a project, there is no need to sit around and wait for anyone to tell you what to do. You can (and should) simply just get up and start getting shit done.</li>
+</ul>
+</li>
+<li><strong><em>Project Status</em>:</strong> ThoughtWorks deemed the project &#8220;successful&#8221; considering we delivered what we said we would - the company division has however been shut down.</li>
 </ul>
 
 
-<h4>San Francisco, California</h4>
+<h4>Assignment in San Francisco, California</h4>
 
 <ul>
-<li>First time I got to do some iPad application testing.</li>
+<li><strong><em>Test Stack</em>:</strong> Ruby/RSpec, Cucumber &amp; Frank (iOS)</li>
+<li><strong><em>Learnings</em>:</strong>
+
+<ul>
 <li>Was lucky enough to be present during the creation of the iOS Test Automation Framework called <a href="http://testingwithfrank.com/">Frank</a> created by fellow ThoughtWorker <a href="http://blog.thepete.net/">Pete Hodgson</a>.</li>
-<li>Product Successfully launched and is currently one of the top 100 iPad apps in the AppleStore.</li>
+</ul>
+</li>
+<li><strong><em>Project Status</em>:</strong> Product Successfully launched and is currently one of the top 100 iPad apps in the AppleStore.</li>
 </ul>
 
 
-<h4>Melbourne, Australia</h4>
+<h4>Assignment in Melbourne, Australia</h4>
 
 <ul>
-<li>Another Mobile application both generic mobile and Native iOs application.</li>
-<li>Got some experience in doing some API Testing.</li>
-<li>There are defined roles on a project but a role is not meant to be done by one person. The team should work together to fill in that role.</li>
+<li><strong><em>Test Stack</em>:</strong> Ruby/RSpec, Cucumber, Capybara &amp; WebDriver</li>
+<li><strong><em>Learnings</em>:</strong>
+
+<ul>
+<li>Mobile (non-native app) automated tests are easy to write when using the Web Browser. But, manual testing will always need to be done on an actual device which can eventually become cumbersome.</li>
+<li>Meticulous implementation/testing is important - however, one should consider being a bit more lenient when dealing with mobile apps where an app&#8217;s average life expectancy is 14 about months.</li>
 <li>Learned that consulting is hard and that before you can be taken seriously &#8230; you need to earn the client&#8217;s trust first.</li>
-<li>Delivered a product on time with high quality - however, the client overlooked having a proper marketing strategy and the product was scrapped.</li>
+<li>There are defined roles on a project but a role is not meant to be done by one person. The team should work together to fill in each role.</li>
+</ul>
+</li>
 </ul>
 
 
-<h4>Bangalore, India and Xian, China</h4>
+<h4>Assignment in Bangalore, India and Xian, China</h4>
 
 <ul>
-<li>Trainer</li>
-<li>Getting over my fear of public speaking.</li>
+<li><strong><em>Test Stack</em>:</strong> Python, Django</li>
+<li><strong><em>Learnings</em>:</strong>
+
+<ul>
+<li>Make a few changes in your teaching style when english is not the first language of those you are teaching.</li>
+<li>Speaking in public is not so hard when you take your time &#8230; and picture the audience is naked.</li>
+</ul>
+</li>
+<li><strong><em>Project Status</em>:</strong> 15 new ThoughtWorkers were released to the world and the project we worked on is currently still getting worked on by a team in Pune, India.</li>
 </ul>
 
 
-<h4>San Francisco, California</h4>
+<h4>Assignment in San Francisco/Los Angeles, California</h4>
 
 <ul>
-<li>Got the opportunity to play the BA/IM role.</li>
-<li>Worked closely with the Dev Team and DevOps guy - Scott Muc</li>
+<li><strong><em>Test Stack</em>:</strong> Ruby, Cucumber, Capybara, WebDriver &amp; Frank</li>
+<li><strong><em>Learnings</em>:</strong>
+
+<ul>
+<li>Releasing a product SOONER provides feedback and is much more effective than striving for perfection before launching.</li>
 <li>Realized the importance of an inception.</li>
+</ul>
+</li>
 </ul>
 
 ]]></content>
