@@ -34,6 +34,7 @@ During my 3 year relationship with ThoughtWorks, I have worked on **4 billable p
 	* Meticulous implementation/testing is important - however, one should consider being a bit more lenient when dealing with mobile apps where an app's average life expectancy is 14 about months. 
 	* Learned that consulting is hard and that before you can be taken seriously ... you need to earn the client's trust first.
 	* There are defined roles on a project but a role is not meant to be done by one person. The team should work together to fill in each role.
+* **_Project Status_:** The team successfully delivered the product as specified by the client however, the client had no marketing strategy to move forward and in the end the product was scrapped.
 
 #### Assignment in Bangalore, India and Xian, China
 * **_Test Stack_:** Python, Django
@@ -47,3 +48,4 @@ During my 3 year relationship with ThoughtWorks, I have worked on **4 billable p
 * **_Learnings_:**
 	* Releasing a product SOONER provides feedback and is much more effective than striving for perfection before launching.
 	* Realized the importance of an inception.
+* **_Project Status_:** ThoughtWorks has handed over the working application to the client and we believe implementation is currently still in progress.
