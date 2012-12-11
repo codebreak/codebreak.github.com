@@ -9,7 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test &hellip;">
+  <meta name="description" content="Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +88,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/06/24/capybara-tutorial-using-irb/">Capybara Tutorial Using Irb</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/06/11/tester-role/">The Tester Role on an Agile Project</a></h1>
     
     
       <p class="meta">
@@ -104,54 +104,32 @@
   
 
 
-<time datetime="2012-06-24T16:03:00-07:00" pubdate data-updated="true">Jun 24<span>th</span>, 2012</time>
+<time datetime="2012-06-11T22:54:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
+  <div class="entry-content"><p>Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies and can depend on the tester or the unique dynamics of the team.</p>
 
-<p>To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)</p>
+<ul>
+<li>Show interest in participating on project <strong>Inceptions</strong> and always accept when invited!</li>
+<li>Provide tester input when the team is holding their story <strong>Estimation</strong> Sessions.</li>
+<li>Be present in team IPMs ( <strong>Iteration Planning Meetings</strong> ) to gain familiarity with the upcoming stories.</li>
+<li>Pair with the BAs in writing the <strong>Acceptance Criteria</strong> so that missed scenarios can be identified.</li>
+<li>Hold <strong>Story Kickoffs</strong> with a BA and the Developer that has picked up the story.</li>
+<li><strong>Pair</strong> with Developers in writing their tests.</li>
+<li>Don&#8217;t wait till stories are &#8220;Ready to Test&#8221;. Pull the latest and greatest on your local or Test Environment and <strong>start testing early</strong>! (No defects should be created at this time, simply notify the Devs about the issues/concerns found.)</li>
+<li>Once Dev&#8217;s believe that their stories are &#8220;Ready to Test&#8221;, hold <strong>Desk-checks</strong> with them and a BA to make sure that they&#8217;ve implemented the stories according to the Acceptance Criteria.</li>
+<li><strong>Automate</strong> functional tests. (Pair with Devs as much as possible when doing this!)</li>
+<li>Perform <strong>Exploratory</strong> Testing on stories and push back stories when blocking issues associated to the stories are found.</li>
+<li>Log <strong>Defects</strong> for issues not blocking stories or those that are new/regression issues.</li>
+<li>Encourage the client to verify stories on Pre-Production and to push to Production as often as possible.</li>
+<li>Perform <strong>Smoke Tests</strong> on the Production Environment.</li>
+<li>Pair with <strong>Dev Ops</strong> to make sure the necessary Environments are created with appropriate data and automated tests.</li>
+</ul>
 
-<pre><code>rvm use 1.9.2@cucumberplay --create
-</code></pre>
-
-<p>Install <a href="https://github.com/jnicklas/capybara/">Capybara</a> if you haven&#8217;t already.</p>
-
-<pre><code>gem install capybara
-</code></pre>
-
-<p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
-
-<pre><code>irb -r rubygems -r capybara -r capybara/dsl
-</code></pre>
-
-<p>Include Cabybara DSL:</p>
-
-<pre><code>include Capybara::DSL
-</code></pre>
-
-<p>Set the default driver.</p>
-
-<pre><code>Capybara.default_driver = :selenium
-</code></pre>
-
-<p>Now test that capybara commands work by visiting google</p>
-
-<pre><code>visit "http://www.google.com"
-</code></pre>
-
-<h2>Here&#8217;s an example for logging into GMAIL</h2>
-
-<pre><code>visit "http://www.gmail.com"
-page.has_content?("A Google approach to email.")
-
-fill_in 'Email', :with =&gt; "johnjames4343@gmail.com"
-fill_in 'Passwd', :with =&gt; "johnjames4u"
-click_button 'Sign in'
-</code></pre>
 </div>
   
   
@@ -176,10 +154,6 @@ click_button 'Sign in'
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/09/26/women-presenters/">Women presenters and lack thereof</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2012/07/20/3-years-at-thoughtworks/">3 years @ ThoughtWorks</a>
       </li>
     
@@ -193,6 +167,10 @@ click_button 'Sign in'
     
       <li class="post">
         <a href="/blog/2012/06/11/tester-role/">The Tester Role on an Agile Project</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/07/hello-world/">Hello World!!</a>
       </li>
     
   </ul>
