@@ -9,7 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="After months of planning with my amazing colleagues - Annie Conn, Bonna Choi, and Nancy Chu - we successfully organized the first ever ThoughtWorks &hellip;">
+  <meta name="description" content="At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +88,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/26/first-technical-talk/">Women Presenters and Lack Thereof</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/06/24/capybara-tutorial-using-irb/">Capybara Tutorial Using Irb</a></h1>
     
     
       <p class="meta">
@@ -104,55 +104,54 @@
   
 
 
-<time datetime="2012-09-26T15:50:00-07:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
+<time datetime="2012-06-24T16:03:00-07:00" pubdate data-updated="true">Jun 24<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/"><img class="right" src="https://evbdn.eventbrite.com/s3-s3/eventlogos/6471833/screenshot20120828at8.06.17pm.png.jpg" width="200" height="200"></a></p>
+  <div class="entry-content"><p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
 
-<p>After months of planning with my amazing colleagues - <a href="https://twitter.com/AConnJob">Annie Conn</a>, <a href="http://www.bonnachoi.com">Bonna Choi</a>, and <a href="http://www.nanchu.me/">Nancy Chu</a> - we successfully organized the first ever <a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/">ThoughtWorks sponsored Girl Geek Dinner.</a></p>
+<p>To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)</p>
 
-<p>Once the venue, catering, and audio/equipment rentals were confirmed &#8230; the next thing on my list was to find <strong>WOMEN</strong> speakers. Much to my surprise this was the hardest part of the organizing bit! When I thought about who I&#8217;d want to invite to be one of my speakers, I quickly thought of our Chief Technology Officer - <a href="http://join.thoughtworks.com/profiles/rebecca-parsons">Rebecca Parsons</a>. After jotting down Rebecca, I remember having to really think hard about my next set of speaker prospects. Though I eventually came up with 4-5 potential ThoughtWorks women speakers, all of them were out of state! Ideally, I could have flown them in but that&#8217;s not very cost effective especially when each talk would range anywhere from 5-10 mins.</p>
+<pre><code>rvm use 1.9.2@cucumberplay --create
+</code></pre>
 
-<p>In the end, I decided to look within the ThoughtWorks San Francisco community. Aside from the fact that they were out of town the day of the event, many gave me the following excuses:</p>
+<p>Install <a href="https://github.com/jnicklas/capybara/">Capybara</a> if you haven&#8217;t already.</p>
 
-<ol>
-<li>I can&#8217;t I&#8217;m not in town that day.</li>
-<li>I don&#8217;t know what to talk about.</li>
-</ol>
+<pre><code>gem install capybara
+</code></pre>
 
+<p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
 
-<blockquote><p>I&#8217;ve never done a talk in front of a large audience before and I&#8217;m utterly terrified of speaking in public.</p></blockquote>
+<pre><code>irb -r rubygems -r capybara -r capybara/dsl
+</code></pre>
 
-<p>Where are the women presenters?</p>
+<p>Include Cabybara DSL:</p>
 
-<p>Thought about flying people in.
-Some had things they wanted to talk about but were too afraid to do the talk. Nervous, no experience.</p>
+<pre><code>include Capybara::DSL
+</code></pre>
 
-<p>Tips:</p>
+<p>Set the default driver.</p>
 
-<h2>Jump at the opportunity</h2>
+<pre><code>Capybara.default_driver = :selenium
+</code></pre>
 
-<h2>Practice!</h2>
+<p>Now test that capybara commands work by visiting google</p>
 
-<h2>Engage the audience.</h2>
+<pre><code>visit "http://www.google.com"
+</code></pre>
 
-<h2>Speak slowly and annunciate</h2>
+<h2>Here&#8217;s an example for logging into GMAIL</h2>
 
-<h2>Don&#8217;t read</h2>
+<pre><code>visit "http://www.gmail.com"
+page.has_content?("A Google approach to email.")
 
-<h2>Look up</h2>
-
-<h2>Focus on one person. talk as if you&#8217;re talking to them.</h2>
-
-<h2>Make it fun!</h2>
-
-<h2>Use simple slides</h2>
-
-<h3>include photos</h3>
+fill_in 'Email', :with =&gt; "johnjames4343@gmail.com"
+fill_in 'Passwd', :with =&gt; "johnjames4u"
+click_button 'Sign in'
+</code></pre>
 </div>
   
   
@@ -177,23 +176,23 @@ Some had things they wanted to talk about but were too afraid to do the talk. Ne
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/12/08/suggestotron/">Suggestotron</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/08/ios-testing-w-slash-frank/">iOS Testing w/ Frank</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/26/first-technical-talk/">Women presenters and lack thereof</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2012/07/20/3-years-at-thoughtworks/">3 years @ ThoughtWorks</a>
       </li>
     
       <li class="post">
         <a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Making the switch to ChromeDriver</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/24/capybara-tutorial-using-irb/">Capybara tutorial using irb</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/11/tester-role/">The Tester Role on an Agile Project</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/07/hello-world/">Hello World!!</a>
       </li>
     
   </ul>

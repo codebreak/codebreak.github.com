@@ -4,7 +4,7 @@
   <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2012-12-10T19:35:10-08:00</updated>
+  <updated>2012-12-10T19:41:22-08:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -12,104 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Suggestotron]]></title>
-    <link href="http://codebreak.github.com/blog/2012/12/08/suggestotron/"/>
-    <updated>2012-12-08T15:47:00-08:00</updated>
-    <id>http://codebreak.github.com/blog/2012/12/08/suggestotron</id>
-    <content type="html"><![CDATA[<p>Pretty up git log
-http://www.jukie.net/bart/blog/pimping-out-git-log</p>
-
-<p>Set up rmvrc to switch to correct ruby when entering a project folder.</p>
-
-<p>Add authentication using Devise to Author&#8217;s page.
-- https://github.com/plataformatec/devise</p>
-
-<p>Added Users
-Created a migration using devise rake task
-Added logout to the layout so that its on every page
-diff &#8211;git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb</p>
-
-<p>show logout if user is logged in:
-+&lt;%=link_to &#8216;Logout&#8217;, destroy_user_session_path, :method => :delete if user_signed_in?%></p>
-
-<p>destroy_user_session_path //(used rake routes)
-:method => :delete if user_signed_in?%> //(standard rails)</p>
-
-<hr />
-
-<p>Rails knows about controller and view
-Controller: knows about Model</p>
-
-<p>Get rid of Authors
-- deleting files
-- created migration to drop table -> rake db:migrate</p>
-
-<p>Associate Topics to Users</p>
-
-<p>View Users Names Only</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[iOS Testing w/ Frank]]></title>
-    <link href="http://codebreak.github.com/blog/2012/10/08/ios-testing-w-slash-frank/"/>
-    <updated>2012-10-08T17:27:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/10/08/ios-testing-w-slash-frank</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Women presenters and lack thereof]]></title>
-    <link href="http://codebreak.github.com/blog/2012/09/26/first-technical-talk/"/>
-    <updated>2012-09-26T15:50:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/09/26/first-technical-talk</id>
-    <content type="html"><![CDATA[<p><a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/"><img class="right" src="https://evbdn.eventbrite.com/s3-s3/eventlogos/6471833/screenshot20120828at8.06.17pm.png.jpg" width="200" height="200"></a></p>
-
-<p>After months of planning with my amazing colleagues - <a href="https://twitter.com/AConnJob">Annie Conn</a>, <a href="http://www.bonnachoi.com">Bonna Choi</a>, and <a href="http://www.nanchu.me/">Nancy Chu</a> - we successfully organized the first ever <a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/">ThoughtWorks sponsored Girl Geek Dinner.</a></p>
-
-<p>Once the venue, catering, and audio/equipment rentals were confirmed &#8230; the next thing on my list was to find <strong>WOMEN</strong> speakers. Much to my surprise this was the hardest part of the organizing bit! When I thought about who I&#8217;d want to invite to be one of my speakers, I quickly thought of our Chief Technology Officer - <a href="http://join.thoughtworks.com/profiles/rebecca-parsons">Rebecca Parsons</a>. After jotting down Rebecca, I remember having to really think hard about my next set of speaker prospects. Though I eventually came up with 4-5 potential ThoughtWorks women speakers, all of them were out of state! Ideally, I could have flown them in but that&#8217;s not very cost effective especially when each talk would range anywhere from 5-10 mins.</p>
-
-<p>In the end, I decided to look within the ThoughtWorks San Francisco community. Aside from the fact that they were out of town the day of the event, many gave me the following excuses:</p>
-
-<ol>
-<li>I can&#8217;t I&#8217;m not in town that day.</li>
-<li>I don&#8217;t know what to talk about.</li>
-</ol>
-
-
-<blockquote><p>I&#8217;ve never done a talk in front of a large audience before and I&#8217;m utterly terrified of speaking in public.</p></blockquote>
-
-<p>Where are the women presenters?</p>
-
-<p>Thought about flying people in.
-Some had things they wanted to talk about but were too afraid to do the talk. Nervous, no experience.</p>
-
-<p>Tips:</p>
-
-<h2>Jump at the opportunity</h2>
-
-<h2>Practice!</h2>
-
-<h2>Engage the audience.</h2>
-
-<h2>Speak slowly and annunciate</h2>
-
-<h2>Don&#8217;t read</h2>
-
-<h2>Look up</h2>
-
-<h2>Focus on one person. talk as if you&#8217;re talking to them.</h2>
-
-<h2>Make it fun!</h2>
-
-<h2>Use simple slides</h2>
-
-<h3>include photos</h3>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[3 years @ ThoughtWorks]]></title>
