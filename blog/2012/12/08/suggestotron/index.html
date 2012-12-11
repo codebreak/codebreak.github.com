@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World!! - codebreak.er</title>
+  <title>Suggestotron - codebreak.er</title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Much love to @scottmuc for helping me setup my octopress blog!! :)
-">
+  <meta name="description" content="Pretty up git log
+http://www.jukie.net/bart/blog/pimping-out-git-log Set up rmvrc to switch to correct ruby when entering a project folder. Add &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/2012/06/07/hello-world/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/2012/12/08/suggestotron/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -86,7 +86,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World!!</h1>
+      <h1 class="entry-title">Suggestotron</h1>
     
     
       <p class="meta">
@@ -102,14 +102,44 @@
   
 
 
-<time datetime="2012-06-07T00:05:00-07:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
+<time datetime="2012-12-08T15:47:00-08:00" pubdate data-updated="true">Dec 8<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Much love to @scottmuc for helping me setup my octopress blog!! :)</p>
+<div class="entry-content"><p>Pretty up git log
+http://www.jukie.net/bart/blog/pimping-out-git-log</p>
+
+<p>Set up rmvrc to switch to correct ruby when entering a project folder.</p>
+
+<p>Add authentication using Devise to Author&#8217;s page.
+- https://github.com/plataformatec/devise</p>
+
+<p>Added Users
+Created a migration using devise rake task
+Added logout to the layout so that its on every page
+diff &#8211;git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb</p>
+
+<p>show logout if user is logged in:
++&lt;%=link_to &#8216;Logout&#8217;, destroy_user_session_path, :method => :delete if user_signed_in?%></p>
+
+<p>destroy_user_session_path //(used rake routes)
+:method => :delete if user_signed_in?%> //(standard rails)</p>
+
+<hr />
+
+<p>Rails knows about controller and view
+Controller: knows about Model</p>
+
+<p>Get rid of Authors
+- deleting files
+- created migration to drop table -> rake db:migrate</p>
+
+<p>Associate Topics to Users</p>
+
+<p>View Users Names Only</p>
 </div>
 
 
@@ -132,7 +162,7 @@
   
 
 
-<time datetime="2012-06-07T00:05:00-07:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
+<time datetime="2012-12-08T15:47:00-08:00" pubdate data-updated="true">Dec 8<span>th</span>, 2012</time>
       
 
 
@@ -140,7 +170,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/06/07/hello-world/" data-via="hiyasmind" data-counturl="http://codebreak.github.com/blog/2012/06/07/hello-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/12/08/suggestotron/" data-via="hiyasmind" data-counturl="http://codebreak.github.com/blog/2012/12/08/suggestotron/" >Tweet</a>
   
   
   
@@ -149,8 +179,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/10/08/ios-testing-w-slash-frank/" title="Previous Post: iOS Testing w/ Frank">&laquo; iOS Testing w/ Frank</a>
       
-        <a class="basic-alignment right" href="/blog/2012/06/11/tester-role/" title="Next Post: The Tester Role on an Agile Project">The Tester Role on an Agile Project &raquo;</a>
       
     </p>
   </footer>

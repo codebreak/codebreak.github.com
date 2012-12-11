@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World!! - codebreak.er</title>
+  <title>codebreak.er</title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Much love to @scottmuc for helping me setup my octopress blog!! :)
-">
+  <meta name="description" content="At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/2012/06/07/hello-world/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/page/6/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -81,12 +80,15 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article class="hentry" role="article">
+      <div class="blog-index">
   
+  
+  
+    <article>
+      
   <header>
     
-      <h1 class="entry-title">Hello World!!</h1>
+      <h1 class="entry-title"><a href="/blog/2012/06/24/capybara-tutorial-using-irb/">Capybara Tutorial Using Irb</a></h1>
     
     
       <p class="meta">
@@ -102,62 +104,71 @@
   
 
 
-<time datetime="2012-06-07T00:05:00-07:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
+<time datetime="2012-06-24T16:03:00-07:00" pubdate data-updated="true">Jun 24<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Much love to @scottmuc for helping me setup my octopress blog!! :)</p>
+  <div class="entry-content"><p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
+
+<p>To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)</p>
+
+<pre><code>rvm use 1.9.2@cucumberplay --create
+</code></pre>
+
+<p>Install <a href="https://github.com/jnicklas/capybara/">Capybara</a> if you haven&#8217;t already.</p>
+
+<pre><code>gem install capybara
+</code></pre>
+
+<p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
+
+<pre><code>irb -r rubygems -r capybara -r capybara/dsl
+</code></pre>
+
+<p>Include Cabybara DSL:</p>
+
+<pre><code>include Capybara::DSL
+</code></pre>
+
+<p>Set the default driver.</p>
+
+<pre><code>Capybara.default_driver = :selenium
+</code></pre>
+
+<p>Now test that capybara commands work by visiting google</p>
+
+<pre><code>visit "http://www.google.com"
+</code></pre>
+
+<h2>Here&#8217;s an example for logging into GMAIL</h2>
+
+<pre><code>visit "http://www.gmail.com"
+page.has_content?("A Google approach to email.")
+
+fill_in 'Email', :with =&gt; "johnjames4343@gmail.com"
+fill_in 'Passwd', :with =&gt; "johnjames4u"
+click_button 'Sign in'
+</code></pre>
 </div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">codebreaker</span></span>
-
-      
-
-
-
-
-
-
-
-
   
 
 
-<time datetime="2012-06-07T00:05:00-07:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
-      
-
-
-    </p>
+    </article>
+  
+  <div class="pagination">
     
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/06/07/hello-world/" data-via="hiyasmind" data-counturl="http://codebreak.github.com/blog/2012/06/07/hello-world/" >Tweet</a>
-  
-  
-  
-</div>
-
+      <a class="prev" href="/blog/page/7/">&larr; Older</a>
     
-    <p class="meta">
-      
-      
-        <a class="basic-alignment right" href="/blog/2012/06/11/tester-role/" title="Next Post: The Tester Role on an Agile Project">The Tester Role on an Agile Project &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/5/">Newer &rarr;</a>
+    
+  </div>
 </div>
-
 <aside class="sidebar">
   
     <section>
@@ -191,7 +202,7 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating...</li>
+    <li class="loading">Status updating&#8230;</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -210,7 +221,6 @@
 
   
 </aside>
-
 
     </div>
   </div>

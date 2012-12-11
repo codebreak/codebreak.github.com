@@ -101,7 +101,7 @@
   
 
 
-<time datetime="2012-06-11T22:54:00-05:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+<time datetime="2012-06-11T22:54:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
         
       </p>
     
@@ -149,7 +149,7 @@
   
 
 
-<time datetime="2012-06-11T22:54:00-05:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+<time datetime="2012-06-11T22:54:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
       
 
 
@@ -157,7 +157,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/06/11/tester-role/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/06/11/tester-role/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/06/11/tester-role/" data-via="hiyasmind" data-counturl="http://codebreak.github.com/blog/2012/06/11/tester-role/" >Tweet</a>
   
   
   
@@ -184,6 +184,18 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/08/suggestotron/">Suggestotron</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/08/ios-testing-w-slash-frank/">iOS Testing w/ Frank</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/26/first-technical-talk/">Women presenters and lack thereof</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/07/20/3-years-at-thoughtworks/">3 years @ ThoughtWorks</a>
       </li>
     
@@ -191,21 +203,25 @@
         <a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Making the switch to ChromeDriver</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2012/06/24/capybara-tutorial-using-irb/">Capybara tutorial using irb</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/11/tester-role/">The Tester Role on an Agile Project</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/07/hello-world/">Hello World!!</a>
-      </li>
-    
   </ul>
 </section>
 
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("hiyasmind", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/hiyasmind" class="twitter-follow-button" data-show-count="false">Follow @hiyasmind</a>
+  
+</section>
 
 
 
