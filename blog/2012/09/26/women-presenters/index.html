@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>WebDriver: Making the switch to ChromeDriver - codebreak.er</title>
+  <title>Women presenters and lack thereof - codebreak.er</title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default &hellip;">
+  <meta name="description" content="After months of planning with my amazing colleagues - Annie Conn, Bonna Choi, and Nancy Chu - we successfully organized the first ever ThoughtWorks &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/2012/09/26/women-presenters/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -85,7 +85,7 @@
   
   <header>
     
-      <h1 class="entry-title">WebDriver: Making the Switch to ChromeDriver</h1>
+      <h1 class="entry-title">Women Presenters and Lack Thereof</h1>
     
     
       <p class="meta">
@@ -101,59 +101,43 @@
   
 
 
-<time datetime="2012-07-11T00:05:00-07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
+<time datetime="2012-09-26T15:50:00-07:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &#8230; but I decided at the last minute to stick with Firefox.</p>
+<div class="entry-content"><p><a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/"><img class="right" src="https://evbdn.eventbrite.com/s3-s3/eventlogos/6471833/screenshot20120828at8.06.17pm.png.jpg" width="200" height="200"></a></p>
 
-<p>Recently, I heard rumors that ChromeDriver is &#8220;Faster&#8221; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
+<p>After months of planning with my amazing colleagues - <a href="https://twitter.com/AConnJob">Annie Conn</a>, <a href="http://www.bonnachoi.com">Bonna Choi</a>, and <a href="http://www.nanchu.me/">Nancy Chu</a> - we successfully organized the first ever <a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/">ThoughtWorks sponsored Girl Geek Dinner.</a></p>
 
-<h3>Setting up Cucumber to use ChromeDriver</h3>
+<p>Once the venue, catering, and audio/equipment rentals were confirmed &#8230; the next thing on my list was to find <strong>WOMEN</strong> speakers. Much to my surprise this was the hardest part of the organizing bit! When I thought about who I&#8217;d want to invite to be one of my speakers, I quickly thought of our Chief Technology Officer - <a href="http://join.thoughtworks.com/profiles/rebecca-parsons">Rebecca Parsons</a>. After jotting down Rebecca, I remember having to really think hard about my next set of speaker prospects. Though I eventually came up with 4-5 potential ThoughtWorks women speakers, all of them were out of state! Ideally, I could have flown them in but that&#8217;s not very cost effective especially when each talk would range anywhere from 5-10 mins.</p>
 
-<p>To make the switch, all I had to do was replace the driver definition from:</p>
+<p>In the end, I decided to look within the ThoughtWorks San Francisco community. By doing so, I was faced with a lot of the same excuses &#8230; <strong>&#8220;I can&#8217;t, I have other plans that day.&#8221;</strong>, <strong>&#8220;I would, but I don&#8217;t know what I&#8217;d talk about.&#8221;</strong> and perhaps the most common one of all (which coincidentally was my excuse initially) &#8230;</p>
 
-<pre><code>Capybara.current_driver = :selenium 
-</code></pre>
+<blockquote><p><strong>I&#8217;ve never done a talk in front of a large audience before and I&#8217;m utterly terrified of speaking in public.</strong></p></blockquote>
 
-<p>to:</p>
+<p>Where are the women presenters?</p>
 
-<pre><code>Capybara.register_driver :chrome do |app|
-    Capybara::Selenium::Driver.new(app, :browser =&gt; :chrome)
-  end
-Capybara.javascript_driver = :chrome
-</code></pre>
+<p>Thought about flying people in.
+Some had things they wanted to talk about but were too afraid to do the talk. Nervous, no experience.</p>
 
-<p>Then in all my Cucumber feature files, I added the tag @javascript:</p>
-
-<h3>Re-run Cucumber Feature Files</h3>
-
-<p>When I re-ran my Cucumber Features files using ChromeDriver, I however came across a few errors:</p>
-
-<pre><code>focusElement execution failed;
-   Failed to send keys because cannot focus element (Selenium::WebDriver::Error::UnknownError)
-</code></pre>
-
-<blockquote><p>Apparently, You can&#8217;t use send_keys for certain types of inputs. (Workaround - click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
-
-<pre><code>Element is not clickable at point (928, 23.5). Other element would receive the click
-</code></pre>
-
-<blockquote><p>ChromeDriver always clicks the middle of the element in attempt to be faithful to what an actual user does.
-There are two ways to handle this currently:</p>
+<p>Tips:</p>
 
 <ul>
-<li>Change/fix the page so that the user can click on the link in the middle.</li>
-<li>Use the advanced user interactions API to click at the appropriate place in the link. e.g., ActionChains(w).move_to_element_with_offset(link, 0, 20).click().perform()</li>
+<li>Jump at the opportunity</li>
+<li>Practice!</li>
+<li>Engage the audience.</li>
+<li>Speak slowly and annunciate</li>
+<li>Don&#8217;t read</li>
+<li>Look up</li>
+<li>Focus on one person. talk as if you&#8217;re talking to them.</li>
+<li>Make it fun!</li>
+<li>Use simple slides</li>
+<li>include photos</li>
 </ul>
-</blockquote>
 
-<h3>Speed Test Results: Firefox vs ChromeDriver</h3>
-
-<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 - 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &#8230; you have to consider whether Chrome&#8217;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
 </div>
 
 
@@ -176,15 +160,21 @@ There are two ways to handle this currently:</p>
   
 
 
-<time datetime="2012-07-11T00:05:00-07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
+<time datetime="2012-09-26T15:50:00-07:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/girl-geek-dinner/'>girl geek dinner</a>, <a class='category' href='/blog/categories/presenting/'>presenting</a>, <a class='category' href='/blog/categories/tech-talk/'>tech talk</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/09/26/women-presenters/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/09/26/women-presenters/" >Tweet</a>
   
   
   
@@ -193,10 +183,8 @@ There are two ways to handle this currently:</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/06/24/capybara-tutorial-using-irb/" title="Previous Post: Capybara tutorial using irb">&laquo; Capybara tutorial using irb</a>
+        <a class="basic-alignment left" href="/blog/2012/07/20/3-years-at-thoughtworks/" title="Previous Post: 3 years @ ThoughtWorks">&laquo; 3 years @ ThoughtWorks</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/07/20/3-years-at-thoughtworks/" title="Next Post: 3 years @ ThoughtWorks">3 years @ ThoughtWorks &raquo;</a>
       
     </p>
   </footer>
