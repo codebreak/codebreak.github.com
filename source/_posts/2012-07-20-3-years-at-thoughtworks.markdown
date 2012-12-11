@@ -14,7 +14,7 @@ I got flown in and put up at the Club Quarters Hotel in the heart of downtown Ch
 
 During my 3 year relationship with ThoughtWorks, I have worked on **4 billable projects** as well as numerous side projects in **5 different countries**. I have met countless intellectual co-workers (now friends) from all over the world and I can honestly say that I have learned something from each one of them. 
 
-## Assignment in Calgary, Canada
+## Assignment in Calgary, Canada (Oct09-March10)
 * **_Role_:** Tester
 * **_Test Stack_:** QTP for test automation
 * **_Learnings_:**
@@ -22,14 +22,15 @@ During my 3 year relationship with ThoughtWorks, I have worked on **4 billable p
 	* Within just a few days, it also became apparent that ThoughtWorks is a flat organization and that though there are leads on a project, there is no need to sit around and wait for anyone to tell you what to do. You can (and should) simply just get up and start getting shit done. 
 * **_Project Status_:** ThoughtWorks deemed the project "successful" considering we delivered what we said we would - the company division has however been shut down.
 
-## Assignment in San Francisco, California
+## Assignment in San Francisco, California (May-Sept10)
 * **_Role_:** Mobile Tester 
 * **_Test Stack_:** Ruby/RSpec, Cucumber & Frank (iOS)
 * **_Learnings_:**
-	* Was lucky enough to be present during the creation of the iOS Test Automation Framework called [Frank](http://testingwithfrank.com/) created by fellow ThoughtWorker [Pete Hodgson](http://blog.thepete.net/).
+	* Was lucky enough to be present during the creation of the iOS Test Automation Framework called [Frank](http://testingwithfrank.com/) created by fellow ThoughtWorker [Pete Hodgson](http://blog.thepete.net/) & Derek Longmuir.
+	* iOS application testing opens up an array of issues that greatly differ from web testing. (More on this later)
 * **_Project Status_:** Product Successfully launched and is currently one of the top 100 iPad apps in the AppleStore.
 
-## Assignment in Melbourne, Australia
+## Assignment in Melbourne, Australia (Oct10-June11)
 * **_Role_:** Tester and Coach
 * **_Test Stack_:** Ruby/RSpec, Cucumber, Capybara & WebDriver
 * **_Learnings_:**
@@ -39,18 +40,21 @@ During my 3 year relationship with ThoughtWorks, I have worked on **4 billable p
 	* There are defined roles on a project but a role is not meant to be done by one person. The team should work together to fill in each role.
 * **_Project Status_:** The team successfully delivered the product as specified by the client however, the client had no marketing strategy to move forward and in the end the product was scrapped.
 
-## Assignment in Bangalore, India and Xian, China
+## Assignment in Bangalore, India & Xian, China (Aug-Nov11)
 * **_Role_:** Coach and Trainer
 * **_Test Stack_:** Python, Django
 * **_Learnings_:**
+	* Distributed projects can work so long as you're in the same (or close enough) time zone so that can flow back and forth easily.
 	* Make a few changes in your teaching style when english is not the first language of those you are teaching.
-	* Speaking in public is not so hard when you take your time ... and picture the audience is naked.
+	* Speaking in public is not so hard when you take your time, practice ... and picture the audience is naked ... I mean, interested. 
+	* You need to toughen up to survive in China ... speaking the language can't hurt either.
 * **_Project Status_:** 15 new ThoughtWorkers were released to the world and the project we worked on is currently still getting worked on by a team in Pune, India.
 
-## Assignment in San Francisco/Los Angeles, California
+## Assignment in San Francisco & Los Angeles, California (Dec11-June12)
 * **_Role_:** Tester & Business Analyst
 * **_Test Stack_:** Ruby, Cucumber, Capybara, WebDriver & Frank (iOS Testing Tool)
 * **_Learnings_:**
 	* Releasing a product SOONER provides feedback and is much more effective than striving for perfection before launching.
-	* Realized the importance of an inception.
+	* Realized the importance of an inception to define some sort of an MVP (Minimal Viable Product).
+	* There needs to be an agreed upon plan to do proper hand over to increase the likelihood that it will be a sustainable project.
 * **_Project Status_:** ThoughtWorks has handed over the working application to the client and we believe implementation is currently still in progress.
