@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Encouraging more women to present"
+title: "Women & Presentations CAN mix"
 date: 2012-09-26 15:50
 comments: true
 categories: [tech talk, girl geek dinner, presenting]
@@ -44,11 +44,12 @@ Realizing that you have something worthwhile to say will help you gain the confi
 
 ## Tips for when you get nervous ...
 * If you get nervous (which I usually do right before I get up) I focus and control my breathing.
+* Find someone you know and just talk as if you're telling them a story. (If you don't know anyone ... try to find someone that looks nice and interested.)
 * Pump yourself up and remind your inner self that:
 	1. These people are here to learn from you ... not to judge you.
 	2. Your presentation is based on your experience, knowledge and quite frankly your own opinion or take on a specific topic. So technically you're the subject matter expert in the room!
-	3. This will be all over soon.
-* Find someone you know and just talk as if you're telling them a story. (If you don't know anyone ... try to find someone that looks nice and interested.)
+	3. This will be all over ... hang in there!
+
 
 
 
