@@ -12,7 +12,7 @@ After months of planning with my amazing colleagues - [Annie Conn](https://twitt
 
 Once the venue, catering, and audio/equipment rentals were confirmed ... the next thing on my list was to find **WOMEN** speakers. Much to my surprise this was the hardest part of the organizing bit! When I thought about who I'd want to invite to be one of my speakers, I quickly thought of our Chief Technology Officer - [Rebecca Parsons](http://join.thoughtworks.com/profiles/rebecca-parsons). After jotting down Rebecca, I remember having to really think hard about my next set of speaker prospects. Eventually, I came up with 4-5 potential ThoughtWorks women speakers but all of them were out of state! I could have flown them in but that was not very cost effective so I dropped that idea.
 
-Instead, I decided to look within the ThoughtWorks San Francisco community. By doing so, I was faced with a lot of the same excuses ... **"I can't, I have other plans that day."**, **"I would, but I don't know what I'd talk about."** and perhaps the most common one of all ...
+Instead, I decided to look within the ThoughtWorks San Francisco community. By doing so, I was faced with a lot of the same excuses ... **"I can't, I have other plans that day."**, **"I would, but I don't know what I'd talk about."** and perhaps the most common one of all (which coincidentally was my excuse as  well) ...
 
 > **I've never done a talk in front of a large audience and I'm utterly terrified of speaking in public.**
 
@@ -20,7 +20,11 @@ OK so you've never done it before. That's fine ... so let's start at a smaller s
 
 > **other's will learn and get inspired by the knowledge and experiences you've shared with them.**
 
-Realizing that you have something worthwhile to say will help you gain the confidence that you need to speak in front of people. Your experiences and lessons learned can serve as your topics. With your topics at hand and armed with confidence ... all that's really left is polishing up your presentation skills. 
+Realizing that you have something worthwhile to say will help you gain the **CONFIDENCE** that you need to speak in front of people. Your experiences and lessons learned can serve as your topics. With your topics at hand and armed with confidence ... all that's really left is polishing up your presentation skills. 
+
+Now don't be fooled ... when I signed up to do my **FIRST EVER** tech talk for Girl Geek Dinners I was not completely at ease. In fact I was still pretty nervous. But if there's one thing I've learned - like many people ...** I will always be nervous when it comes to speaking in front of people ** but I'm not going to let that prevent me from getting up there and doing it anyways! 
+
+So get out there, challenge your self by doing a presentation or 2. And maybe ... just maybe you'll get to a point where you're a little less nervous than when you first started.
 
 ## Step #1 Sign up for presentations
 
