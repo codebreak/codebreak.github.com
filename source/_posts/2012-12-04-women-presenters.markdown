@@ -49,7 +49,7 @@ Realizing that you have something worthwhile to say will help you gain the confi
 * Pump yourself up and remind your inner self that:
 	1. These people are here to learn from you ... not to judge you.
 	2. Your presentation is based on your experience, knowledge and quite frankly your own opinion or take on a specific topic. So technically you're the subject matter expert in the room!
-	3. This will be all over ... hang in there!
+	3. This will be all over soon ... hang in there!
 
 
 
