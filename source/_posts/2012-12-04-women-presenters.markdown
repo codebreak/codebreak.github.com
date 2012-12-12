@@ -25,6 +25,7 @@ Realizing that you have something worthwhile to say will help you gain the confi
 ## Step #1 Sign up for presentations
 
 * Teach or train a fellow team member.
+* Start [Pecha Kucka Nights](http://www.pecha-kucha.org/) with a group of people.
 * Hold workshops on topics that other people could benefit from.
 * Hold brown bags (people bring in lunch while someone does a presentation).
 * Participate in Lightning talks (Very short 5-10 min talks on a particular topic).
