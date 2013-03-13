@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>The Tester Role on an Agile Project - codebreak.er</title>
+  <title>Using RVM - codebreak.er</title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies &hellip;">
+  <meta name="description" content="RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&#8217;t around, having &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/2012/06/11/tester-role/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/2012/10/28/using-rvm/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -85,7 +85,7 @@
   
   <header>
     
-      <h1 class="entry-title">The Tester Role on an Agile Project</h1>
+      <h1 class="entry-title">Using RVM</h1>
     
     
       <p class="meta">
@@ -101,32 +101,70 @@
   
 
 
-<time datetime="2012-06-11T22:54:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+<time datetime="2012-10-28T09:36:00-07:00" pubdate data-updated="true">Oct 28<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies and can depend on the tester or the unique dynamics of the team.</p>
+<div class="entry-content"><p>RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&#8217;t around, having more than one version of Ruby on your system would be very difficult to deal with. RVM will allow you to have multiple installations of Ruby AND make it easy for you to switch back and forth.</p>
 
-<ul>
-<li>Show interest in participating on project <strong>Inceptions</strong> and always accept when invited!</li>
-<li>Provide tester input when the team is holding their story <strong>Estimation</strong> Sessions.</li>
-<li>Be present in team IPMs ( <strong>Iteration Planning Meetings</strong> ) to gain familiarity with the upcoming stories.</li>
-<li>Pair with the BAs in writing the <strong>Acceptance Criteria</strong> so that missed scenarios can be identified.</li>
-<li>Hold <strong>Story Kickoffs</strong> with a BA and the Developer that has picked up the story.</li>
-<li><strong>Pair</strong> with Developers in writing their tests.</li>
-<li>Don&#8217;t wait till stories are &#8220;Ready to Test&#8221;. Pull the latest and greatest on your local or Test Environment and <strong>start testing early</strong>! (No defects should be created at this time, simply notify the Devs about the issues/concerns found.)</li>
-<li>Once Dev&#8217;s believe that their stories are &#8220;Ready to Test&#8221;, hold <strong>Desk-checks</strong> with them and a BA to make sure that they&#8217;ve implemented the stories according to the Acceptance Criteria.</li>
-<li><strong>Automate</strong> functional tests. (Pair with Devs as much as possible when doing this!)</li>
-<li>Perform <strong>Exploratory</strong> Testing on stories and push back stories when blocking issues associated to the stories are found.</li>
-<li>Log <strong>Defects</strong> for issues not blocking stories or those that are new/regression issues.</li>
-<li>Encourage the client to verify stories on Pre-Production and to push to Production as often as possible.</li>
-<li>Perform <strong>Smoke Tests</strong> on the Production Environment.</li>
-<li>Pair with <strong>Dev Ops</strong> to make sure the necessary Environments are created with appropriate data and automated tests.</li>
-</ul>
+<p>To install a specific (1.9.3) Ruby interpreter:</p>
 
+<pre><code>rvm install 1.9.3
+</code></pre>
+
+<p>To check ruby version:</p>
+
+<pre><code>ruby -v
+</code></pre>
+
+<p>To check your current ruby path:</p>
+
+<pre><code>which ruby
+</code></pre>
+
+<p>To check current installed rubies:</p>
+
+<pre><code>rvm list
+</code></pre>
+
+<p>To use system ruby:</p>
+
+<pre><code>rvm use system
+</code></pre>
+
+<p>Before you can use a gemset, you must create it:</p>
+
+<pre><code>rvm use 1.9.3@biteme --create
+</code></pre>
+
+<p>To view your gemset list:</p>
+
+<pre><code>rvm gemset list
+</code></pre>
+
+<p>To use a gemset list:</p>
+
+<pre><code>rvm use 1.9.3@biteme
+</code></pre>
+
+<p>To delete a gemset:</p>
+
+<pre><code>rvm gemset delete biteme
+</code></pre>
+
+<p>To specify a &#8216;default&#8217; gemset for a given interpreter:</p>
+
+<pre><code>rvm use 1.9.3@biteme --default
+</code></pre>
+
+<p>To have it so that your gemset is automatically loaded when you enter a directory, you&#8217;ll need to create or add to your .rvmrc file &#8216;rvm use 1.9.3@biteme&#8217;</p>
+
+<pre><code>vi .rvmrc
+rvm use 1.9.3@biteme    
+</code></pre>
 </div>
 
 
@@ -149,7 +187,7 @@
   
 
 
-<time datetime="2012-06-11T22:54:00-07:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+<time datetime="2012-10-28T09:36:00-07:00" pubdate data-updated="true">Oct 28<span>th</span>, 2012</time>
       
 
 
@@ -157,7 +195,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/06/11/tester-role/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/06/11/tester-role/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/10/28/using-rvm/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/10/28/using-rvm/" >Tweet</a>
   
   
   
@@ -166,10 +204,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/06/07/hello-world/" title="Previous Post: Hello World!!">&laquo; Hello World!!</a>
+        <a class="basic-alignment left" href="/blog/2012/09/26/women-presenters/" title="Previous Post: Women & Presentations CAN mix">&laquo; Women & Presentations CAN mix</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/06/24/capybara-tutorial-using-irb/" title="Next Post: Capybara tutorial using irb">Capybara tutorial using irb &raquo;</a>
       
     </p>
   </footer>
