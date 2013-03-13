@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Using RVM"
+date: 2012-10-28 09:36
+comments: true
+categories: 
+---
+RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn't around, having more than one version of Ruby on your system would be very difficult to deal with. RVM will allow you to have multiple installations of Ruby AND make it easy for you to switch back and forth.
+
+To install a specific (1.9.3) Ruby interpreter:
+	rvm install 1.9.3
+
+To check ruby version:
+	ruby -v
+
+To check your current ruby path:
+	which ruby
+
+To check current installed rubies:
+	rvm list
+
+To use system ruby:
+	rvm use system
+
+Before you can use a gemset, you must create it:
+	rvm use 1.9.3@biteme --create
+
+To view your gemset list:
+	rvm gemset list
+
+To use a gemset list:
+	rvm use 1.9.3@biteme
+	
+To delete a gemset:
+	rvm gemset delete biteme
+
+To specify a 'default' gemset for a given interpreter:
+	rvm use 1.9.3@biteme --default
+	
+To have it so that your gemset is automatically loaded when you enter a directory, you'll need to create or add to your .rvmrc file 'rvm use 1.9.3@biteme'
+	vi .rvmrc
+	rvm use 1.9.3@biteme	

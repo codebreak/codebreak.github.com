@@ -24,7 +24,7 @@ Realizing that you have something worthwhile to say will help you gain the **CON
 
 Now don't be fooled ... when I signed up to do my **FIRST EVER** tech talk for Girl Geek Dinners I was not completely at ease. In fact I was still pretty nervous. But if there's one thing I've learned - like many people ...** I will always be nervous when it comes to speaking in front of people ** but I'm not going to let that prevent me from getting up there and doing it anyways! 
 
-So get out there, challenge your self by doing a presentation or 2. And maybe ... just maybe you'll get to a point where you're a little less nervous than when you first started.
+So get out there, challenge your self by doing a presentation or 2. And maybe ... just maybe you'll get to a point where you're a little less nervous than your very first presentation/talk.
 
 ## Step #1 Sign up for presentations
 
