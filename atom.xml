@@ -4,7 +4,7 @@
   <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2013-03-12T21:32:03-07:00</updated>
+  <updated>2013-03-14T08:51:39-07:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[fatal: The remote end hung up unexpectedly]]></title>
+    <link href="http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/"/>
+    <updated>2012-11-14T08:39:00-08:00</updated>
+    <id>http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly</id>
+    <content type="html"><![CDATA[<p>Lately I&#8217;ve been working on a client site &#8230; which entails having to set some proxies. I think for some reason this has conflicted with my github set up. The other day, when I tried a &#8216;git pull &#8211;rebase&#8217; I got the &#8216;fatal: The remote end hung up unexpectedly&#8217; error. This is what I did to fix the problem.</p>
+
+<p>I checked to see if I had any of my proxies set in my environment:</p>
+
+<pre><code>env | grep -i http
+</code></pre>
+
+<p>When I saw that they were set, I went ahead an unset them:</p>
+
+<pre><code>unset http_proxy
+unset https_proxy
+unset all_proxy
+</code></pre>
+
+<p>After unsetting them, I checked if I can do a &#8216;git pull &#8211;rebase&#8217; again. Sadly I still got the error. To get around this, I decided to try pulling using https instead of ssh. To do this, I first added it:</p>
+
+<pre><code>git remote add origin-https https://github.com/&lt;project_name&gt;/&lt;project_name.git&gt;
+</code></pre>
+
+<p>Doing so then allows you to pull from the remote set up &#8216;origin-https&#8217;. NOTE: Remember to specify the branch as well (In this case &#8216;master&#8217;).</p>
+
+<pre><code>git pull origin-https master
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using RVM]]></title>

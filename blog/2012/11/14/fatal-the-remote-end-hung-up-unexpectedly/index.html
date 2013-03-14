@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>codebreak.er</title>
+  <title>fatal: The remote end hung up unexpectedly - codebreak.er</title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default &hellip;">
+  <meta name="description" content="Lately I&#8217;ve been working on a client site &#8230; which entails having to set some proxies. I think for some reason this has conflicted with my &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/page/5/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,15 +80,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Making the Switch to ChromeDriver</a></h1>
+      <h1 class="entry-title">Fatal: The Remote End Hung Up Unexpectedly</h1>
     
     
       <p class="meta">
@@ -104,76 +101,84 @@
   
 
 
-<time datetime="2012-07-11T00:05:00-07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
+<time datetime="2012-11-14T08:39:00-08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &#8230; but I decided at the last minute to stick with Firefox.</p>
+<div class="entry-content"><p>Lately I&#8217;ve been working on a client site &#8230; which entails having to set some proxies. I think for some reason this has conflicted with my github set up. The other day, when I tried a &#8216;git pull &#8211;rebase&#8217; I got the &#8216;fatal: The remote end hung up unexpectedly&#8217; error. This is what I did to fix the problem.</p>
 
-<p>Recently, I heard rumors that ChromeDriver is &#8220;Faster&#8221; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
+<p>I checked to see if I had any of my proxies set in my environment:</p>
 
-<h3>Setting up Cucumber to use ChromeDriver</h3>
-
-<p>To make the switch, all I had to do was replace the driver definition from:</p>
-
-<pre><code>Capybara.current_driver = :selenium 
+<pre><code>env | grep -i http
 </code></pre>
 
-<p>to:</p>
+<p>When I saw that they were set, I went ahead an unset them:</p>
 
-<pre><code>Capybara.register_driver :chrome do |app|
-    Capybara::Selenium::Driver.new(app, :browser =&gt; :chrome)
-  end
-Capybara.javascript_driver = :chrome
+<pre><code>unset http_proxy
+unset https_proxy
+unset all_proxy
 </code></pre>
 
-<p>Then in all my Cucumber feature files, I added the tag @javascript:</p>
+<p>After unsetting them, I checked if I can do a &#8216;git pull &#8211;rebase&#8217; again. Sadly I still got the error. To get around this, I decided to try pulling using https instead of ssh. To do this, I first added it:</p>
 
-<h3>Re-run Cucumber Feature Files</h3>
-
-<p>When I re-ran my Cucumber Features files using ChromeDriver, I however came across a few errors:</p>
-
-<pre><code>focusElement execution failed;
-   Failed to send keys because cannot focus element (Selenium::WebDriver::Error::UnknownError)
+<pre><code>git remote add origin-https https://github.com/&lt;project_name&gt;/&lt;project_name.git&gt;
 </code></pre>
 
-<blockquote><p>Apparently, You can&#8217;t use send_keys for certain types of inputs. (Workaround - click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
+<p>Doing so then allows you to pull from the remote set up &#8216;origin-https&#8217;. NOTE: Remember to specify the branch as well (In this case &#8216;master&#8217;).</p>
 
-<pre><code>Element is not clickable at point (928, 23.5). Other element would receive the click
+<pre><code>git pull origin-https master
 </code></pre>
-
-<blockquote><p>ChromeDriver always clicks the middle of the element in attempt to be faithful to what an actual user does.
-There are two ways to handle this currently:</p>
-
-<ul>
-<li>Change/fix the page so that the user can click on the link in the middle.</li>
-<li>Use the advanced user interactions API to click at the appropriate place in the link. e.g., ActionChains(w).move_to_element_with_offset(link, 0, 20).click().perform()</li>
-</ul>
-</blockquote>
-
-<h3>Speed Test Results: Firefox vs ChromeDriver</h3>
-
-<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 - 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &#8230; you have to consider whether Chrome&#8217;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">codebreaker</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2012-11-14T08:39:00-08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
   
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/6/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-    <a class="next" href="/blog/page/4/">Newer &rarr;</a>
-    
-  </div>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/" data-via="" data-counturl="http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/28/using-rvm/" title="Previous Post: Using RVM">&laquo; Using RVM</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -222,6 +227,7 @@ There are two ways to handle this currently:</p>
 
   
 </aside>
+
 
     </div>
   </div>

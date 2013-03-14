@@ -9,7 +9,8 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default &hellip;">
+  <meta name="description" content="Much love to @scottmuc for helping me setup my octopress blog!! :)
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/page/5/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/page/8/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -88,7 +89,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Making the Switch to ChromeDriver</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/06/07/hello-world/">Hello World!!</a></h1>
     
     
       <p class="meta">
@@ -104,59 +105,14 @@
   
 
 
-<time datetime="2012-07-11T00:05:00-07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
+<time datetime="2012-06-07T00:05:00-07:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &#8230; but I decided at the last minute to stick with Firefox.</p>
-
-<p>Recently, I heard rumors that ChromeDriver is &#8220;Faster&#8221; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
-
-<h3>Setting up Cucumber to use ChromeDriver</h3>
-
-<p>To make the switch, all I had to do was replace the driver definition from:</p>
-
-<pre><code>Capybara.current_driver = :selenium 
-</code></pre>
-
-<p>to:</p>
-
-<pre><code>Capybara.register_driver :chrome do |app|
-    Capybara::Selenium::Driver.new(app, :browser =&gt; :chrome)
-  end
-Capybara.javascript_driver = :chrome
-</code></pre>
-
-<p>Then in all my Cucumber feature files, I added the tag @javascript:</p>
-
-<h3>Re-run Cucumber Feature Files</h3>
-
-<p>When I re-ran my Cucumber Features files using ChromeDriver, I however came across a few errors:</p>
-
-<pre><code>focusElement execution failed;
-   Failed to send keys because cannot focus element (Selenium::WebDriver::Error::UnknownError)
-</code></pre>
-
-<blockquote><p>Apparently, You can&#8217;t use send_keys for certain types of inputs. (Workaround - click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
-
-<pre><code>Element is not clickable at point (928, 23.5). Other element would receive the click
-</code></pre>
-
-<blockquote><p>ChromeDriver always clicks the middle of the element in attempt to be faithful to what an actual user does.
-There are two ways to handle this currently:</p>
-
-<ul>
-<li>Change/fix the page so that the user can click on the link in the middle.</li>
-<li>Use the advanced user interactions API to click at the appropriate place in the link. e.g., ActionChains(w).move_to_element_with_offset(link, 0, 20).click().perform()</li>
-</ul>
-</blockquote>
-
-<h3>Speed Test Results: Firefox vs ChromeDriver</h3>
-
-<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 - 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &#8230; you have to consider whether Chrome&#8217;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
+  <div class="entry-content"><p>Much love to @scottmuc for helping me setup my octopress blog!! :)</p>
 </div>
   
   
@@ -166,11 +122,9 @@ There are two ways to handle this currently:</p>
   
   <div class="pagination">
     
-      <a class="prev" href="/blog/page/6/">&larr; Older</a>
-    
     <a href="/blog/archives">Blog Archives</a>
     
-    <a class="next" href="/blog/page/4/">Newer &rarr;</a>
+    <a class="next" href="/blog/page/7/">Newer &rarr;</a>
     
   </div>
 </div>
