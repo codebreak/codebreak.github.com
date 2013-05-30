@@ -2,7 +2,7 @@
 layout: post
 title: "Hello World!!"
 date: 2012-06-07 00:05
-comments: true
+comments: false
 categories: 
 ---
 

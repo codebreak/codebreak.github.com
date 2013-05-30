@@ -2,7 +2,7 @@
 layout: post
 title: "3 years @ ThoughtWorks"
 date: 2012-07-20 09:41
-comments: true
+comments: false
 categories: 
 ---
 

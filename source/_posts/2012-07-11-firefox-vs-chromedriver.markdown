@@ -2,7 +2,7 @@
 layout: post
 title: "WebDriver: Making the switch to ChromeDriver"
 date: 2012-07-11 00:05
-comments: true
+comments: false
 categories: 
 ---
 

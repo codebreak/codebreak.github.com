@@ -2,7 +2,7 @@
 layout: post
 title: "fatal: The remote end hung up unexpectedly"
 date: 2012-11-14 08:39
-comments: true
+comments: false
 categories: 
 ---
 

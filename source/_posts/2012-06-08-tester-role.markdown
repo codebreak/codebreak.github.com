@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Tester Role on an Agile Project"
-date: 2012-06-11 22:54
-comments: true
+date: 2012-06-08 22:54
+comments: false
 categories: 
 ---
 

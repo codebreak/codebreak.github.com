@@ -2,7 +2,7 @@
 layout: post
 title: "Using RVM"
 date: 2012-10-28 09:36
-comments: true
+comments: false
 categories: 
 ---
 RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn't around, having more than one version of Ruby on your system would be very difficult to deal with. RVM will allow you to have multiple installations of Ruby AND make it easy for you to switch back and forth.

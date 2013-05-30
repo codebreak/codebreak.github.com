@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Women & Presentations CAN mix"
-date: 2012-09-26 15:50
-comments: true
+date: 2012-06-09 15:50
+comments: false
 categories: [tech talk, girl geek dinner, presenting]
 ---
 

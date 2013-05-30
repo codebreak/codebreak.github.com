@@ -2,7 +2,7 @@
 layout: post
 title: "Capybara tutorial using irb"
 date: 2012-06-24 16:03
-comments: true
+comments: false
 categories: 
 ---
 At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called [Capybara](https://github.com/jnicklas/capybara/). I've found it pretty useful so I figured I'd share it here.
