@@ -4,7 +4,7 @@
   <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2013-03-14T08:51:39-07:00</updated>
+  <updated>2013-05-30T16:58:56-07:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Intel HAXM]]></title>
+    <link href="http://codebreak.github.com/blog/2013/03/29/intel-haxm/"/>
+    <updated>2013-03-29T15:09:00-07:00</updated>
+    <id>http://codebreak.github.com/blog/2013/03/29/intel-haxm</id>
+    <content type="html"><![CDATA[<p>One of the biggest pains that I found when I started learning how to build android apps was waiting for the emulator to Launch and startup. Luckily, after having tweeted:</p>
+
+<blockquote><blockquote><p>&#8220;This #android #emulator sure takes it&#8217;s time to load. Wish there was some sort of progress bar to indicate that it&#8217;s not stuck or hanging.&#8221;</p></blockquote></blockquote>
+
+<p>android sdk</p>
+
+<p>installing HAXM</p>
+
+<p>To verify that Intel HAXM is running, open a terminal window and execute the following command:</p>
+
+<p><code>kextstat | grep intel</code></p>
+
+<p>If Intel HAXM is operating correctly, the command will show a status message indicating that the kernel extension named <code>com.intel.kext.intelhaxm</code> is loaded.</p>
+
+<p>To stop or start Intel HAXM, use the following commands:</p>
+
+<p>Stop:
+<code>sudo kextunload –b com.intel.kext.intelhaxm</code></p>
+
+<p>Start:
+<code>sudo kextload –b com.intel.kext.intelhaxm</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RapidFTR-Android Setup]]></title>
+    <link href="http://codebreak.github.com/blog/2013/03/23/rapidftr-android-setup/"/>
+    <updated>2013-03-23T23:29:00-07:00</updated>
+    <id>http://codebreak.github.com/blog/2013/03/23/rapidftr-android-setup</id>
+    <content type="html"><![CDATA[<p>git clone git@github.com:rapidftr/RapidFTR&#8212;Android.git</p>
+
+<p>Set Up instructions:
+https://github.com/rapidftr/RapidFTR&#8212;Android/wiki/Project-setup</p>
+
+<p>Project Settings: (command, semicolon)
+Under Platform Settings, Select SDKs
+Make sure an Android SDK is created, if none were created add one by selecting the &#8216;+&#8217;.
+Select &#8216;Android SDK&#8217; and select your SDK.
+In the next window, select your Java SDK, Your Build Target and then select &#8216;OK&#8217;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[fatal: The remote end hung up unexpectedly]]></title>
@@ -106,79 +153,6 @@ unset all_proxy
 <pre><code>vi .rvmrc
 rvm use 1.9.3@biteme    
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Women & Presentations CAN mix]]></title>
-    <link href="http://codebreak.github.com/blog/2012/09/26/women-presenters/"/>
-    <updated>2012-09-26T15:50:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/09/26/women-presenters</id>
-    <content type="html"><![CDATA[<p><a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/"><img class="right" src="https://evbdn.eventbrite.com/s3-s3/eventlogos/6471833/screenshot20120828at8.06.17pm.png.jpg" width="200" height="200"></a></p>
-
-<p>After months of planning with my amazing colleagues - <a href="https://twitter.com/AConnJob">Annie Conn</a>, <a href="http://www.bonnachoi.com">Bonna Choi</a>, and <a href="http://www.nanchu.me/">Nancy Chu</a> - we successfully organized the first ever <a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/">ThoughtWorks sponsored Girl Geek Dinner.</a></p>
-
-<p>Once the venue, catering, and audio/equipment rentals were confirmed &#8230; the next thing on my list was to find <strong>WOMEN</strong> speakers. Much to my surprise this was the hardest part of the organizing bit! When I thought about who I&#8217;d want to invite to be one of my speakers, I quickly thought of our Chief Technology Officer - <a href="http://join.thoughtworks.com/profiles/rebecca-parsons">Rebecca Parsons</a>. After jotting down Rebecca, I remember having to really think hard about my next set of speaker prospects. Eventually, I came up with 4-5 potential ThoughtWorks women speakers but all of them were out of state! I could have flown them in but that was not very cost effective so I dropped that idea.</p>
-
-<p>Instead, I decided to look within the ThoughtWorks San Francisco community. By doing so, I was faced with a lot of the same excuses &#8230; <strong>&#8220;I can&#8217;t, I have other plans that day.&#8221;</strong>, <strong>&#8220;I would, but I don&#8217;t know what I&#8217;d talk about.&#8221;</strong> and perhaps the most common one of all (which coincidentally was my excuse as  well) &#8230;</p>
-
-<blockquote><p><strong>I&#8217;ve never done a talk in front of a large audience and I&#8217;m utterly terrified of speaking in public.</strong></p></blockquote>
-
-<p>OK so you&#8217;ve never done it before. That&#8217;s fine &#8230; so let&#8217;s start at a smaller scale and work our way up. How about we start with speaking out more during the day. Make yourself heard in meetings and team conversations or even talk to a team member you don&#8217;t usually talk to. Discuss <strong>WHAT</strong> you&#8217;re working on and as well as <strong>HOW</strong> you&#8217;re getting things done to those outside of your team. By doing so, I think you&#8217;ll find that your communication skills will improve and &#8230;</p>
-
-<blockquote><p><strong>other&#8217;s will learn and get inspired by the knowledge and experiences you&#8217;ve shared with them.</strong></p></blockquote>
-
-<p>Realizing that you have something worthwhile to say will help you gain the <strong>CONFIDENCE</strong> that you need to speak in front of people. Your experiences and lessons learned can serve as your topics. With your topics at hand and armed with confidence &#8230; all that&#8217;s really left is polishing up your presentation skills.</p>
-
-<p>Now don&#8217;t be fooled &#8230; when I signed up to do my <strong>FIRST EVER</strong> tech talk for Girl Geek Dinners I was not completely at ease. In fact I was still pretty nervous. But if there&#8217;s one thing I&#8217;ve learned - like many people &#8230;<strong> I will always be nervous when it comes to speaking in front of people </strong> but I&#8217;m not going to let that prevent me from getting up there and doing it anyways!</p>
-
-<p>So get out there, challenge your self by doing a presentation or 2. And maybe &#8230; just maybe you&#8217;ll get to a point where you&#8217;re a little less nervous than your very first presentation/talk.</p>
-
-<h2>Step #1 Sign up for presentations</h2>
-
-<ul>
-<li>Teach or train a fellow team member.</li>
-<li>Start <a href="http://www.pecha-kucha.org/">Pecha Kucka Nights</a> with a group of people.</li>
-<li>Hold workshops on topics that other people could benefit from.</li>
-<li>Hold brown bags (people bring in lunch while someone does a presentation).</li>
-<li>Participate in Lightning talks (Very short 5-10 min talks on a particular topic).</li>
-</ul>
-
-
-<h2>Step #2 Preparation is key</h2>
-
-<ul>
-<li>Do the necessary research or find supporting artifacts to get your point across.</li>
-<li>If you&#8217;re using slides during your presentation - make sure they are there only to support your talk &#8230; NOT control it. Keep it simple with as few words as possible. (Photos wont hurt either)</li>
-<li>Most Power point tools these days timers &#8230; USE THEM when you&#8217;re practicing AND during your talk!</li>
-<li>Practice, Practice, Practice! Practice in front of a mirror or better yet, do a dry run in front of someone.</li>
-</ul>
-
-
-<h2>Step #3 Rock It!</h2>
-
-<ul>
-<li>Engage the audience, ask them questions and make them feel like they&#8217;re having a conversation with you instead of it being a one way street.</li>
-<li>Speak slowly and annunciate. It may sound odd to you at first (and maybe it does) but at least people will be able to follow and listen to what you have to say.</li>
-<li>Don&#8217;t read your notes &#8230; I know its terrifying but trust me &#8230; its better if you try to memorize everything!</li>
-</ul>
-
-
-<h2>Tips for when you get nervous &#8230;</h2>
-
-<ul>
-<li>If you get nervous (which I usually do right before I get up) I focus and control my breathing.</li>
-<li>Find someone you know and just talk as if you&#8217;re telling them a story. (If you don&#8217;t know anyone &#8230; try to find someone that looks nice and interested.)</li>
-<li>Pump yourself up and remind your inner self that:
-
-<ol>
-<li>These people are here to learn from you &#8230; not to judge you.</li>
-<li>Your presentation is based on your experience, knowledge and quite frankly your own opinion or take on a specific topic. So technically you&#8217;re the subject matter expert in the room!</li>
-<li>This will be all over soon &#8230; hang in there!</li>
-</ol>
-</li>
-</ul>
-
 ]]></content>
   </entry>
   
@@ -386,10 +360,83 @@ click_button 'Sign in'
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Women & Presentations CAN mix]]></title>
+    <link href="http://codebreak.github.com/blog/2012/06/09/women-presenters/"/>
+    <updated>2012-06-09T15:50:00-07:00</updated>
+    <id>http://codebreak.github.com/blog/2012/06/09/women-presenters</id>
+    <content type="html"><![CDATA[<p><a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/"><img class="right" src="https://evbdn.eventbrite.com/s3-s3/eventlogos/6471833/screenshot20120828at8.06.17pm.png.jpg" width="200" height="200"></a></p>
+
+<p>After months of planning with my amazing colleagues - <a href="https://twitter.com/AConnJob">Annie Conn</a>, <a href="http://www.bonnachoi.com">Bonna Choi</a>, and <a href="http://www.nanchu.me/">Nancy Chu</a> - we successfully organized the first ever <a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/">ThoughtWorks sponsored Girl Geek Dinner.</a></p>
+
+<p>Once the venue, catering, and audio/equipment rentals were confirmed &#8230; the next thing on my list was to find <strong>WOMEN</strong> speakers. Much to my surprise this was the hardest part of the organizing bit! When I thought about who I&#8217;d want to invite to be one of my speakers, I quickly thought of our Chief Technology Officer - <a href="http://join.thoughtworks.com/profiles/rebecca-parsons">Rebecca Parsons</a>. After jotting down Rebecca, I remember having to really think hard about my next set of speaker prospects. Eventually, I came up with 4-5 potential ThoughtWorks women speakers but all of them were out of state! I could have flown them in but that was not very cost effective so I dropped that idea.</p>
+
+<p>Instead, I decided to look within the ThoughtWorks San Francisco community. By doing so, I was faced with a lot of the same excuses &#8230; <strong>&#8220;I can&#8217;t, I have other plans that day.&#8221;</strong>, <strong>&#8220;I would, but I don&#8217;t know what I&#8217;d talk about.&#8221;</strong> and perhaps the most common one of all (which coincidentally was my excuse as  well) &#8230;</p>
+
+<blockquote><p><strong>I&#8217;ve never done a talk in front of a large audience and I&#8217;m utterly terrified of speaking in public.</strong></p></blockquote>
+
+<p>OK so you&#8217;ve never done it before. That&#8217;s fine &#8230; so let&#8217;s start at a smaller scale and work our way up. How about we start with speaking out more during the day. Make yourself heard in meetings and team conversations or even talk to a team member you don&#8217;t usually talk to. Discuss <strong>WHAT</strong> you&#8217;re working on and as well as <strong>HOW</strong> you&#8217;re getting things done to those outside of your team. By doing so, I think you&#8217;ll find that your communication skills will improve and &#8230;</p>
+
+<blockquote><p><strong>other&#8217;s will learn and get inspired by the knowledge and experiences you&#8217;ve shared with them.</strong></p></blockquote>
+
+<p>Realizing that you have something worthwhile to say will help you gain the <strong>CONFIDENCE</strong> that you need to speak in front of people. Your experiences and lessons learned can serve as your topics. With your topics at hand and armed with confidence &#8230; all that&#8217;s really left is polishing up your presentation skills.</p>
+
+<p>Now don&#8217;t be fooled &#8230; when I signed up to do my <strong>FIRST EVER</strong> tech talk for Girl Geek Dinners I was not completely at ease. In fact I was still pretty nervous. But if there&#8217;s one thing I&#8217;ve learned - like many people &#8230;<strong> I will always be nervous when it comes to speaking in front of people </strong> but I&#8217;m not going to let that prevent me from getting up there and doing it anyways!</p>
+
+<p>So get out there, challenge your self by doing a presentation or 2. And maybe &#8230; just maybe you&#8217;ll get to a point where you&#8217;re a little less nervous than your very first presentation/talk.</p>
+
+<h2>Step #1 Sign up for presentations</h2>
+
+<ul>
+<li>Teach or train a fellow team member.</li>
+<li>Start <a href="http://www.pecha-kucha.org/">Pecha Kucka Nights</a> with a group of people.</li>
+<li>Hold workshops on topics that other people could benefit from.</li>
+<li>Hold brown bags (people bring in lunch while someone does a presentation).</li>
+<li>Participate in Lightning talks (Very short 5-10 min talks on a particular topic).</li>
+</ul>
+
+
+<h2>Step #2 Preparation is key</h2>
+
+<ul>
+<li>Do the necessary research or find supporting artifacts to get your point across.</li>
+<li>If you&#8217;re using slides during your presentation - make sure they are there only to support your talk &#8230; NOT control it. Keep it simple with as few words as possible. (Photos wont hurt either)</li>
+<li>Most Power point tools these days timers &#8230; USE THEM when you&#8217;re practicing AND during your talk!</li>
+<li>Practice, Practice, Practice! Practice in front of a mirror or better yet, do a dry run in front of someone.</li>
+</ul>
+
+
+<h2>Step #3 Rock It!</h2>
+
+<ul>
+<li>Engage the audience, ask them questions and make them feel like they&#8217;re having a conversation with you instead of it being a one way street.</li>
+<li>Speak slowly and annunciate. It may sound odd to you at first (and maybe it does) but at least people will be able to follow and listen to what you have to say.</li>
+<li>Don&#8217;t read your notes &#8230; I know its terrifying but trust me &#8230; its better if you try to memorize everything!</li>
+</ul>
+
+
+<h2>Tips for when you get nervous &#8230;</h2>
+
+<ul>
+<li>If you get nervous (which I usually do right before I get up) I focus and control my breathing.</li>
+<li>Find someone you know and just talk as if you&#8217;re telling them a story. (If you don&#8217;t know anyone &#8230; try to find someone that looks nice and interested.)</li>
+<li>Pump yourself up and remind your inner self that:
+
+<ol>
+<li>These people are here to learn from you &#8230; not to judge you.</li>
+<li>Your presentation is based on your experience, knowledge and quite frankly your own opinion or take on a specific topic. So technically you&#8217;re the subject matter expert in the room!</li>
+<li>This will be all over soon &#8230; hang in there!</li>
+</ol>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[The Tester Role on an Agile Project]]></title>
-    <link href="http://codebreak.github.com/blog/2012/06/11/tester-role/"/>
-    <updated>2012-06-11T22:54:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/06/11/tester-role</id>
+    <link href="http://codebreak.github.com/blog/2012/06/08/tester-role/"/>
+    <updated>2012-06-08T22:54:00-07:00</updated>
+    <id>http://codebreak.github.com/blog/2012/06/08/tester-role</id>
     <content type="html"><![CDATA[<p>Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies and can depend on the tester or the unique dynamics of the team.</p>
 
 <ul>

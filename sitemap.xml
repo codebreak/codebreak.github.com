@@ -2,44 +2,52 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://codebreak.github.com/blog/2012/06/07/hello-world/</loc>
-        <lastmod>2012-06-07T07:00:35-07:00</lastmod>
+        <lastmod>2013-05-30T16:31:27-07:00</lastmod>
     </url>
     <url>
-        <loc>http://codebreak.github.com/blog/2012/06/11/tester-role/</loc>
-        <lastmod>2012-07-20T14:52:55-07:00</lastmod>
+        <loc>http://codebreak.github.com/blog/2012/06/08/tester-role/</loc>
+        <lastmod>2013-05-30T16:42:49-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://codebreak.github.com/blog/2012/06/09/women-presenters/</loc>
+        <lastmod>2013-05-30T16:42:53-07:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/blog/2012/06/24/capybara-tutorial-using-irb/</loc>
-        <lastmod>2012-12-10T19:41:02-08:00</lastmod>
+        <lastmod>2013-05-30T16:31:27-07:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/</loc>
-        <lastmod>2012-07-20T14:46:18-07:00</lastmod>
+        <lastmod>2013-05-30T16:31:27-07:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/blog/2012/07/20/3-years-at-thoughtworks/</loc>
-        <lastmod>2012-12-10T23:14:35-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://codebreak.github.com/blog/2012/09/26/women-presenters/</loc>
-        <lastmod>2012-12-11T16:46:48-08:00</lastmod>
+        <lastmod>2013-05-30T16:31:28-07:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/blog/2012/10/28/using-rvm/</loc>
-        <lastmod>2013-03-12T21:28:43-07:00</lastmod>
+        <lastmod>2013-05-30T16:31:28-07:00</lastmod>
     </url>
     <url>
         <loc>
             http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/
         </loc>
-        <lastmod>2013-03-14T08:51:27-07:00</lastmod>
+        <lastmod>2013-05-30T16:31:28-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://codebreak.github.com/blog/2013/03/23/rapidftr-android-setup/</loc>
+        <lastmod>2013-05-30T16:42:53-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://codebreak.github.com/blog/2013/03/29/intel-haxm/</loc>
+        <lastmod>2013-05-30T16:58:56-07:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/blog/archives/</loc>
-        <lastmod>2013-03-14T08:51:27-07:00</lastmod>
+        <lastmod>2013-05-30T16:58:56-07:00</lastmod>
     </url>
     <url>
         <loc>http://codebreak.github.com/</loc>
-        <lastmod>2013-03-14T08:51:27-07:00</lastmod>
+        <lastmod>2013-05-30T16:58:56-07:00</lastmod>
     </url>
 </urlset>

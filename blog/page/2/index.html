@@ -9,7 +9,8 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&#8217;t around, having &hellip;">
+  <meta name="description" content="git clone git@github.com:rapidftr/RapidFTR&#8212;Android.git Set Up instructions:
+https://github.com/rapidftr/RapidFTR&#8212;Android/wiki/Project- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +89,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/10/28/using-rvm/">Using RVM</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/03/23/rapidftr-android-setup/">RapidFTR-Android Setup</a></h1>
     
     
       <p class="meta">
@@ -104,70 +105,23 @@
   
 
 
-<time datetime="2012-10-28T09:36:00-07:00" pubdate data-updated="true">Oct 28<span>th</span>, 2012</time>
+<time datetime="2013-03-23T23:29:00-07:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&#8217;t around, having more than one version of Ruby on your system would be very difficult to deal with. RVM will allow you to have multiple installations of Ruby AND make it easy for you to switch back and forth.</p>
+  <div class="entry-content"><p>git clone git@github.com:rapidftr/RapidFTR&#8212;Android.git</p>
 
-<p>To install a specific (1.9.3) Ruby interpreter:</p>
+<p>Set Up instructions:
+https://github.com/rapidftr/RapidFTR&#8212;Android/wiki/Project-setup</p>
 
-<pre><code>rvm install 1.9.3
-</code></pre>
-
-<p>To check ruby version:</p>
-
-<pre><code>ruby -v
-</code></pre>
-
-<p>To check your current ruby path:</p>
-
-<pre><code>which ruby
-</code></pre>
-
-<p>To check current installed rubies:</p>
-
-<pre><code>rvm list
-</code></pre>
-
-<p>To use system ruby:</p>
-
-<pre><code>rvm use system
-</code></pre>
-
-<p>Before you can use a gemset, you must create it:</p>
-
-<pre><code>rvm use 1.9.3@biteme --create
-</code></pre>
-
-<p>To view your gemset list:</p>
-
-<pre><code>rvm gemset list
-</code></pre>
-
-<p>To use a gemset list:</p>
-
-<pre><code>rvm use 1.9.3@biteme
-</code></pre>
-
-<p>To delete a gemset:</p>
-
-<pre><code>rvm gemset delete biteme
-</code></pre>
-
-<p>To specify a &#8216;default&#8217; gemset for a given interpreter:</p>
-
-<pre><code>rvm use 1.9.3@biteme --default
-</code></pre>
-
-<p>To have it so that your gemset is automatically loaded when you enter a directory, you&#8217;ll need to create or add to your .rvmrc file &#8216;rvm use 1.9.3@biteme&#8217;</p>
-
-<pre><code>vi .rvmrc
-rvm use 1.9.3@biteme    
-</code></pre>
+<p>Project Settings: (command, semicolon)
+Under Platform Settings, Select SDKs
+Make sure an Android SDK is created, if none were created add one by selecting the &#8216;+&#8217;.
+Select &#8216;Android SDK&#8217; and select your SDK.
+In the next window, select your Java SDK, Your Build Target and then select &#8216;OK&#8217;</p>
 </div>
   
   
@@ -192,15 +146,19 @@ rvm use 1.9.3@biteme
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/23/rapidftr-android-setup/">RapidFTR-Android Setup</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/">fatal: The remote end hung up unexpectedly</a>
       </li>
     
       <li class="post">
         <a href="/blog/2012/10/28/using-rvm/">Using RVM</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/26/women-presenters/">Women & Presentations CAN mix</a>
       </li>
     
       <li class="post">
@@ -216,7 +174,11 @@ rvm use 1.9.3@biteme
       </li>
     
       <li class="post">
-        <a href="/blog/2012/06/11/tester-role/">The Tester Role on an Agile Project</a>
+        <a href="/blog/2012/06/09/women-presenters/">Women & Presentations CAN mix</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/08/tester-role/">The Tester Role on an Agile Project</a>
       </li>
     
       <li class="post">
