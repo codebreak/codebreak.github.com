@@ -9,7 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test &hellip;">
+  <meta name="description" content="On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +88,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/06/24/capybara-tutorial-using-irb/">Capybara Tutorial Using Irb</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Making the Switch to ChromeDriver</a></h1>
     
     
       <p class="meta">
@@ -104,54 +104,59 @@
   
 
 
-<time datetime="2012-06-24T16:03:00-07:00" pubdate data-updated="true">Jun 24<span>th</span>, 2012</time>
+<time datetime="2012-07-11T00:05:00-07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
+  <div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &#8230; but I decided at the last minute to stick with Firefox.</p>
 
-<p>To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)</p>
+<p>Recently, I heard rumors that ChromeDriver is &#8220;Faster&#8221; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
 
-<pre><code>rvm use 1.9.2@cucumberplay --create
+<h3>Setting up Cucumber to use ChromeDriver</h3>
+
+<p>To make the switch, all I had to do was replace the driver definition from:</p>
+
+<pre><code>Capybara.current_driver = :selenium 
 </code></pre>
 
-<p>Install <a href="https://github.com/jnicklas/capybara/">Capybara</a> if you haven&#8217;t already.</p>
+<p>to:</p>
 
-<pre><code>gem install capybara
+<pre><code>Capybara.register_driver :chrome do |app|
+    Capybara::Selenium::Driver.new(app, :browser =&gt; :chrome)
+  end
+Capybara.javascript_driver = :chrome
 </code></pre>
 
-<p>Launch irb with the following requirements (ruby, capybara, and capybara/dsl)</p>
+<p>Then in all my Cucumber feature files, I added the tag @javascript:</p>
 
-<pre><code>irb -r rubygems -r capybara -r capybara/dsl
+<h3>Re-run Cucumber Feature Files</h3>
+
+<p>When I re-ran my Cucumber Features files using ChromeDriver, I however came across a few errors:</p>
+
+<pre><code>focusElement execution failed;
+   Failed to send keys because cannot focus element (Selenium::WebDriver::Error::UnknownError)
 </code></pre>
 
-<p>Include Cabybara DSL:</p>
+<blockquote><p>Apparently, You can&#8217;t use send_keys for certain types of inputs. (Workaround - click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
 
-<pre><code>include Capybara::DSL
+<pre><code>Element is not clickable at point (928, 23.5). Other element would receive the click
 </code></pre>
 
-<p>Set the default driver.</p>
+<blockquote><p>ChromeDriver always clicks the middle of the element in attempt to be faithful to what an actual user does.
+There are two ways to handle this currently:</p>
 
-<pre><code>Capybara.default_driver = :selenium
-</code></pre>
+<ul>
+<li>Change/fix the page so that the user can click on the link in the middle.</li>
+<li>Use the advanced user interactions API to click at the appropriate place in the link. e.g., ActionChains(w).move_to_element_with_offset(link, 0, 20).click().perform()</li>
+</ul>
+</blockquote>
 
-<p>Now test that capybara commands work by visiting google</p>
+<h3>Speed Test Results: Firefox vs ChromeDriver</h3>
 
-<pre><code>visit "http://www.google.com"
-</code></pre>
-
-<h2>Here&#8217;s an example for logging into GMAIL</h2>
-
-<pre><code>visit "http://www.gmail.com"
-page.has_content?("A Google approach to email.")
-
-fill_in 'Email', :with =&gt; "johnjames4343@gmail.com"
-fill_in 'Passwd', :with =&gt; "johnjames4u"
-click_button 'Sign in'
-</code></pre>
+<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 - 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &#8230; you have to consider whether Chrome&#8217;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
 </div>
   
   
@@ -174,6 +179,10 @@ click_button 'Sign in'
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/19/javaland/">Javaland</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a>

@@ -9,7 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&#8217;t around, having &hellip;">
+  <meta name="description" content="Lately I&#8217;ve been working on a client site &#8230; which entails having to set some proxies. I think for some reason this has conflicted with my &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +88,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/10/28/using-rvm/">Using RVM</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/">Fatal: The Remote End Hung Up Unexpectedly</a></h1>
     
     
       <p class="meta">
@@ -104,69 +104,35 @@
   
 
 
-<time datetime="2012-10-28T09:36:00-07:00" pubdate data-updated="true">Oct 28<span>th</span>, 2012</time>
+<time datetime="2012-11-14T08:39:00-08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&#8217;t around, having more than one version of Ruby on your system would be very difficult to deal with. RVM will allow you to have multiple installations of Ruby AND make it easy for you to switch back and forth.</p>
+  <div class="entry-content"><p>Lately I&#8217;ve been working on a client site &#8230; which entails having to set some proxies. I think for some reason this has conflicted with my github set up. The other day, when I tried a &#8216;git pull &#8211;rebase&#8217; I got the &#8216;fatal: The remote end hung up unexpectedly&#8217; error. This is what I did to fix the problem.</p>
 
-<p>To install a specific (1.9.3) Ruby interpreter:</p>
+<p>I checked to see if I had any of my proxies set in my environment:</p>
 
-<pre><code>rvm install 1.9.3
+<pre><code>env | grep -i http
 </code></pre>
 
-<p>To check ruby version:</p>
+<p>When I saw that they were set, I went ahead an unset them:</p>
 
-<pre><code>ruby -v
+<pre><code>unset http_proxy
+unset https_proxy
+unset all_proxy
 </code></pre>
 
-<p>To check your current ruby path:</p>
+<p>After unsetting them, I checked if I can do a &#8216;git pull &#8211;rebase&#8217; again. Sadly I still got the error. To get around this, I decided to try pulling using https instead of ssh. To do this, I first added it:</p>
 
-<pre><code>which ruby
+<pre><code>git remote add origin-https https://github.com/&lt;project_name&gt;/&lt;project_name.git&gt;
 </code></pre>
 
-<p>To check current installed rubies:</p>
+<p>Doing so then allows you to pull from the remote set up &#8216;origin-https&#8217;. NOTE: Remember to specify the branch as well (In this case &#8216;master&#8217;).</p>
 
-<pre><code>rvm list
-</code></pre>
-
-<p>To use system ruby:</p>
-
-<pre><code>rvm use system
-</code></pre>
-
-<p>Before you can use a gemset, you must create it:</p>
-
-<pre><code>rvm use 1.9.3@biteme --create
-</code></pre>
-
-<p>To view your gemset list:</p>
-
-<pre><code>rvm gemset list
-</code></pre>
-
-<p>To use a gemset list:</p>
-
-<pre><code>rvm use 1.9.3@biteme
-</code></pre>
-
-<p>To delete a gemset:</p>
-
-<pre><code>rvm gemset delete biteme
-</code></pre>
-
-<p>To specify a &#8216;default&#8217; gemset for a given interpreter:</p>
-
-<pre><code>rvm use 1.9.3@biteme --default
-</code></pre>
-
-<p>To have it so that your gemset is automatically loaded when you enter a directory, you&#8217;ll need to create or add to your .rvmrc file &#8216;rvm use 1.9.3@biteme&#8217;</p>
-
-<pre><code>vi .rvmrc
-rvm use 1.9.3@biteme    
+<pre><code>git pull origin-https master
 </code></pre>
 </div>
   
@@ -190,6 +156,10 @@ rvm use 1.9.3@biteme
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/19/javaland/">Javaland</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a>

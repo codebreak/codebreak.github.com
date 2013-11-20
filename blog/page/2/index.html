@@ -9,8 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="git clone git@github.com:rapidftr/RapidFTR&#8212;Android.git Set Up instructions:
-https://github.com/rapidftr/RapidFTR&#8212;Android/wiki/Project- &hellip;">
+  <meta name="description" content="One of the biggest pains that I found when I started learning how to build android apps was waiting for the emulator to Launch and startup. Luckily, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,7 +88,7 @@ https://github.com/rapidftr/RapidFTR&#8212;Android/wiki/Project- &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/03/23/rapidftr-android-setup/">RapidFTR-Android Setup</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a></h1>
     
     
       <p class="meta">
@@ -105,23 +104,34 @@ https://github.com/rapidftr/RapidFTR&#8212;Android/wiki/Project- &hellip;">
   
 
 
-<time datetime="2013-03-23T23:29:00-07:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2013</time>
+<time datetime="2013-03-29T15:09:00-07:00" pubdate data-updated="true">Mar 29<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>git clone git@github.com:rapidftr/RapidFTR&#8212;Android.git</p>
+  <div class="entry-content"><p>One of the biggest pains that I found when I started learning how to build android apps was waiting for the emulator to Launch and startup. Luckily, after having tweeted:</p>
 
-<p>Set Up instructions:
-https://github.com/rapidftr/RapidFTR&#8212;Android/wiki/Project-setup</p>
+<blockquote><blockquote><p>&#8220;This #android #emulator sure takes it&#8217;s time to load. Wish there was some sort of progress bar to indicate that it&#8217;s not stuck or hanging.&#8221;</p></blockquote></blockquote>
 
-<p>Project Settings: (command, semicolon)
-Under Platform Settings, Select SDKs
-Make sure an Android SDK is created, if none were created add one by selecting the &#8216;+&#8217;.
-Select &#8216;Android SDK&#8217; and select your SDK.
-In the next window, select your Java SDK, Your Build Target and then select &#8216;OK&#8217;</p>
+<p>android sdk</p>
+
+<p>installing HAXM</p>
+
+<p>To verify that Intel HAXM is running, open a terminal window and execute the following command:</p>
+
+<p><code>kextstat | grep intel</code></p>
+
+<p>If Intel HAXM is operating correctly, the command will show a status message indicating that the kernel extension named <code>com.intel.kext.intelhaxm</code> is loaded.</p>
+
+<p>To stop or start Intel HAXM, use the following commands:</p>
+
+<p>Stop:
+<code>sudo kextunload –b com.intel.kext.intelhaxm</code></p>
+
+<p>Start:
+<code>sudo kextload –b com.intel.kext.intelhaxm</code></p>
 </div>
   
   
@@ -144,6 +154,10 @@ In the next window, select your Java SDK, Your Build Target and then select &#82
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/19/javaland/">Javaland</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a>

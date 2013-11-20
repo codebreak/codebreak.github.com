@@ -5,11 +5,17 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: tech talk - codebreak.er</title>
+  <title>Javaland - codebreak.er</title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Category: tech talk">
+  <meta name="description" content="Simple Start on Java
+OCT 31ST, 2013
+Java and Gradle
+Get Gradle
+Create Project directory “MarsRover”
+Build Project Structure:
+cd MarsRover/ mkdir -p &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.comblog/categories/tech-talk/">
+  <link rel="canonical" href="http://codebreak.github.com/blog/2013/11/19/javaland/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -81,35 +87,96 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Tech Talk</h1>
+    
+      <h1 class="entry-title">Javaland</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-19T22:10:00-08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/06/09/women-presenters/">Women & Presentations CAN mix</a></h1>
-<time datetime="2012-06-09T15:50:00-07:00" pubdate><span class='month'>Jun</span> <span class='day'>09</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/girl-geek-dinner/'>girl geek dinner</a>, <a class='category' href='/blog/categories/presenting/'>presenting</a>, <a class='category' href='/blog/categories/tech-talk/'>tech talk</a></span>
-</footer>
-
-
-</article>
-
+<div class="entry-content"><p>Simple Start on Java
+OCT 31ST, 2013
+Java and Gradle
+Get Gradle
+Create Project directory “MarsRover”
+Build Project Structure:
+cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
+Create first java class:
+cd src/main/java vi HelloWorld.java
+public class HelloWorld{ public static void main(String[] args){ System.out.println(“Hello World!!”);
+}
+}
+Java conventional rules: Allowed only one public class in the file and that class name should match the filename. static means method is not an instance it is attached to the class void means method is not returning anything main mean its the entry point to the app
+Build your project: gradle build
+:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE :classes UP-TO-DATE (classes depends on compileJava)
+:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) :assemble UP-TO-DATE umbrella tasks :compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE :testClasses UP-TO-DATE :test UP-TO-DATE :check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) :build UP-TO-DATE (umbrella: assemble and check)
+this basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)
+Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">codebreaker</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-19T22:10:00-08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codebreak.github.com/blog/2013/11/19/javaland/" data-via="" data-counturl="http://codebreak.github.com/blog/2013/11/19/javaland/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/29/intel-haxm/" title="Previous Post: Intel HAXM">&laquo; Intel HAXM</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

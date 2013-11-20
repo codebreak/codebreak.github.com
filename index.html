@@ -9,7 +9,13 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="One of the biggest pains that I found when I started learning how to build android apps was waiting for the emulator to Launch and startup. Luckily, &hellip;">
+  <meta name="description" content="Simple Start on Java
+OCT 31ST, 2013
+Java and Gradle
+Get Gradle
+Create Project directory “MarsRover”
+Build Project Structure:
+cd MarsRover/ mkdir -p &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +94,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/11/19/javaland/">Javaland</a></h1>
     
     
       <p class="meta">
@@ -104,34 +110,32 @@
   
 
 
-<time datetime="2013-03-29T15:09:00-07:00" pubdate data-updated="true">Mar 29<span>th</span>, 2013</time>
+<time datetime="2013-11-19T22:10:00-08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>One of the biggest pains that I found when I started learning how to build android apps was waiting for the emulator to Launch and startup. Luckily, after having tweeted:</p>
-
-<blockquote><blockquote><p>&#8220;This #android #emulator sure takes it&#8217;s time to load. Wish there was some sort of progress bar to indicate that it&#8217;s not stuck or hanging.&#8221;</p></blockquote></blockquote>
-
-<p>android sdk</p>
-
-<p>installing HAXM</p>
-
-<p>To verify that Intel HAXM is running, open a terminal window and execute the following command:</p>
-
-<p><code>kextstat | grep intel</code></p>
-
-<p>If Intel HAXM is operating correctly, the command will show a status message indicating that the kernel extension named <code>com.intel.kext.intelhaxm</code> is loaded.</p>
-
-<p>To stop or start Intel HAXM, use the following commands:</p>
-
-<p>Stop:
-<code>sudo kextunload –b com.intel.kext.intelhaxm</code></p>
-
-<p>Start:
-<code>sudo kextload –b com.intel.kext.intelhaxm</code></p>
+  <div class="entry-content"><p>Simple Start on Java
+OCT 31ST, 2013
+Java and Gradle
+Get Gradle
+Create Project directory “MarsRover”
+Build Project Structure:
+cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
+Create first java class:
+cd src/main/java vi HelloWorld.java
+public class HelloWorld{ public static void main(String[] args){ System.out.println(“Hello World!!”);
+}
+}
+Java conventional rules: Allowed only one public class in the file and that class name should match the filename. static means method is not an instance it is attached to the class void means method is not returning anything main mean its the entry point to the app
+Build your project: gradle build
+:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE :classes UP-TO-DATE (classes depends on compileJava)
+:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) :assemble UP-TO-DATE umbrella tasks :compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE :testClasses UP-TO-DATE :test UP-TO-DATE :check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) :build UP-TO-DATE (umbrella: assemble and check)
+this basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)
+Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld</p>
 </div>
   
   
@@ -152,6 +156,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/19/javaland/">Javaland</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a>

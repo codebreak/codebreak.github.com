@@ -4,7 +4,7 @@
   <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2013-05-30T23:45:58-07:00</updated>
+  <updated>2013-11-19T22:31:41-08:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Javaland]]></title>
+    <link href="http://codebreak.github.com/blog/2013/11/19/javaland/"/>
+    <updated>2013-11-19T22:10:00-08:00</updated>
+    <id>http://codebreak.github.com/blog/2013/11/19/javaland</id>
+    <content type="html"><![CDATA[<p>Simple Start on Java
+OCT 31ST, 2013
+Java and Gradle
+Get Gradle
+Create Project directory “MarsRover”
+Build Project Structure:
+cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
+Create first java class:
+cd src/main/java vi HelloWorld.java
+public class HelloWorld{ public static void main(String[] args){ System.out.println(“Hello World!!”);
+}
+}
+Java conventional rules: Allowed only one public class in the file and that class name should match the filename. static means method is not an instance it is attached to the class void means method is not returning anything main mean its the entry point to the app
+Build your project: gradle build
+:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE :classes UP-TO-DATE (classes depends on compileJava)
+:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) :assemble UP-TO-DATE umbrella tasks :compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE :testClasses UP-TO-DATE :test UP-TO-DATE :check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) :build UP-TO-DATE (umbrella: assemble and check)
+this basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)
+Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Intel HAXM]]></title>
