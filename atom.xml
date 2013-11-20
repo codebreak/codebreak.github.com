@@ -4,7 +4,7 @@
   <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.com/atom.xml" rel="self"/>
   <link href="http://codebreak.github.com/"/>
-  <updated>2013-11-19T22:31:41-08:00</updated>
+  <updated>2013-11-19T22:41:08-08:00</updated>
   <id>http://codebreak.github.com/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -47,7 +47,7 @@ Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld</p>
     <id>http://codebreak.github.com/blog/2013/03/29/intel-haxm</id>
     <content type="html"><![CDATA[<p>One of the biggest pains that I found when I started learning how to build android apps was waiting for the emulator to Launch and startup. Luckily, after having tweeted:</p>
 
-<blockquote><blockquote><p>&#8220;This #android #emulator sure takes it&#8217;s time to load. Wish there was some sort of progress bar to indicate that it&#8217;s not stuck or hanging.&#8221;</p></blockquote></blockquote>
+<blockquote><blockquote><p>&ldquo;This #android #emulator sure takes it&rsquo;s time to load. Wish there was some sort of progress bar to indicate that it&rsquo;s not stuck or hanging.&rdquo;</p></blockquote></blockquote>
 
 <p>android sdk</p>
 
@@ -74,16 +74,16 @@ Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld</p>
     <link href="http://codebreak.github.com/blog/2013/03/23/rapidftr-android-setup/"/>
     <updated>2013-03-23T23:29:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2013/03/23/rapidftr-android-setup</id>
-    <content type="html"><![CDATA[<p>git clone git@github.com:rapidftr/RapidFTR&#8212;Android.git</p>
+    <content type="html"><![CDATA[<p>git clone git@github.com:rapidftr/RapidFTR&mdash;-Android.git</p>
 
 <p>Set Up instructions:
-https://github.com/rapidftr/RapidFTR&#8212;Android/wiki/Project-setup</p>
+<a href="https://github.com/rapidftr/RapidFTR---Android/wiki/Project-setup">https://github.com/rapidftr/RapidFTR&#8212;Android/wiki/Project-setup</a></p>
 
 <p>Project Settings: (command, semicolon)
 Under Platform Settings, Select SDKs
-Make sure an Android SDK is created, if none were created add one by selecting the &#8216;+&#8217;.
-Select &#8216;Android SDK&#8217; and select your SDK.
-In the next window, select your Java SDK, Your Build Target and then select &#8216;OK&#8217;</p>
+Make sure an Android SDK is created, if none were created add one by selecting the &lsquo;+&rsquo;.
+Select &lsquo;Android SDK&rsquo; and select your SDK.
+In the next window, select your Java SDK, Your Build Target and then select &lsquo;OK&rsquo;</p>
 ]]></content>
   </entry>
   
@@ -92,7 +92,7 @@ In the next window, select your Java SDK, Your Build Target and then select &#82
     <link href="http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/"/>
     <updated>2012-11-14T08:39:00-08:00</updated>
     <id>http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly</id>
-    <content type="html"><![CDATA[<p>Lately I&#8217;ve been working on a client site &#8230; which entails having to set some proxies. I think for some reason this has conflicted with my github set up. The other day, when I tried a &#8216;git pull &#8211;rebase&#8217; I got the &#8216;fatal: The remote end hung up unexpectedly&#8217; error. This is what I did to fix the problem.</p>
+    <content type="html"><![CDATA[<p>Lately I&rsquo;ve been working on a client site &hellip; which entails having to set some proxies. I think for some reason this has conflicted with my github set up. The other day, when I tried a &lsquo;git pull &mdash;rebase&rsquo; I got the &lsquo;fatal: The remote end hung up unexpectedly&rsquo; error. This is what I did to fix the problem.</p>
 
 <p>I checked to see if I had any of my proxies set in my environment:</p>
 
@@ -106,12 +106,12 @@ unset https_proxy
 unset all_proxy
 </code></pre>
 
-<p>After unsetting them, I checked if I can do a &#8216;git pull &#8211;rebase&#8217; again. Sadly I still got the error. To get around this, I decided to try pulling using https instead of ssh. To do this, I first added it:</p>
+<p>After unsetting them, I checked if I can do a &lsquo;git pull &mdash;rebase&rsquo; again. Sadly I still got the error. To get around this, I decided to try pulling using https instead of ssh. To do this, I first added it:</p>
 
 <pre><code>git remote add origin-https https://github.com/&lt;project_name&gt;/&lt;project_name.git&gt;
 </code></pre>
 
-<p>Doing so then allows you to pull from the remote set up &#8216;origin-https&#8217;. NOTE: Remember to specify the branch as well (In this case &#8216;master&#8217;).</p>
+<p>Doing so then allows you to pull from the remote set up &lsquo;origin-https&rsquo;. NOTE: Remember to specify the branch as well (In this case &lsquo;master&rsquo;).</p>
 
 <pre><code>git pull origin-https master
 </code></pre>
@@ -123,7 +123,7 @@ unset all_proxy
     <link href="http://codebreak.github.com/blog/2012/10/28/using-rvm/"/>
     <updated>2012-10-28T09:36:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/10/28/using-rvm</id>
-    <content type="html"><![CDATA[<p>RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&#8217;t around, having more than one version of Ruby on your system would be very difficult to deal with. RVM will allow you to have multiple installations of Ruby AND make it easy for you to switch back and forth.</p>
+    <content type="html"><![CDATA[<p>RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&rsquo;t around, having more than one version of Ruby on your system would be very difficult to deal with. RVM will allow you to have multiple installations of Ruby AND make it easy for you to switch back and forth.</p>
 
 <p>To install a specific (1.9.3) Ruby interpreter:</p>
 
@@ -170,12 +170,12 @@ unset all_proxy
 <pre><code>rvm gemset delete biteme
 </code></pre>
 
-<p>To specify a &#8216;default&#8217; gemset for a given interpreter:</p>
+<p>To specify a &lsquo;default&rsquo; gemset for a given interpreter:</p>
 
 <pre><code>rvm use 1.9.3@biteme --default
 </code></pre>
 
-<p>To have it so that your gemset is automatically loaded when you enter a directory, you&#8217;ll need to create or add to your .rvmrc file &#8216;rvm use 1.9.3@biteme&#8217;</p>
+<p>To have it so that your gemset is automatically loaded when you enter a directory, you&rsquo;ll need to create or add to your .rvmrc file &lsquo;rvm use 1.9.3@biteme&rsquo;</p>
 
 <pre><code>vi .rvmrc
 rvm use 1.9.3@biteme    
@@ -188,11 +188,11 @@ rvm use 1.9.3@biteme
     <link href="http://codebreak.github.com/blog/2012/07/20/3-years-at-thoughtworks/"/>
     <updated>2012-07-20T09:41:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/07/20/3-years-at-thoughtworks</id>
-    <content type="html"><![CDATA[<p>Over 3 years ago, after being laid off from a start up company then deciding to volunteer in Peru and backpack through South America for a few months - I was basking in the glory of <strong>FUNEMPLOYMENT</strong> when I came across an invitation to a &#8221;<strong>Super Saturday</strong>&#8221; interview event at <a href="https://www.thoughtworks.com">ThoughtWorks</a> - Chicago.</p>
+    <content type="html"><![CDATA[<p>Over 3 years ago, after being laid off from a start up company then deciding to volunteer in Peru and backpack through South America for a few months &ndash; I was basking in the glory of <strong>FUNEMPLOYMENT</strong> when I came across an invitation to a &ldquo;<strong>Super Saturday</strong>&rdquo; interview event at <a href="https://www.thoughtworks.com">ThoughtWorks</a> &ndash; Chicago.</p>
 
 <p>I got flown in and put up at the Club Quarters Hotel in the heart of downtown Chicago. Then during the event, 30-40 candidates got divided into groups and spent the entire day meeting numerous ThoughtWorkers as well participate in various activities like a Lego game and a controversial group discussion.</p>
 
-<blockquote><p>I really appreciated how the main purpose was to not only test my technical abilities but to also determine if I&#8217;m a good culture fit. Never before have I been thoroughly impressed by the way a company hired people.</p></blockquote>
+<blockquote><p>I really appreciated how the main purpose was to not only test my technical abilities but to also determine if I&rsquo;m a good culture fit. Never before have I been thoroughly impressed by the way a company hired people.</p></blockquote>
 
 <p>During my 3 year relationship with ThoughtWorks, I have worked on <strong>4 billable projects</strong> as well as numerous side projects in <strong>5 different countries</strong>. I have met countless intellectual co-workers (now friends) from all over the world and I can honestly say that I have learned something from each one of them.</p>
 
@@ -208,7 +208,7 @@ rvm use 1.9.3@biteme
 <li>Within just a few days, it also became apparent that ThoughtWorks is a flat organization and that though there are leads on a project, there is no need to sit around and wait for anyone to tell you what to do. You can (and should) simply just get up and start getting shit done.</li>
 </ul>
 </li>
-<li><strong><em>Project Status</em>:</strong> ThoughtWorks deemed the project &#8220;successful&#8221; considering we delivered what we said we would - the company division has however been shut down.</li>
+<li><strong><em>Project Status</em>:</strong> ThoughtWorks deemed the project &ldquo;successful&rdquo; considering we delivered what we said we would &ndash; the company division has however been shut down.</li>
 </ul>
 
 
@@ -237,8 +237,8 @@ rvm use 1.9.3@biteme
 
 <ul>
 <li>Mobile (non-native app) automated tests are easy to write when using the Web Browser. But, manual testing will always need to be done on an actual device which can eventually become cumbersome.</li>
-<li>Meticulous implementation/testing is important - however, one should consider being a bit more lenient when dealing with mobile apps where an app&#8217;s average life expectancy is 14 about months.</li>
-<li>Learned that consulting is hard and that before you can be taken seriously &#8230; you need to earn the client&#8217;s trust first.</li>
+<li>Meticulous implementation/testing is important &ndash; however, one should consider being a bit more lenient when dealing with mobile apps where an app&rsquo;s average life expectancy is 14 about months.</li>
+<li>Learned that consulting is hard and that before you can be taken seriously &hellip; you need to earn the client&rsquo;s trust first.</li>
 <li>There are defined roles on a project but a role is not meant to be done by one person. The team should work together to fill in each role.</li>
 </ul>
 </li>
@@ -254,10 +254,10 @@ rvm use 1.9.3@biteme
 <li><strong><em>Learnings</em>:</strong>
 
 <ul>
-<li>Distributed projects can work so long as you&#8217;re in the same (or close enough) time zone so that can flow back and forth easily.</li>
+<li>Distributed projects can work so long as you&rsquo;re in the same (or close enough) time zone so that can flow back and forth easily.</li>
 <li>Make a few changes in your teaching style when english is not the first language of those you are teaching.</li>
-<li>Speaking in public is not so hard when you take your time, practice &#8230; and picture the audience is naked &#8230; I mean, interested.</li>
-<li>You need to toughen up to survive in China &#8230; speaking the language can&#8217;t hurt either.</li>
+<li>Speaking in public is not so hard when you take your time, practice &hellip; and picture the audience is naked &hellip; I mean, interested.</li>
+<li>You need to toughen up to survive in China &hellip; speaking the language can&rsquo;t hurt either.</li>
 </ul>
 </li>
 <li><strong><em>Project Status</em>:</strong> 15 new ThoughtWorkers were released to the world and the project we worked on is currently still getting worked on by a team in Pune, India.</li>
@@ -288,9 +288,9 @@ rvm use 1.9.3@biteme
     <link href="http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/"/>
     <updated>2012-07-11T00:05:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver</id>
-    <content type="html"><![CDATA[<p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &#8230; but I decided at the last minute to stick with Firefox.</p>
+    <content type="html"><![CDATA[<p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &hellip; but I decided at the last minute to stick with Firefox.</p>
 
-<p>Recently, I heard rumors that ChromeDriver is &#8220;Faster&#8221; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
+<p>Recently, I heard rumors that ChromeDriver is &ldquo;Faster&rdquo; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
 
 <h3>Setting up Cucumber to use ChromeDriver</h3>
 
@@ -317,7 +317,7 @@ Capybara.javascript_driver = :chrome
    Failed to send keys because cannot focus element (Selenium::WebDriver::Error::UnknownError)
 </code></pre>
 
-<blockquote><p>Apparently, You can&#8217;t use send_keys for certain types of inputs. (Workaround - click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
+<blockquote><p>Apparently, You can&rsquo;t use send_keys for certain types of inputs. (Workaround &ndash; click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
 
 <pre><code>Element is not clickable at point (928, 23.5). Other element would receive the click
 </code></pre>
@@ -333,7 +333,7 @@ There are two ways to handle this currently:</p>
 
 <h3>Speed Test Results: Firefox vs ChromeDriver</h3>
 
-<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 - 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &#8230; you have to consider whether Chrome&#8217;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
+<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 &ndash; 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &hellip; you have to consider whether Chrome&rsquo;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
 ]]></content>
   </entry>
   
@@ -342,14 +342,14 @@ There are two ways to handle this currently:</p>
     <link href="http://codebreak.github.com/blog/2012/06/24/capybara-tutorial-using-irb/"/>
     <updated>2012-06-24T16:03:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/24/capybara-tutorial-using-irb</id>
-    <content type="html"><![CDATA[<p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&#8217;ve found it pretty useful so I figured I&#8217;d share it here.</p>
+    <content type="html"><![CDATA[<p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&rsquo;ve found it pretty useful so I figured I&rsquo;d share it here.</p>
 
 <p>To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)</p>
 
 <pre><code>rvm use 1.9.2@cucumberplay --create
 </code></pre>
 
-<p>Install <a href="https://github.com/jnicklas/capybara/">Capybara</a> if you haven&#8217;t already.</p>
+<p>Install <a href="https://github.com/jnicklas/capybara/">Capybara</a> if you haven&rsquo;t already.</p>
 
 <pre><code>gem install capybara
 </code></pre>
@@ -374,7 +374,7 @@ There are two ways to handle this currently:</p>
 <pre><code>visit "http://www.google.com"
 </code></pre>
 
-<h2>Here&#8217;s an example for logging into GMAIL</h2>
+<h2>Here&rsquo;s an example for logging into GMAIL</h2>
 
 <pre><code>visit "http://www.gmail.com"
 page.has_content?("A Google approach to email.")
@@ -393,23 +393,23 @@ click_button 'Sign in'
     <id>http://codebreak.github.com/blog/2012/06/09/women-presenters</id>
     <content type="html"><![CDATA[<p><a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/"><img class="right" src="https://evbdn.eventbrite.com/s3-s3/eventlogos/6471833/screenshot20120828at8.06.17pm.png.jpg" width="200" height="200"></a></p>
 
-<p>After months of planning with my amazing colleagues - <a href="https://twitter.com/AConnJob">Annie Conn</a>, <a href="http://www.bonnachoi.com">Bonna Choi</a>, and <a href="http://www.nanchu.me/">Nancy Chu</a> - we successfully organized the first ever <a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/">ThoughtWorks sponsored Girl Geek Dinner.</a></p>
+<p>After months of planning with my amazing colleagues &ndash; <a href="https://twitter.com/AConnJob">Annie Conn</a>, <a href="http://www.bonnachoi.com">Bonna Choi</a>, and <a href="http://www.nanchu.me/">Nancy Chu</a> &ndash; we successfully organized the first ever <a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/">ThoughtWorks sponsored Girl Geek Dinner.</a></p>
 
-<p>Once the venue, catering, and audio/equipment rentals were confirmed &#8230; the next thing on my list was to find <strong>WOMEN</strong> speakers. Much to my surprise this was the hardest part of the organizing bit! When I thought about who I&#8217;d want to invite to be one of my speakers, I quickly thought of our Chief Technology Officer - <a href="http://join.thoughtworks.com/profiles/rebecca-parsons">Rebecca Parsons</a>. After jotting down Rebecca, I remember having to really think hard about my next set of speaker prospects. Eventually, I came up with 4-5 potential ThoughtWorks women speakers but all of them were out of state! I could have flown them in but that was not very cost effective so I dropped that idea.</p>
+<p>Once the venue, catering, and audio/equipment rentals were confirmed &hellip; the next thing on my list was to find <strong>WOMEN</strong> speakers. Much to my surprise this was the hardest part of the organizing bit! When I thought about who I&rsquo;d want to invite to be one of my speakers, I quickly thought of our Chief Technology Officer &ndash; <a href="http://join.thoughtworks.com/profiles/rebecca-parsons">Rebecca Parsons</a>. After jotting down Rebecca, I remember having to really think hard about my next set of speaker prospects. Eventually, I came up with 4-5 potential ThoughtWorks women speakers but all of them were out of state! I could have flown them in but that was not very cost effective so I dropped that idea.</p>
 
-<p>Instead, I decided to look within the ThoughtWorks San Francisco community. By doing so, I was faced with a lot of the same excuses &#8230; <strong>&#8220;I can&#8217;t, I have other plans that day.&#8221;</strong>, <strong>&#8220;I would, but I don&#8217;t know what I&#8217;d talk about.&#8221;</strong> and perhaps the most common one of all (which coincidentally was my excuse as  well) &#8230;</p>
+<p>Instead, I decided to look within the ThoughtWorks San Francisco community. By doing so, I was faced with a lot of the same excuses &hellip; <strong>&ldquo;I can&rsquo;t, I have other plans that day.&rdquo;</strong>, <strong>&ldquo;I would, but I don&rsquo;t know what I&rsquo;d talk about.&rdquo;</strong> and perhaps the most common one of all (which coincidentally was my excuse as  well) &hellip;</p>
 
-<blockquote><p><strong>I&#8217;ve never done a talk in front of a large audience and I&#8217;m utterly terrified of speaking in public.</strong></p></blockquote>
+<blockquote><p><strong>I&rsquo;ve never done a talk in front of a large audience and I&rsquo;m utterly terrified of speaking in public.</strong></p></blockquote>
 
-<p>OK so you&#8217;ve never done it before. That&#8217;s fine &#8230; so let&#8217;s start at a smaller scale and work our way up. How about we start with speaking out more during the day. Make yourself heard in meetings and team conversations or even talk to a team member you don&#8217;t usually talk to. Discuss <strong>WHAT</strong> you&#8217;re working on and as well as <strong>HOW</strong> you&#8217;re getting things done to those outside of your team. By doing so, I think you&#8217;ll find that your communication skills will improve and &#8230;</p>
+<p>OK so you&rsquo;ve never done it before. That&rsquo;s fine &hellip; so let&rsquo;s start at a smaller scale and work our way up. How about we start with speaking out more during the day. Make yourself heard in meetings and team conversations or even talk to a team member you don&rsquo;t usually talk to. Discuss <strong>WHAT</strong> you&rsquo;re working on and as well as <strong>HOW</strong> you&rsquo;re getting things done to those outside of your team. By doing so, I think you&rsquo;ll find that your communication skills will improve and &hellip;</p>
 
-<blockquote><p><strong>other&#8217;s will learn and get inspired by the knowledge and experiences you&#8217;ve shared with them.</strong></p></blockquote>
+<blockquote><p><strong>other&rsquo;s will learn and get inspired by the knowledge and experiences you&rsquo;ve shared with them.</strong></p></blockquote>
 
-<p>Realizing that you have something worthwhile to say will help you gain the <strong>CONFIDENCE</strong> that you need to speak in front of people. Your experiences and lessons learned can serve as your topics. With your topics at hand and armed with confidence &#8230; all that&#8217;s really left is polishing up your presentation skills.</p>
+<p>Realizing that you have something worthwhile to say will help you gain the <strong>CONFIDENCE</strong> that you need to speak in front of people. Your experiences and lessons learned can serve as your topics. With your topics at hand and armed with confidence &hellip; all that&rsquo;s really left is polishing up your presentation skills.</p>
 
-<p>Now don&#8217;t be fooled &#8230; when I signed up to do my <strong>FIRST EVER</strong> tech talk for Girl Geek Dinners I was not completely at ease. In fact I was still pretty nervous. But if there&#8217;s one thing I&#8217;ve learned - like many people &#8230;<strong> I will always be nervous when it comes to speaking in front of people </strong> but I&#8217;m not going to let that prevent me from getting up there and doing it anyways!</p>
+<p>Now don&rsquo;t be fooled &hellip; when I signed up to do my <strong>FIRST EVER</strong> tech talk for Girl Geek Dinners I was not completely at ease. In fact I was still pretty nervous. But if there&rsquo;s one thing I&rsquo;ve learned &ndash; like many people &hellip;<strong> I will always be nervous when it comes to speaking in front of people </strong> but I&rsquo;m not going to let that prevent me from getting up there and doing it anyways!</p>
 
-<p>So get out there, challenge your self by doing a presentation or 2. And maybe &#8230; just maybe you&#8217;ll get to a point where you&#8217;re a little less nervous than your very first presentation/talk.</p>
+<p>So get out there, challenge your self by doing a presentation or 2. And maybe &hellip; just maybe you&rsquo;ll get to a point where you&rsquo;re a little less nervous than your very first presentation/talk.</p>
 
 <h2>Step #1 Sign up for presentations</h2>
 
@@ -426,8 +426,8 @@ click_button 'Sign in'
 
 <ul>
 <li>Do the necessary research or find supporting artifacts to get your point across.</li>
-<li>If you&#8217;re using slides during your presentation - make sure they are there only to support your talk &#8230; NOT control it. Keep it simple with as few words as possible. (Photos wont hurt either)</li>
-<li>Most Power point tools these days timers &#8230; USE THEM when you&#8217;re practicing AND during your talk!</li>
+<li>If you&rsquo;re using slides during your presentation &ndash; make sure they are there only to support your talk &hellip; NOT control it. Keep it simple with as few words as possible. (Photos wont hurt either)</li>
+<li>Most Power point tools these days timers &hellip; USE THEM when you&rsquo;re practicing AND during your talk!</li>
 <li>Practice, Practice, Practice! Practice in front of a mirror or better yet, do a dry run in front of someone.</li>
 </ul>
 
@@ -435,23 +435,23 @@ click_button 'Sign in'
 <h2>Step #3 Rock It!</h2>
 
 <ul>
-<li>Engage the audience, ask them questions and make them feel like they&#8217;re having a conversation with you instead of it being a one way street.</li>
+<li>Engage the audience, ask them questions and make them feel like they&rsquo;re having a conversation with you instead of it being a one way street.</li>
 <li>Speak slowly and annunciate. It may sound odd to you at first (and maybe it does) but at least people will be able to follow and listen to what you have to say.</li>
-<li>Don&#8217;t read your notes &#8230; I know its terrifying but trust me &#8230; its better if you try to memorize everything!</li>
+<li>Don&rsquo;t read your notes &hellip; I know its terrifying but trust me &hellip; its better if you try to memorize everything!</li>
 </ul>
 
 
-<h2>Tips for when you get nervous &#8230;</h2>
+<h2>Tips for when you get nervous &hellip;</h2>
 
 <ul>
 <li>If you get nervous (which I usually do right before I get up) I focus and control my breathing.</li>
-<li>Find someone you know and just talk as if you&#8217;re telling them a story. (If you don&#8217;t know anyone &#8230; try to find someone that looks nice and interested.)</li>
+<li>Find someone you know and just talk as if you&rsquo;re telling them a story. (If you don&rsquo;t know anyone &hellip; try to find someone that looks nice and interested.)</li>
 <li>Pump yourself up and remind your inner self that:
 
 <ol>
-<li>These people are here to learn from you &#8230; not to judge you.</li>
-<li>Your presentation is based on your experience, knowledge and quite frankly your own opinion or take on a specific topic. So technically you&#8217;re the subject matter expert in the room!</li>
-<li>This will be all over soon &#8230; hang in there!</li>
+<li> These people are here to learn from you &hellip; not to judge you.</li>
+<li> Your presentation is based on your experience, knowledge and quite frankly your own opinion or take on a specific topic. So technically you&rsquo;re the subject matter expert in the room!</li>
+<li> This will be all over soon &hellip; hang in there!</li>
 </ol>
 </li>
 </ul>
@@ -464,7 +464,7 @@ click_button 'Sign in'
     <link href="http://codebreak.github.com/blog/2012/06/08/tester-role/"/>
     <updated>2012-06-08T22:54:00-07:00</updated>
     <id>http://codebreak.github.com/blog/2012/06/08/tester-role</id>
-    <content type="html"><![CDATA[<p>Below are examples of what I personally strive for when I&#8217;m on an agile project. Do note that the role that a tester plays on a project varies and can depend on the tester or the unique dynamics of the team.</p>
+    <content type="html"><![CDATA[<p>Below are examples of what I personally strive for when I&rsquo;m on an agile project. Do note that the role that a tester plays on a project varies and can depend on the tester or the unique dynamics of the team.</p>
 
 <ul>
 <li>Show interest in participating on project <strong>Inceptions</strong> and always accept when invited!</li>
@@ -473,8 +473,8 @@ click_button 'Sign in'
 <li>Pair with the BAs in writing the <strong>Acceptance Criteria</strong> so that missed scenarios can be identified.</li>
 <li>Hold <strong>Story Kickoffs</strong> with a BA and the Developer that has picked up the story.</li>
 <li><strong>Pair</strong> with Developers in writing their tests.</li>
-<li>Don&#8217;t wait till stories are &#8220;Ready to Test&#8221;. Pull the latest and greatest on your local or Test Environment and <strong>start testing early</strong>! (No defects should be created at this time, simply notify the Devs about the issues/concerns found.)</li>
-<li>Once Dev&#8217;s believe that their stories are &#8220;Ready to Test&#8221;, hold <strong>Desk-checks</strong> with them and a BA to make sure that they&#8217;ve implemented the stories according to the Acceptance Criteria.</li>
+<li>Don&rsquo;t wait till stories are &ldquo;Ready to Test&rdquo;. Pull the latest and greatest on your local or Test Environment and <strong>start testing early</strong>! (No defects should be created at this time, simply notify the Devs about the issues/concerns found.)</li>
+<li>Once Dev&rsquo;s believe that their stories are &ldquo;Ready to Test&rdquo;, hold <strong>Desk-checks</strong> with them and a BA to make sure that they&rsquo;ve implemented the stories according to the Acceptance Criteria.</li>
 <li><strong>Automate</strong> functional tests. (Pair with Devs as much as possible when doing this!)</li>
 <li>Perform <strong>Exploratory</strong> Testing on stories and push back stories when blocking issues associated to the stories are found.</li>
 <li>Log <strong>Defects</strong> for issues not blocking stories or those that are new/regression issues.</li>

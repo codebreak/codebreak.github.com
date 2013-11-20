@@ -111,9 +111,9 @@
   </header>
 
 
-  <div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &#8230; but I decided at the last minute to stick with Firefox.</p>
+  <div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &hellip; but I decided at the last minute to stick with Firefox.</p>
 
-<p>Recently, I heard rumors that ChromeDriver is &#8220;Faster&#8221; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
+<p>Recently, I heard rumors that ChromeDriver is &ldquo;Faster&rdquo; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
 
 <h3>Setting up Cucumber to use ChromeDriver</h3>
 
@@ -140,7 +140,7 @@ Capybara.javascript_driver = :chrome
    Failed to send keys because cannot focus element (Selenium::WebDriver::Error::UnknownError)
 </code></pre>
 
-<blockquote><p>Apparently, You can&#8217;t use send_keys for certain types of inputs. (Workaround - click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
+<blockquote><p>Apparently, You can&rsquo;t use send_keys for certain types of inputs. (Workaround &ndash; click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
 
 <pre><code>Element is not clickable at point (928, 23.5). Other element would receive the click
 </code></pre>
@@ -156,7 +156,7 @@ There are two ways to handle this currently:</p>
 
 <h3>Speed Test Results: Firefox vs ChromeDriver</h3>
 
-<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 - 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &#8230; you have to consider whether Chrome&#8217;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
+<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 &ndash; 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &hellip; you have to consider whether Chrome&rsquo;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
 </div>
   
   
@@ -226,7 +226,6 @@ There are two ways to handle this currently:</p>
     
   </ul>
 </section>
-
 
 
 

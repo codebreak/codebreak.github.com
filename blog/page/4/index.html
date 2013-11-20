@@ -9,7 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Lately I&#8217;ve been working on a client site &#8230; which entails having to set some proxies. I think for some reason this has conflicted with my &hellip;">
+  <meta name="description" content="Lately I&rsquo;ve been working on a client site &hellip; which entails having to set some proxies. I think for some reason this has conflicted with &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -111,7 +111,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Lately I&#8217;ve been working on a client site &#8230; which entails having to set some proxies. I think for some reason this has conflicted with my github set up. The other day, when I tried a &#8216;git pull &#8211;rebase&#8217; I got the &#8216;fatal: The remote end hung up unexpectedly&#8217; error. This is what I did to fix the problem.</p>
+  <div class="entry-content"><p>Lately I&rsquo;ve been working on a client site &hellip; which entails having to set some proxies. I think for some reason this has conflicted with my github set up. The other day, when I tried a &lsquo;git pull &mdash;rebase&rsquo; I got the &lsquo;fatal: The remote end hung up unexpectedly&rsquo; error. This is what I did to fix the problem.</p>
 
 <p>I checked to see if I had any of my proxies set in my environment:</p>
 
@@ -125,12 +125,12 @@ unset https_proxy
 unset all_proxy
 </code></pre>
 
-<p>After unsetting them, I checked if I can do a &#8216;git pull &#8211;rebase&#8217; again. Sadly I still got the error. To get around this, I decided to try pulling using https instead of ssh. To do this, I first added it:</p>
+<p>After unsetting them, I checked if I can do a &lsquo;git pull &mdash;rebase&rsquo; again. Sadly I still got the error. To get around this, I decided to try pulling using https instead of ssh. To do this, I first added it:</p>
 
 <pre><code>git remote add origin-https https://github.com/&lt;project_name&gt;/&lt;project_name.git&gt;
 </code></pre>
 
-<p>Doing so then allows you to pull from the remote set up &#8216;origin-https&#8217;. NOTE: Remember to specify the branch as well (In this case &#8216;master&#8217;).</p>
+<p>Doing so then allows you to pull from the remote set up &lsquo;origin-https&rsquo;. NOTE: Remember to specify the branch as well (In this case &lsquo;master&rsquo;).</p>
 
 <pre><code>git pull origin-https master
 </code></pre>
@@ -203,7 +203,6 @@ unset all_proxy
     
   </ul>
 </section>
-
 
 
 
