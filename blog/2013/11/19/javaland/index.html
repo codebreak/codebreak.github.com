@@ -5,17 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Javaland - codebreak.er</title>
+  <title>Simple intro into Java-Land - codebreak.er</title>
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Simple Start on Java
-OCT 31ST, 2013
-Java and Gradle
-Get Gradle
+  <meta name="description" content="Java and Gradle Get Gradle
 Create Project directory “MarsRover”
-Build Project Structure:
-cd MarsRover/ mkdir -p &hellip;">
+Build Project Structure: cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,7 +87,7 @@ cd MarsRover/ mkdir -p &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Javaland</h1>
+      <h1 class="entry-title">Simple Intro Into Java-Land</h1>
     
     
       <p class="meta">
@@ -114,25 +110,58 @@ cd MarsRover/ mkdir -p &hellip;">
   </header>
 
 
-<div class="entry-content"><p>Simple Start on Java
-OCT 31ST, 2013
-Java and Gradle
-Get Gradle
-Create Project directory “MarsRover”
-Build Project Structure:
-cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
-Create first java class:
-cd src/main/java vi HelloWorld.java
-public class HelloWorld{ public static void main(String[] args){ System.out.println(“Hello World!!”);
-}
-}
-Java conventional rules: Allowed only one public class in the file and that class name should match the filename. static means method is not an instance it is attached to the class void means method is not returning anything main mean its the entry point to the app
-Build your project: gradle build
-:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE :classes UP-TO-DATE (classes depends on compileJava)
-:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) :assemble UP-TO-DATE umbrella tasks :compileTestJava UP-TO-DATE
-:processTestResources UP-TO-DATE :testClasses UP-TO-DATE :test UP-TO-DATE :check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) :build UP-TO-DATE (umbrella: assemble and check)
-this basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)
-Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld</p>
+<div class="entry-content"><h4>Java and Gradle</h4>
+
+<ul>
+<li>Get Gradle</li>
+<li>Create Project directory “MarsRover”</li>
+<li><p>Build Project Structure:</p>
+
+<pre><code>  cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
+</code></pre></li>
+<li><p>Create first java class:
+      cd src/main/java vi HelloWorld.java</p>
+
+<pre><code>  public class HelloWorld{ 
+      public static void main(String[] args){ 
+          System.out.println(“Hello World!!”);
+      }
+  }
+</code></pre></li>
+</ul>
+
+
+<p>Java conventional rules: Allowed only one public class in the file and that class name should match the filename. static means method is not an instance it is attached to the class void means method is not returning anything main mean its the entry point to the app</p>
+
+<ul>
+<li><p>Build your project:</p>
+
+<pre><code>  gradle build
+</code></pre></li>
+<li><p>You should then get the following:</p>
+
+<pre><code>  :compileJava UP-TO-DATE
+  :processResources UP-TO-DATE :classes UP-TO-DATE
+  :jar UP-TO-DATE 
+  :assemble UP-TO-DATE
+  :compileTestJava UP-TO-DATE 
+  :processTestResources UP-TO-DATE 
+  :testClasses UP-TO-DATE 
+  :test UP-TO-DATE 
+  :check UP-TO-DATE 
+  :build UP-TO-DATE 
+</code></pre></li>
+<li><p>&lsquo;gradle build&rsquo; basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)</p></li>
+<li>&lsquo;:compileJava UP-TO-DATE&rsquo;: compiles java classes – HelloWorld</li>
+<li>&lsquo;:processResources UP-TO-DATE :classes UP-TO-DATE&rsquo;: classes depends on compileJava</li>
+<li><p>&lsquo;:jar UP-TO-DATE&rsquo;: Builds the jar – creates MarsRover.jar with HelloWorld – .zip</p></li>
+<li><p>Now, to run your program:</p>
+
+<pre><code>  cd build/libs/ 
+  java -cp MarsRover.jar HelloWorld
+</code></pre></li>
+</ul>
+
 </div>
 
 
@@ -186,7 +215,7 @@ Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/11/19/javaland/">Javaland</a>
+        <a href="/blog/2013/11/19/javaland/">Simple intro into Java-Land</a>
       </li>
     
       <li class="post">
