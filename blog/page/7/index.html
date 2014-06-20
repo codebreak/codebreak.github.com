@@ -9,7 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default &hellip;">
+  <meta name="description" content="After months of planning with my amazing colleagues &ndash; Annie Conn, Bonna Choi, and Nancy Chu &ndash; we successfully organized the first ever &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +88,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Making the Switch to ChromeDriver</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/06/09/women-presenters/">Women & Presentations CAN Mix</a></h1>
     
     
       <p class="meta">
@@ -104,59 +104,78 @@
   
 
 
-<time datetime="2012-07-11T00:05:00-07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
+<time datetime="2012-06-09T15:50:00-07:00" pubdate data-updated="true">Jun 9<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &hellip; but I decided at the last minute to stick with Firefox.</p>
+  <div class="entry-content"><p><a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/"><img class="right" src="https://evbdn.eventbrite.com/s3-s3/eventlogos/6471833/screenshot20120828at8.06.17pm.png.jpg" width="200" height="200"></a></p>
 
-<p>Recently, I heard rumors that ChromeDriver is &ldquo;Faster&rdquo; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
+<p>After months of planning with my amazing colleagues &ndash; <a href="https://twitter.com/AConnJob">Annie Conn</a>, <a href="http://www.bonnachoi.com">Bonna Choi</a>, and <a href="http://www.nanchu.me/">Nancy Chu</a> &ndash; we successfully organized the first ever <a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/">ThoughtWorks sponsored Girl Geek Dinner.</a></p>
 
-<h3>Setting up Cucumber to use ChromeDriver</h3>
+<p>Once the venue, catering, and audio/equipment rentals were confirmed &hellip; the next thing on my list was to find <strong>WOMEN</strong> speakers. Much to my surprise this was the hardest part of the organizing bit! When I thought about who I&rsquo;d want to invite to be one of my speakers, I quickly thought of our Chief Technology Officer &ndash; <a href="http://join.thoughtworks.com/profiles/rebecca-parsons">Rebecca Parsons</a>. After jotting down Rebecca, I remember having to really think hard about my next set of speaker prospects. Eventually, I came up with 4-5 potential ThoughtWorks women speakers but all of them were out of state! I could have flown them in but that was not very cost effective so I dropped that idea.</p>
 
-<p>To make the switch, all I had to do was replace the driver definition from:</p>
+<p>Instead, I decided to look within the ThoughtWorks San Francisco community. By doing so, I was faced with a lot of the same excuses &hellip; <strong>&ldquo;I can&rsquo;t, I have other plans that day.&rdquo;</strong>, <strong>&ldquo;I would, but I don&rsquo;t know what I&rsquo;d talk about.&rdquo;</strong> and perhaps the most common one of all (which coincidentally was my excuse as  well) &hellip;</p>
 
-<pre><code>Capybara.current_driver = :selenium 
-</code></pre>
+<blockquote><p><strong>I&rsquo;ve never done a talk in front of a large audience and I&rsquo;m utterly terrified of speaking in public.</strong></p></blockquote>
 
-<p>to:</p>
+<p>OK so you&rsquo;ve never done it before. That&rsquo;s fine &hellip; so let&rsquo;s start at a smaller scale and work our way up. How about we start with speaking out more during the day. Make yourself heard in meetings and team conversations or even talk to a team member you don&rsquo;t usually talk to. Discuss <strong>WHAT</strong> you&rsquo;re working on and as well as <strong>HOW</strong> you&rsquo;re getting things done to those outside of your team. By doing so, I think you&rsquo;ll find that your communication skills will improve and &hellip;</p>
 
-<pre><code>Capybara.register_driver :chrome do |app|
-    Capybara::Selenium::Driver.new(app, :browser =&gt; :chrome)
-  end
-Capybara.javascript_driver = :chrome
-</code></pre>
+<blockquote><p><strong>other&rsquo;s will learn and get inspired by the knowledge and experiences you&rsquo;ve shared with them.</strong></p></blockquote>
 
-<p>Then in all my Cucumber feature files, I added the tag @javascript:</p>
+<p>Realizing that you have something worthwhile to say will help you gain the <strong>CONFIDENCE</strong> that you need to speak in front of people. Your experiences and lessons learned can serve as your topics. With your topics at hand and armed with confidence &hellip; all that&rsquo;s really left is polishing up your presentation skills.</p>
 
-<h3>Re-run Cucumber Feature Files</h3>
+<p>Now don&rsquo;t be fooled &hellip; when I signed up to do my <strong>FIRST EVER</strong> tech talk for Girl Geek Dinners I was not completely at ease. In fact I was still pretty nervous. But if there&rsquo;s one thing I&rsquo;ve learned &ndash; like many people &hellip;<strong> I will always be nervous when it comes to speaking in front of people </strong> but I&rsquo;m not going to let that prevent me from getting up there and doing it anyways!</p>
 
-<p>When I re-ran my Cucumber Features files using ChromeDriver, I however came across a few errors:</p>
+<p>So get out there, challenge your self by doing a presentation or 2. And maybe &hellip; just maybe you&rsquo;ll get to a point where you&rsquo;re a little less nervous than your very first presentation/talk.</p>
 
-<pre><code>focusElement execution failed;
-   Failed to send keys because cannot focus element (Selenium::WebDriver::Error::UnknownError)
-</code></pre>
-
-<blockquote><p>Apparently, You can&rsquo;t use send_keys for certain types of inputs. (Workaround &ndash; click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
-
-<pre><code>Element is not clickable at point (928, 23.5). Other element would receive the click
-</code></pre>
-
-<blockquote><p>ChromeDriver always clicks the middle of the element in attempt to be faithful to what an actual user does.
-There are two ways to handle this currently:</p>
+<h2>Step #1 Sign up for presentations</h2>
 
 <ul>
-<li>Change/fix the page so that the user can click on the link in the middle.</li>
-<li>Use the advanced user interactions API to click at the appropriate place in the link. e.g., ActionChains(w).move_to_element_with_offset(link, 0, 20).click().perform()</li>
+<li>Teach or train a fellow team member.</li>
+<li>Start <a href="http://www.pecha-kucha.org/">Pecha Kucka Nights</a> with a group of people.</li>
+<li>Hold workshops on topics that other people could benefit from.</li>
+<li>Hold brown bags (people bring in lunch while someone does a presentation).</li>
+<li>Participate in Lightning talks (Very short 5-10 min talks on a particular topic).</li>
 </ul>
-</blockquote>
 
-<h3>Speed Test Results: Firefox vs ChromeDriver</h3>
 
-<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 &ndash; 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &hellip; you have to consider whether Chrome&rsquo;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
+<h2>Step #2 Preparation is key</h2>
+
+<ul>
+<li>Do the necessary research or find supporting artifacts to get your point across.</li>
+<li>If you&rsquo;re using slides during your presentation &ndash; make sure they are there only to support your talk &hellip; NOT control it. Keep it simple with as few words as possible. (Photos wont hurt either)</li>
+<li>Most Power point tools these days timers &hellip; USE THEM when you&rsquo;re practicing AND during your talk!</li>
+<li>Practice, Practice, Practice! Practice in front of a mirror or better yet, do a dry run in front of someone.</li>
+</ul>
+
+
+<h2>Step #3 Rock It!</h2>
+
+<ul>
+<li>Engage the audience, ask them questions and make them feel like they&rsquo;re having a conversation with you instead of it being a one way street.</li>
+<li>Speak slowly and annunciate. It may sound odd to you at first (and maybe it does) but at least people will be able to follow and listen to what you have to say.</li>
+<li>Don&rsquo;t read your notes &hellip; I know its terrifying but trust me &hellip; its better if you try to memorize everything!</li>
+</ul>
+
+
+<h2>Tips for when you get nervous &hellip;</h2>
+
+<ul>
+<li>If you get nervous (which I usually do right before I get up) I focus and control my breathing.</li>
+<li>Find someone you know and just talk as if you&rsquo;re telling them a story. (If you don&rsquo;t know anyone &hellip; try to find someone that looks nice and interested.)</li>
+<li>Pump yourself up and remind your inner self that:
+
+<ol>
+<li> These people are here to learn from you &hellip; not to judge you.</li>
+<li> Your presentation is based on your experience, knowledge and quite frankly your own opinion or take on a specific topic. So technically you&rsquo;re the subject matter expert in the room!</li>
+<li> This will be all over soon &hellip; hang in there!</li>
+</ol>
+</li>
+</ul>
+
 </div>
   
   
@@ -181,15 +200,7 @@ There are two ways to handle this currently:</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/11/19/javaland/">Simple intro into Java-Land</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/23/rapidftr-android-setup/">RapidFTR-Android Setup</a>
+        <a href="/blog/2013/11/19/javaland/">Javaland</a>
       </li>
     
       <li class="post">
@@ -237,7 +248,7 @@ There are two ways to handle this currently:</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - codebreaker -
+  Copyright &copy; 2014 - codebreaker -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

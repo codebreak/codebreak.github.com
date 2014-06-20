@@ -9,7 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Lately I&rsquo;ve been working on a client site &hellip; which entails having to set some proxies. I think for some reason this has conflicted with &hellip;">
+  <meta name="description" content="Over 3 years ago, after being laid off from a start up company then deciding to volunteer in Peru and backpack through South America for a few months &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +88,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/">Fatal: The Remote End Hung Up Unexpectedly</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/07/20/3-years-at-thoughtworks/">3 Years @ ThoughtWorks</a></h1>
     
     
       <p class="meta">
@@ -104,36 +104,105 @@
   
 
 
-<time datetime="2012-11-14T08:39:00-08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2012</time>
+<time datetime="2012-07-20T09:41:00-07:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Lately I&rsquo;ve been working on a client site &hellip; which entails having to set some proxies. I think for some reason this has conflicted with my github set up. The other day, when I tried a &lsquo;git pull &mdash;rebase&rsquo; I got the &lsquo;fatal: The remote end hung up unexpectedly&rsquo; error. This is what I did to fix the problem.</p>
+  <div class="entry-content"><p>Over 3 years ago, after being laid off from a start up company then deciding to volunteer in Peru and backpack through South America for a few months &ndash; I was basking in the glory of <strong>FUNEMPLOYMENT</strong> when I came across an invitation to a &ldquo;<strong>Super Saturday</strong>&rdquo; interview event at <a href="https://www.thoughtworks.com">ThoughtWorks</a> &ndash; Chicago.</p>
 
-<p>I checked to see if I had any of my proxies set in my environment:</p>
+<p>I got flown in and put up at the Club Quarters Hotel in the heart of downtown Chicago. Then during the event, 30-40 candidates got divided into groups and spent the entire day meeting numerous ThoughtWorkers as well participate in various activities like a Lego game and a controversial group discussion.</p>
 
-<pre><code>env | grep -i http
-</code></pre>
+<blockquote><p>I really appreciated how the main purpose was to not only test my technical abilities but to also determine if I&rsquo;m a good culture fit. Never before have I been thoroughly impressed by the way a company hired people.</p></blockquote>
 
-<p>When I saw that they were set, I went ahead an unset them:</p>
+<p>During my 3 year relationship with ThoughtWorks, I have worked on <strong>4 billable projects</strong> as well as numerous side projects in <strong>5 different countries</strong>. I have met countless intellectual co-workers (now friends) from all over the world and I can honestly say that I have learned something from each one of them.</p>
 
-<pre><code>unset http_proxy
-unset https_proxy
-unset all_proxy
-</code></pre>
+<h2>Assignment in Calgary, Canada (Oct09-March10)</h2>
 
-<p>After unsetting them, I checked if I can do a &lsquo;git pull &mdash;rebase&rsquo; again. Sadly I still got the error. To get around this, I decided to try pulling using https instead of ssh. To do this, I first added it:</p>
+<ul>
+<li><strong><em>Role</em>:</strong> Tester</li>
+<li><strong><em>Test Stack</em>:</strong> QTP for test automation</li>
+<li><strong><em>Learnings</em>:</strong>
 
-<pre><code>git remote add origin-https https://github.com/&lt;project_name&gt;/&lt;project_name.git&gt;
-</code></pre>
+<ul>
+<li>On my very first project, I had the opportunity to work with a dominantly ThoughtWorks team and learn so much about an array of different roles from amazing people like Jane Robarts (Delivery Assurance and my original sponsor), Mikey Aquilar (Project Coach and my current sponsor), Vijay Seetaram (Iteration Manager), Juanjuan Zang (BA), and Radu Muresan (kick ass DEV).</li>
+<li>Within just a few days, it also became apparent that ThoughtWorks is a flat organization and that though there are leads on a project, there is no need to sit around and wait for anyone to tell you what to do. You can (and should) simply just get up and start getting shit done.</li>
+</ul>
+</li>
+<li><strong><em>Project Status</em>:</strong> ThoughtWorks deemed the project &ldquo;successful&rdquo; considering we delivered what we said we would &ndash; the company division has however been shut down.</li>
+</ul>
 
-<p>Doing so then allows you to pull from the remote set up &lsquo;origin-https&rsquo;. NOTE: Remember to specify the branch as well (In this case &lsquo;master&rsquo;).</p>
 
-<pre><code>git pull origin-https master
-</code></pre>
+<h2>Assignment in San Francisco, California (May-Sept10)</h2>
+
+<ul>
+<li><strong><em>Role</em>:</strong> Mobile Tester</li>
+<li><strong><em>Test Stack</em>:</strong> Ruby/RSpec, Cucumber &amp; Frank (iOS)</li>
+<li><strong><em>Learnings</em>:</strong>
+
+<ul>
+<li>Was lucky enough to be present during the creation of the iOS Test Automation Framework called <a href="http://testingwithfrank.com/">Frank</a> created by fellow ThoughtWorker <a href="http://blog.thepete.net/">Pete Hodgson</a> &amp; Derek Longmuir.</li>
+<li>iOS application testing opens up an array of issues that greatly differ from web testing. (More on this later)</li>
+</ul>
+</li>
+<li><strong><em>Project Status</em>:</strong> Product Successfully launched and is currently one of the top 100 iPad apps in the AppleStore.</li>
+</ul>
+
+
+<h2>Assignment in Melbourne, Australia (Oct10-June11)</h2>
+
+<ul>
+<li><strong><em>Role</em>:</strong> Tester and Coach</li>
+<li><strong><em>Test Stack</em>:</strong> Ruby/RSpec, Cucumber, Capybara &amp; WebDriver</li>
+<li><strong><em>Learnings</em>:</strong>
+
+<ul>
+<li>Mobile (non-native app) automated tests are easy to write when using the Web Browser. But, manual testing will always need to be done on an actual device which can eventually become cumbersome.</li>
+<li>Meticulous implementation/testing is important &ndash; however, one should consider being a bit more lenient when dealing with mobile apps where an app&rsquo;s average life expectancy is 14 about months.</li>
+<li>Learned that consulting is hard and that before you can be taken seriously &hellip; you need to earn the client&rsquo;s trust first.</li>
+<li>There are defined roles on a project but a role is not meant to be done by one person. The team should work together to fill in each role.</li>
+</ul>
+</li>
+<li><strong><em>Project Status</em>:</strong> The team successfully delivered the product as specified by the client however, the client had no marketing strategy to move forward and in the end the product was scrapped.</li>
+</ul>
+
+
+<h2>Assignment in Bangalore, India &amp; Xian, China (Aug-Nov11)</h2>
+
+<ul>
+<li><strong><em>Role</em>:</strong> Coach and Trainer</li>
+<li><strong><em>Test Stack</em>:</strong> Python, Django</li>
+<li><strong><em>Learnings</em>:</strong>
+
+<ul>
+<li>Distributed projects can work so long as you&rsquo;re in the same (or close enough) time zone so that can flow back and forth easily.</li>
+<li>Make a few changes in your teaching style when english is not the first language of those you are teaching.</li>
+<li>Speaking in public is not so hard when you take your time, practice &hellip; and picture the audience is naked &hellip; I mean, interested.</li>
+<li>You need to toughen up to survive in China &hellip; speaking the language can&rsquo;t hurt either.</li>
+</ul>
+</li>
+<li><strong><em>Project Status</em>:</strong> 15 new ThoughtWorkers were released to the world and the project we worked on is currently still getting worked on by a team in Pune, India.</li>
+</ul>
+
+
+<h2>Assignment in San Francisco &amp; Los Angeles, California (Dec11-June12)</h2>
+
+<ul>
+<li><strong><em>Role</em>:</strong> Tester &amp; Business Analyst</li>
+<li><strong><em>Test Stack</em>:</strong> Ruby, Cucumber, Capybara, WebDriver &amp; Frank (iOS Testing Tool)</li>
+<li><strong><em>Learnings</em>:</strong>
+
+<ul>
+<li>Releasing a product SOONER provides feedback and is much more effective than striving for perfection before launching.</li>
+<li>Realized the importance of an inception to define some sort of an MVP (Minimal Viable Product).</li>
+<li>There needs to be an agreed upon plan to do proper hand over to increase the likelihood that it will be a sustainable project.</li>
+</ul>
+</li>
+<li><strong><em>Project Status</em>:</strong> ThoughtWorks has handed over the working application to the client and we believe implementation is currently still in progress.</li>
+</ul>
+
 </div>
   
   
@@ -158,15 +227,7 @@ unset all_proxy
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/11/19/javaland/">Simple intro into Java-Land</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/23/rapidftr-android-setup/">RapidFTR-Android Setup</a>
+        <a href="/blog/2013/11/19/javaland/">Javaland</a>
       </li>
     
       <li class="post">
@@ -214,7 +275,7 @@ unset all_proxy
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - codebreaker -
+  Copyright &copy; 2014 - codebreaker -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

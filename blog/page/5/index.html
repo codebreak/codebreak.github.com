@@ -9,7 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&rsquo;t around, having &hellip;">
+  <meta name="description" content="On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,7 +88,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/10/28/using-rvm/">Using RVM</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/07/11/firefox-vs-chromedriver/">WebDriver: Making the Switch to ChromeDriver</a></h1>
     
     
       <p class="meta">
@@ -104,70 +104,59 @@
   
 
 
-<time datetime="2012-10-28T09:36:00-07:00" pubdate data-updated="true">Oct 28<span>th</span>, 2012</time>
+<time datetime="2012-07-11T00:05:00-07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&rsquo;t around, having more than one version of Ruby on your system would be very difficult to deal with. RVM will allow you to have multiple installations of Ruby AND make it easy for you to switch back and forth.</p>
+  <div class="entry-content"><p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &hellip; but I decided at the last minute to stick with Firefox.</p>
 
-<p>To install a specific (1.9.3) Ruby interpreter:</p>
+<p>Recently, I heard rumors that ChromeDriver is &ldquo;Faster&rdquo; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
 
-<pre><code>rvm install 1.9.3
+<h3>Setting up Cucumber to use ChromeDriver</h3>
+
+<p>To make the switch, all I had to do was replace the driver definition from:</p>
+
+<pre><code>Capybara.current_driver = :selenium 
 </code></pre>
 
-<p>To check ruby version:</p>
+<p>to:</p>
 
-<pre><code>ruby -v
+<pre><code>Capybara.register_driver :chrome do |app|
+    Capybara::Selenium::Driver.new(app, :browser =&gt; :chrome)
+  end
+Capybara.javascript_driver = :chrome
 </code></pre>
 
-<p>To check your current ruby path:</p>
+<p>Then in all my Cucumber feature files, I added the tag @javascript:</p>
 
-<pre><code>which ruby
+<h3>Re-run Cucumber Feature Files</h3>
+
+<p>When I re-ran my Cucumber Features files using ChromeDriver, I however came across a few errors:</p>
+
+<pre><code>focusElement execution failed;
+   Failed to send keys because cannot focus element (Selenium::WebDriver::Error::UnknownError)
 </code></pre>
 
-<p>To check current installed rubies:</p>
+<blockquote><p>Apparently, You can&rsquo;t use send_keys for certain types of inputs. (Workaround &ndash; click the element and then use the advanced interactions API to send keys without an element.)</p></blockquote>
 
-<pre><code>rvm list
+<pre><code>Element is not clickable at point (928, 23.5). Other element would receive the click
 </code></pre>
 
-<p>To use system ruby:</p>
+<blockquote><p>ChromeDriver always clicks the middle of the element in attempt to be faithful to what an actual user does.
+There are two ways to handle this currently:</p>
 
-<pre><code>rvm use system
-</code></pre>
+<ul>
+<li>Change/fix the page so that the user can click on the link in the middle.</li>
+<li>Use the advanced user interactions API to click at the appropriate place in the link. e.g., ActionChains(w).move_to_element_with_offset(link, 0, 20).click().perform()</li>
+</ul>
+</blockquote>
 
-<p>Before you can use a gemset, you must create it:</p>
+<h3>Speed Test Results: Firefox vs ChromeDriver</h3>
 
-<pre><code>rvm use 1.9.3@biteme --create
-</code></pre>
-
-<p>To view your gemset list:</p>
-
-<pre><code>rvm gemset list
-</code></pre>
-
-<p>To use a gemset list:</p>
-
-<pre><code>rvm use 1.9.3@biteme
-</code></pre>
-
-<p>To delete a gemset:</p>
-
-<pre><code>rvm gemset delete biteme
-</code></pre>
-
-<p>To specify a &lsquo;default&rsquo; gemset for a given interpreter:</p>
-
-<pre><code>rvm use 1.9.3@biteme --default
-</code></pre>
-
-<p>To have it so that your gemset is automatically loaded when you enter a directory, you&rsquo;ll need to create or add to your .rvmrc file &lsquo;rvm use 1.9.3@biteme&rsquo;</p>
-
-<pre><code>vi .rvmrc
-rvm use 1.9.3@biteme    
-</code></pre>
+<p>After fixing the issues above and passing all my tests, I was able to compare their speeds and found that ChromeDriver was 15 &ndash; 20% faster than Firefox. With a smaller testsuite, the difference might not make much of a difference but can you imagine the difference on a larger testsuite! In the end &hellip; you have to consider whether Chrome&rsquo;s speedy performance is worth dealing with the issues that seem to be ChromeDriver specific.</p>
 </div>
   
   
@@ -192,15 +181,7 @@ rvm use 1.9.3@biteme
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/11/19/javaland/">Simple intro into Java-Land</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/29/intel-haxm/">Intel HAXM</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/23/rapidftr-android-setup/">RapidFTR-Android Setup</a>
+        <a href="/blog/2013/11/19/javaland/">Javaland</a>
       </li>
     
       <li class="post">
@@ -248,7 +229,7 @@ rvm use 1.9.3@biteme
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - codebreaker -
+  Copyright &copy; 2014 - codebreaker -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
