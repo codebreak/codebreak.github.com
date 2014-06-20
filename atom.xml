@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[codebreak.er]]></title>
-  <link href="http://codebreak.github.com/atom.xml" rel="self"/>
-  <link href="http://codebreak.github.com/"/>
-  <updated>2014-06-19T22:41:16-07:00</updated>
-  <id>http://codebreak.github.com/</id>
+  <link href="http://codebreak.github.io/atom.xml" rel="self"/>
+  <link href="http://codebreak.github.io/"/>
+  <updated>2014-06-19T23:39:10-07:00</updated>
+  <id>http://codebreak.github.io/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
     
@@ -15,36 +15,70 @@
   
   <entry>
     <title type="html"><![CDATA[Javaland]]></title>
-    <link href="http://codebreak.github.com/blog/2013/11/19/javaland/"/>
+    <link href="http://codebreak.github.io/blog/2013/11/19/javaland/"/>
     <updated>2013-11-19T22:10:00-08:00</updated>
-    <id>http://codebreak.github.com/blog/2013/11/19/javaland</id>
-    <content type="html"><![CDATA[<p>Simple Start on Java
-OCT 31ST, 2013
-Java and Gradle
-Get Gradle
-Create Project directory “MarsRover”
-Build Project Structure:
-cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
-Create first java class:
-cd src/main/java vi HelloWorld.java
-public class HelloWorld{ public static void main(String[] args){ System.out.println(“Hello World!!”);
-}
-}
-Java conventional rules: Allowed only one public class in the file and that class name should match the filename. static means method is not an instance it is attached to the class void means method is not returning anything main mean its the entry point to the app
-Build your project: gradle build
-:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE :classes UP-TO-DATE (classes depends on compileJava)
-:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) :assemble UP-TO-DATE umbrella tasks :compileTestJava UP-TO-DATE
-:processTestResources UP-TO-DATE :testClasses UP-TO-DATE :test UP-TO-DATE :check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) :build UP-TO-DATE (umbrella: assemble and check)
-this basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)
-Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld</p>
+    <id>http://codebreak.github.io/blog/2013/11/19/javaland</id>
+    <content type="html"><![CDATA[<p>Install Gradle:</p>
+
+<pre><code>brew install gradle
+</code></pre>
+
+<p>Create Project directory “MarsRover”</p>
+
+<pre><code>mkdir MarsRover
+</code></pre>
+
+<p>Build Project Structure:</p>
+
+<pre><code>cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
+</code></pre>
+
+<p>Create first java class:</p>
+
+<pre><code>cd src/main/java vi HelloWorld.java
+
+public class HelloWorld{ 
+    public static void main(String[] args){ 
+        System.out.println(“Hello World!!”);
+        }
+    }
+</code></pre>
+
+<p>Java conventional rules:
+ Allowed only one public class in the file and that class name should match the filename.
+ &lsquo;static&rsquo; means method is not an instance it is attached to the class
+ &lsquo;void&rsquo; means method is not returning anything main mean its the entry point to the app</p>
+
+<p>Build your project:</p>
+
+<pre><code>gradle build
+
+:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE 
+:classes UP-TO-DATE (classes depends on compileJava) 
+:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) 
+:assemble UP-TO-DATE umbrella tasks 
+:compileTestJava UP-TO-DATE 
+:processTestResources UP-TO-DATE 
+:testClasses UP-TO-DATE 
+:test UP-TO-DATE 
+:check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) 
+:build UP-TO-DATE (umbrella: assemble and check)
+</code></pre>
+
+<p>This basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)</p>
+
+<p>Running program:</p>
+
+<pre><code>cd build/libs/ java -cp MarsRover.jar HelloWorld
+</code></pre>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[fatal: The remote end hung up unexpectedly]]></title>
-    <link href="http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/"/>
+    <link href="http://codebreak.github.io/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly/"/>
     <updated>2012-11-14T08:39:00-08:00</updated>
-    <id>http://codebreak.github.com/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly</id>
+    <id>http://codebreak.github.io/blog/2012/11/14/fatal-the-remote-end-hung-up-unexpectedly</id>
     <content type="html"><![CDATA[<p>Lately I&rsquo;ve been working on a client site &hellip; which entails having to set some proxies. I think for some reason this has conflicted with my github set up. The other day, when I tried a &lsquo;git pull &mdash;rebase&rsquo; I got the &lsquo;fatal: The remote end hung up unexpectedly&rsquo; error. This is what I did to fix the problem.</p>
 
 <p>I checked to see if I had any of my proxies set in my environment:</p>
@@ -73,9 +107,9 @@ unset all_proxy
   
   <entry>
     <title type="html"><![CDATA[Using RVM]]></title>
-    <link href="http://codebreak.github.com/blog/2012/10/28/using-rvm/"/>
+    <link href="http://codebreak.github.io/blog/2012/10/28/using-rvm/"/>
     <updated>2012-10-28T09:36:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/10/28/using-rvm</id>
+    <id>http://codebreak.github.io/blog/2012/10/28/using-rvm</id>
     <content type="html"><![CDATA[<p>RVM stands for Ruby Version Manager. RVM becomes very useful for when you want to use multiple versions of Ruby. If RVM wasn&rsquo;t around, having more than one version of Ruby on your system would be very difficult to deal with. RVM will allow you to have multiple installations of Ruby AND make it easy for you to switch back and forth.</p>
 
 <p>To install a specific (1.9.3) Ruby interpreter:</p>
@@ -138,9 +172,9 @@ rvm use 1.9.3@biteme
   
   <entry>
     <title type="html"><![CDATA[3 years @ ThoughtWorks]]></title>
-    <link href="http://codebreak.github.com/blog/2012/07/20/3-years-at-thoughtworks/"/>
+    <link href="http://codebreak.github.io/blog/2012/07/20/3-years-at-thoughtworks/"/>
     <updated>2012-07-20T09:41:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/07/20/3-years-at-thoughtworks</id>
+    <id>http://codebreak.github.io/blog/2012/07/20/3-years-at-thoughtworks</id>
     <content type="html"><![CDATA[<p>Over 3 years ago, after being laid off from a start up company then deciding to volunteer in Peru and backpack through South America for a few months &ndash; I was basking in the glory of <strong>FUNEMPLOYMENT</strong> when I came across an invitation to a &ldquo;<strong>Super Saturday</strong>&rdquo; interview event at <a href="https://www.thoughtworks.com">ThoughtWorks</a> &ndash; Chicago.</p>
 
 <p>I got flown in and put up at the Club Quarters Hotel in the heart of downtown Chicago. Then during the event, 30-40 candidates got divided into groups and spent the entire day meeting numerous ThoughtWorkers as well participate in various activities like a Lego game and a controversial group discussion.</p>
@@ -238,9 +272,9 @@ rvm use 1.9.3@biteme
   
   <entry>
     <title type="html"><![CDATA[WebDriver: Making the switch to ChromeDriver]]></title>
-    <link href="http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver/"/>
+    <link href="http://codebreak.github.io/blog/2012/07/11/firefox-vs-chromedriver/"/>
     <updated>2012-07-11T00:05:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/07/11/firefox-vs-chromedriver</id>
+    <id>http://codebreak.github.io/blog/2012/07/11/firefox-vs-chromedriver</id>
     <content type="html"><![CDATA[<p>On my previous project I used Cucumber on top of Capybara to driver out WebDriver. We were initially going to use ChromeDriver instead of the default FireFox &hellip; but I decided at the last minute to stick with Firefox.</p>
 
 <p>Recently, I heard rumors that ChromeDriver is &ldquo;Faster&rdquo; than Firefox. So, like the curious person that I am, I decided to switch out FireFox for ChromeDriver to test out this claim.</p>
@@ -292,9 +326,9 @@ There are two ways to handle this currently:</p>
   
   <entry>
     <title type="html"><![CDATA[Capybara tutorial using irb]]></title>
-    <link href="http://codebreak.github.com/blog/2012/06/24/capybara-tutorial-using-irb/"/>
+    <link href="http://codebreak.github.io/blog/2012/06/24/capybara-tutorial-using-irb/"/>
     <updated>2012-06-24T16:03:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/06/24/capybara-tutorial-using-irb</id>
+    <id>http://codebreak.github.io/blog/2012/06/24/capybara-tutorial-using-irb</id>
     <content type="html"><![CDATA[<p>At one of my previous projects, a fellow ThoughtWorker named Rob Hunter showed me how to use irb (Interactive Ruby Shell) to play around with a test framework for web applications called <a href="https://github.com/jnicklas/capybara/">Capybara</a>. I&rsquo;ve found it pretty useful so I figured I&rsquo;d share it here.</p>
 
 <p>To get started, make sure you have ruby installed. (Below I am using ruby version 1.9.2 and creating a gemset using RVM)</p>
@@ -341,9 +375,9 @@ click_button 'Sign in'
   
   <entry>
     <title type="html"><![CDATA[Women & Presentations CAN mix]]></title>
-    <link href="http://codebreak.github.com/blog/2012/06/09/women-presenters/"/>
+    <link href="http://codebreak.github.io/blog/2012/06/09/women-presenters/"/>
     <updated>2012-06-09T15:50:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/06/09/women-presenters</id>
+    <id>http://codebreak.github.io/blog/2012/06/09/women-presenters</id>
     <content type="html"><![CDATA[<p><a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/"><img class="right" src="https://evbdn.eventbrite.com/s3-s3/eventlogos/6471833/screenshot20120828at8.06.17pm.png.jpg" width="200" height="200"></a></p>
 
 <p>After months of planning with my amazing colleagues &ndash; <a href="https://twitter.com/AConnJob">Annie Conn</a>, <a href="http://www.bonnachoi.com">Bonna Choi</a>, and <a href="http://www.nanchu.me/">Nancy Chu</a> &ndash; we successfully organized the first ever <a href="http://www.bayareagirlgeekdinners.com/bay-area-girl-geek-dinner-25-sponsored-by-thoughtworks/">ThoughtWorks sponsored Girl Geek Dinner.</a></p>
@@ -414,9 +448,9 @@ click_button 'Sign in'
   
   <entry>
     <title type="html"><![CDATA[The Tester Role on an Agile Project]]></title>
-    <link href="http://codebreak.github.com/blog/2012/06/08/tester-role/"/>
+    <link href="http://codebreak.github.io/blog/2012/06/08/tester-role/"/>
     <updated>2012-06-08T22:54:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/06/08/tester-role</id>
+    <id>http://codebreak.github.io/blog/2012/06/08/tester-role</id>
     <content type="html"><![CDATA[<p>Below are examples of what I personally strive for when I&rsquo;m on an agile project. Do note that the role that a tester plays on a project varies and can depend on the tester or the unique dynamics of the team.</p>
 
 <ul>
@@ -441,9 +475,9 @@ click_button 'Sign in'
   
   <entry>
     <title type="html"><![CDATA[Hello World!!]]></title>
-    <link href="http://codebreak.github.com/blog/2012/06/07/hello-world/"/>
+    <link href="http://codebreak.github.io/blog/2012/06/07/hello-world/"/>
     <updated>2012-06-07T00:05:00-07:00</updated>
-    <id>http://codebreak.github.com/blog/2012/06/07/hello-world</id>
+    <id>http://codebreak.github.io/blog/2012/06/07/hello-world</id>
     <content type="html"><![CDATA[<p>Much love to @scottmuc for helping me setup my octopress blog!! :)</p>
 ]]></content>
   </entry>

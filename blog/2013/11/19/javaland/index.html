@@ -9,13 +9,7 @@
   <meta name="author" content="codebreaker">
 
   
-  <meta name="description" content="Simple Start on Java
-OCT 31ST, 2013
-Java and Gradle
-Get Gradle
-Create Project directory “MarsRover”
-Build Project Structure:
-cd MarsRover/ mkdir -p &hellip;">
+  <meta name="description" content="Install Gradle: brew install gradle Create Project directory “MarsRover” mkdir MarsRover Build Project Structure: cd MarsRover/ mkdir -p src/main/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +18,7 @@ cd MarsRover/ mkdir -p &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codebreak.github.com/blog/2013/11/19/javaland/">
+  <link rel="canonical" href="http://codebreak.github.io/blog/2013/11/19/javaland/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -71,7 +65,7 @@ cd MarsRover/ mkdir -p &hellip;">
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:codebreak.github.com" />
+    <input type="hidden" name="q" value="site:codebreak.github.io" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -114,25 +108,59 @@ cd MarsRover/ mkdir -p &hellip;">
   </header>
 
 
-<div class="entry-content"><p>Simple Start on Java
-OCT 31ST, 2013
-Java and Gradle
-Get Gradle
-Create Project directory “MarsRover”
-Build Project Structure:
-cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
-Create first java class:
-cd src/main/java vi HelloWorld.java
-public class HelloWorld{ public static void main(String[] args){ System.out.println(“Hello World!!”);
-}
-}
-Java conventional rules: Allowed only one public class in the file and that class name should match the filename. static means method is not an instance it is attached to the class void means method is not returning anything main mean its the entry point to the app
-Build your project: gradle build
-:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE :classes UP-TO-DATE (classes depends on compileJava)
-:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) :assemble UP-TO-DATE umbrella tasks :compileTestJava UP-TO-DATE
-:processTestResources UP-TO-DATE :testClasses UP-TO-DATE :test UP-TO-DATE :check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) :build UP-TO-DATE (umbrella: assemble and check)
-this basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)
-Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld</p>
+<div class="entry-content"><p>Install Gradle:</p>
+
+<pre><code>brew install gradle
+</code></pre>
+
+<p>Create Project directory “MarsRover”</p>
+
+<pre><code>mkdir MarsRover
+</code></pre>
+
+<p>Build Project Structure:</p>
+
+<pre><code>cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
+</code></pre>
+
+<p>Create first java class:</p>
+
+<pre><code>cd src/main/java vi HelloWorld.java
+
+public class HelloWorld{ 
+    public static void main(String[] args){ 
+        System.out.println(“Hello World!!”);
+        }
+    }
+</code></pre>
+
+<p>Java conventional rules:
+ Allowed only one public class in the file and that class name should match the filename.
+ &lsquo;static&rsquo; means method is not an instance it is attached to the class
+ &lsquo;void&rsquo; means method is not returning anything main mean its the entry point to the app</p>
+
+<p>Build your project:</p>
+
+<pre><code>gradle build
+
+:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE 
+:classes UP-TO-DATE (classes depends on compileJava) 
+:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) 
+:assemble UP-TO-DATE umbrella tasks 
+:compileTestJava UP-TO-DATE 
+:processTestResources UP-TO-DATE 
+:testClasses UP-TO-DATE 
+:test UP-TO-DATE 
+:check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) 
+:build UP-TO-DATE (umbrella: assemble and check)
+</code></pre>
+
+<p>This basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)</p>
+
+<p>Running program:</p>
+
+<pre><code>cd build/libs/ java -cp MarsRover.jar HelloWorld
+</code></pre>
 </div>
 
 
