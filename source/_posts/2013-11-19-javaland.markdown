@@ -2,25 +2,54 @@
 layout: post
 title: "Javaland"
 date: 2013-11-19 22:10
-comments: true
+comments: false
 categories: 
 ---
-Simple Start on Java
-OCT 31ST, 2013
-Java and Gradle
-Get Gradle
+
+Install Gradle:
+
+	brew install gradle
+
 Create Project directory “MarsRover”
+
+	mkdir MarsRover
+
 Build Project Structure:
-cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
+
+	cd MarsRover/ mkdir -p src/main/java mkdir -p src/test/java
+
 Create first java class:
-cd src/main/java vi HelloWorld.java
-public class HelloWorld{ public static void main(String[] args){ System.out.println(“Hello World!!”);
-}
-}
-Java conventional rules: Allowed only one public class in the file and that class name should match the filename. static means method is not an instance it is attached to the class void means method is not returning anything main mean its the entry point to the app
-Build your project: gradle build
-:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE :classes UP-TO-DATE (classes depends on compileJava) 
-:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) :assemble UP-TO-DATE umbrella tasks :compileTestJava UP-TO-DATE 
-:processTestResources UP-TO-DATE :testClasses UP-TO-DATE :test UP-TO-DATE :check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) :build UP-TO-DATE (umbrella: assemble and check)
-this basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)
-Running program: cd build/libs/ java -cp MarsRover.jar HelloWorld
+
+	cd src/main/java vi HelloWorld.java
+
+	public class HelloWorld{ 
+		public static void main(String[] args){ 
+			System.out.println(“Hello World!!”);
+			}
+		}
+
+Java conventional rules: 
+ Allowed only one public class in the file and that class name should match the filename. 
+ 'static' means method is not an instance it is attached to the class 
+ 'void' means method is not returning anything main mean its the entry point to the app
+
+Build your project: 
+
+	gradle build
+
+	:compileJava UP-TO-DATE (compiles java classes – HelloWorld) :processResources UP-TO-DATE 
+	:classes UP-TO-DATE (classes depends on compileJava) 
+	:jar UP-TO-DATE (Builds the jar – creates MarsRover.jar with HelloWorld – .zip) 
+	:assemble UP-TO-DATE umbrella tasks 
+	:compileTestJava UP-TO-DATE 
+	:processTestResources UP-TO-DATE 
+	:testClasses UP-TO-DATE 
+	:test UP-TO-DATE 
+	:check UP-TO-DATE (umbrella for test tasks … i.e. cucumber) 
+	:build UP-TO-DATE (umbrella: assemble and check)
+
+This basically creates a .jar file (MarsRover.jar) which is really just a zip file of all your compiled source files. (everything from src/main/java)
+
+Running program: 
+
+	cd build/libs/ java -cp MarsRover.jar HelloWorld
