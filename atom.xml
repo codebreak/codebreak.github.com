@@ -4,7 +4,7 @@
   <title><![CDATA[codebreak.er]]></title>
   <link href="http://codebreak.github.io/atom.xml" rel="self"/>
   <link href="http://codebreak.github.io/"/>
-  <updated>2014-06-19T23:39:10-07:00</updated>
+  <updated>2014-06-20T00:05:51-07:00</updated>
   <id>http://codebreak.github.io/</id>
   <author>
     <name><![CDATA[codebreaker]]></name>
@@ -14,18 +14,18 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Javaland]]></title>
+    <title type="html"><![CDATA[Simple intro into Java-land]]></title>
     <link href="http://codebreak.github.io/blog/2013/11/19/javaland/"/>
     <updated>2013-11-19T22:10:00-08:00</updated>
     <id>http://codebreak.github.io/blog/2013/11/19/javaland</id>
-    <content type="html"><![CDATA[<p>Install Gradle:</p>
+    <content type="html"><![CDATA[<p>Get Gradle</p>
 
-<pre><code>brew install gradle
+<pre><code> brew install gradle
 </code></pre>
 
 <p>Create Project directory “MarsRover”</p>
 
-<pre><code>mkdir MarsRover
+<pre><code>mkdir MarsRover 
 </code></pre>
 
 <p>Build Project Structure:</p>
