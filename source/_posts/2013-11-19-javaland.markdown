@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "Javaland"
+title: Simple intro into Java-land
 date: 2013-11-19 22:10
 comments: false
 categories: 
 ---
 
-Install Gradle:
+Get Gradle
 
-	brew install gradle
+	 brew install gradle
 
 Create Project directory “MarsRover”
 
-	mkdir MarsRover
+	mkdir MarsRover	
 
 Build Project Structure:
 
